@@ -40,11 +40,22 @@
 							<p class="landing--sub-title mt-2">Wildflowers</p>
 						</div>
 						
-						<div class="">
+						<div>
 							<v-btn class="button d-block mt-9" tile color="#3B4549" dark> Search Wildflowers</v-btn>
 							<v-btn class="button d-block mt-4" tile color="#3B4549" dark> Search Trees</v-btn>
 							<v-btn class="button d-block mt-4" tile color="#3B4549" dark> Instructions</v-btn>
 						</div>
+						<v-bottom-navigation background-color="#3B4549" color="#fff" absolute style="justify-content: space-between">
+							<v-btn value="sideDrawer" @click="setAppBarIcon('hamburger');">
+								<img :src="hambugerMenuIcon" alt="hamburgerMenu">
+							</v-btn>
+							<v-btn value="wildflowers" @click="setAppBarIcon('flower');">
+								<img :src="wildflowerIcon" alt="flower">
+							</v-btn>
+							<v-btn value="trees" @click="setAppBarIcon('tree');">
+								<img :src="treesIcon" alt="tree">
+							</v-btn>
+						</v-bottom-navigation>
 					</div>
 				</v-content>
 			</v-app>
