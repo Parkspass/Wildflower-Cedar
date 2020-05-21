@@ -96,5 +96,10 @@ html,body{
 .button {
     width: 250px;
     margin: 0 auto;
+    text-align: left;
 }
 
+.landing--buttons_image {
+    height: 20px; 
+    width: 20px;
+}
