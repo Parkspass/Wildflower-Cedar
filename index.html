@@ -7,7 +7,7 @@
 		<meta content="utf-8" http-equiv="encoding">
 		<title>Parkdata Dashboard</title>
 		<link rel="stylesheet" type="text/css" href="vuetify.min.css">
-		<link rel="stylesheet" type="text/css" href="dashboard.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon.ico">
 		<link rel="icon" type="image/png" sizes="192x192" href="./images/favicon.ico">
 		<link rel="icon" type="image/png" sizes="512x512" href="./images/favicon.ico">
@@ -15,7 +15,29 @@
     </head>
     <body>
         <div id="app">
+			<v-app>
+				<v-content>
+					<div v-if="page == 'loading' " >
+						<img src="landing_flower.png" class="landing--flower" alt="flower">
+						<p class="landing--title">Cedar Breaks</p>
+						<p class="landing--title"> National Monument</p>
+						<p class="landing--sub-title">Wildflowers</p>
+						<div class="landing--nps_div">
+							<img class="landing--NPS_logo" src="nps_logo.svg" alt="npsLogo">
+							<p class="landing--NPS_logo ml-2">NATIONAL PARK SERVICE</p>
+						</div>
+					</div>
 
-        </div>
+					<div v-if="page == 'landing' ">
+						<v-btn>landing</v-btn>
+					</div>
+				</v-content>
+			</v-app>
+		</div>
+		
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+		<script src="index.js"></script>
+		<noscript>Please install Javascript</noscript>
     </body>
 </html>

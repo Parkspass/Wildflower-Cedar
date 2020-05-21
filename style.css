@@ -16,3 +16,42 @@ body{
 html,body{
     overflow-x: hidden;
 }
+
+.landing--flower {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    
+}
+.landing--title {
+    /* font-family: Libre Baskerville; */
+    font-size: 20px;
+    line-height: 36px;
+    color: #666;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+}
+.landing--sub-title {
+    color: #879893;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.landing--nps_div {
+    width: 250px;
+    margin: 0 auto;
+    
+}
+.landing--NPS_logo{
+    display: inline;
+    vertical-align: middle;
+}
+
