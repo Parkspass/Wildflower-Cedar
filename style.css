@@ -17,7 +17,7 @@ html,body{
     overflow-x: hidden;
 }
 
-.landing--flower {
+.loading--flower {
     width: 100px;
     height: 100px;
     display: block;
@@ -26,7 +26,7 @@ html,body{
     margin-top: 100px;
     
 }
-.landing--title {
+.loading--title {
     /* font-family: Libre Baskerville; */
     font-size: 20px;
     line-height: 36px;
@@ -36,7 +36,7 @@ html,body{
     margin-left: auto;
     margin-top: 10px;
 }
-.landing--sub-title {
+.loading--sub-title {
     color: #879893;
     font-size: 16px;
     line-height: 20px;
@@ -45,7 +45,7 @@ html,body{
     margin-left: auto;
 }
 
-.landing--nps_div {
+.loading--nps_div {
     position:absolute;
     width:250px;
     height:50px;
@@ -53,8 +53,45 @@ html,body{
     bottom:0px;
     left:50%;
 }
+.loading--NPS_logo{
+    display: inline;
+    vertical-align: middle;
+}
+/* END LANDING PAGE CSS */
+
+/* START OF LANDING PAGE */
+
+.landing--nps_div {
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 24px;
+}
 .landing--NPS_logo{
     display: inline;
     vertical-align: middle;
 }
+.landing--title_div {
+    margin-top: 80px;
+}
+.landing--title {
+    /* font-family: Libre Baskerville; */
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 25px;
+    color: #3B4549;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+.landing--sub-title {
+    color: #3B4549;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 25px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
 

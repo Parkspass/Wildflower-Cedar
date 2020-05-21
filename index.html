@@ -18,18 +18,27 @@
 			<v-app>
 				<v-content>
 					<div v-if="page == 'loading' " >
-						<img src="landing_flower.png" class="landing--flower" alt="flower">
-						<p class="landing--title">Cedar Breaks</p>
-						<p class="landing--title"> National Monument</p>
-						<p class="landing--sub-title">Wildflowers</p>
-						<div class="landing--nps_div">
-							<img class="landing--NPS_logo" src="nps_logo.svg" alt="npsLogo">
-							<p class="landing--NPS_logo ml-2">NATIONAL PARK SERVICE</p>
+						<img src="landing_flower.png" class="loading--flower" alt="flower">
+						<p class="loading--title">Cedar Breaks</p>
+						<p class="loading--title"> National Monument</p>
+						<p class="loading--sub-title">Wildflowers</p>
+						<div class="loading--nps_div">
+							<img class="loading--NPS_logo" src="nps_logo.svg" alt="npsLogo">
+							<p class="loading--NPS_logo ml-2">NATIONAL PARK SERVICE</p>
 						</div>
 					</div>
 
 					<div v-if="page == 'landing' ">
-						<v-btn>landing</v-btn>
+						<div class="landing--nps_div">
+							<img class="landing--NPS_logo" src="nps_logo.svg" alt="npsLogo">
+							<p class="landing--NPS_logo ml-2">NATIONAL PARK SERVICE</p>
+						</div>
+						<div class="landing--title_div">
+							<p class="landing--title">Cedar Breaks</p>
+							<p class="landing--title"> National Monument</p>
+							<img src="landing_flower.png" class="loading--flower mt-5" alt="flower">
+							<p class="landing--sub-title mt-2">Wildflowers</p>
+						</div>
 					</div>
 				</v-content>
 			</v-app>
