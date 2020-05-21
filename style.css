@@ -120,3 +120,25 @@ html,body{
     margin-right: 20px;
     float: right;
 }
+.sortBy{
+    /* font-family: Baskerville; */
+    font-size: 16px;
+    line-height: 18px;
+    color: #3B4549;
+}
+.sideDrawer--sortBy {
+    margin-left: 20px;
+    margin-right: 13px;
+}
+.sortBy_tabs {
+    padding: 5px;
+    border: 1px solid #3B4549;
+}
+.color {
+    background: #3B4549;
+}
+
+.sortBy_focus{
+    background: #3B4549;
+    color: #fff;
+}

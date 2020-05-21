@@ -8,7 +8,11 @@ var app = new Vue({
         hambugerMenuIcon: 'icons/hamburger_menuDark.svg',
         wildflowerIcon: 'icons/flowerDark.svg',
         treesIcon: 'icons/treeDark.svg',
-        drawer: true
+        drawer: true,
+        common_selected: true,
+        latin_selected: false
+        
+
     },
     methods: {
         setAppBarIcon: function(tab){ 
@@ -24,7 +28,18 @@ var app = new Vue({
             this.hambugerMenuIcon = 'icons/hamburger_menuDark.svg';
             this.wildflowerIcon = 'icons/flowerDark.svg';
             this.treesIcon = 'icons/treeDark.svg';
+        },
+        commonSelected: function() {
+            console.log('common clicked');
+            this.common_selected = true;
+            this.latin_selected = false;
+        },
+        latinSelected: function() {
+            console.log('latin clicked');
+            this.common_selected = false;
+            this.latin_selected = true;
         }
+        
         
     },
     created: function(){
