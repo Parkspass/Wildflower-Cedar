@@ -1,15 +1,9 @@
 @font-face{
-    font-family: "myRoboto";
-    src: url("fonts/Roboto/Roboto-Regular.ttf");
-}
-@font-face{
-    font-family: "robotoTitle";
-    src: url("fonts/Roboto_Slab/static/RobotoSlab-Regular.ttf");
-    font-style: normal;
-    font-weight: normal;
+    font-family: "myBaskerville";
+    src: url("fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf");
 }
 body{
-    font-family: 'myRoboto';
+    font-family: 'myBaskerville' !important;
     font-style: normal;
     font-weight: normal;
 }
@@ -119,4 +113,13 @@ html,body{
 .sideDrawer--arrows {
     margin-right: 20px;
     float: right;
+}
+#researchHeader{
+    height: 56px;
+    background-color: #829891;
+    text-align: center;
+    vertical-align: middle;
+    color: #E9DED9;
+    font-size: 20px;
+    font-weight: bold;
 }
