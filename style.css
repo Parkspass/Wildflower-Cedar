@@ -93,5 +93,13 @@ html,body{
     margin-left: auto;
 }
 
+/* .landing--buttons{
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+} */
 
+.button {
+    width: 250px;
+    margin: 0 auto;
+}
 
