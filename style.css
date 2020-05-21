@@ -103,3 +103,20 @@ html,body{
     height: 20px; 
     width: 20px;
 }
+
+#sideDrawerTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3B4549;
+    line-height: 25px;
+}
+.sideDrawer--Titles{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: #3B4549;
+}
+.sideDrawer--arrows {
+    margin-right: 20px;
+    float: right;
+}

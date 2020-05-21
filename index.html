@@ -46,7 +46,7 @@
 							<v-btn class="button d-block mt-4" tile color="#3B4549" dark><img class="landing--buttons_image mr-2" src="icons/question_mark.svg" alt="flower"> Instructions</v-btn>
 						</div>
 						<v-bottom-navigation background-color="#3B4549" color="#fff" absolute style="justify-content: space-between">
-							<v-btn value="sideDrawer" @click="setAppBarIcon('hamburger');">
+							<v-btn value="sideDrawer" @click="setAppBarIcon('hamburger'); drawer = !drawer">
 								<img :src="hambugerMenuIcon" alt="hamburgerMenu">
 							</v-btn>
 							<v-btn value="wildflowers" @click="setAppBarIcon('flower');">
@@ -56,6 +56,24 @@
 								<img :src="treesIcon" alt="tree">
 							</v-btn>
 						</v-bottom-navigation>
+
+						<!-- Start side drawer -->
+						<v-navigation-drawer class="fill-height" v-model="drawer" app>
+							<v-toolbar color="#fff" height="24" class="mb-4" dense flat></v-toolbar>
+							<!-- <v-list-item-title id="sideDrawerTitle" class="title ml-4">Menu</v-list-item-title> -->
+							<div id="sideDrawerTitle" class="ml-4">Menu</div>
+							<!-- <v-divider></v-divider> -->
+							<div class="ml-4 mt-9 mb-3 sideDrawer--Titles">Home <img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""> </div><v-divider></v-divider>
+							<div class="ml-4 mt-3 mb-3 sideDrawer--Titles">Wildflowers<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
+							<div class="ml-4 mt-3 mb-3 sideDrawer--Titles">Trees<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
+							<div class="ml-4 mt-3 mb-3 sideDrawer--Titles">Instructions<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
+							<div class="ml-4 mt-3 mb-3 sideDrawer--Titles">Glossary<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
+							<div class="ml-4 mt-3 mb-3 sideDrawer--Titles">Additional Resources<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
+							<div class="ml-4 mt-3 mb-3 sideDrawer--Titles">General Information<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
+							<p class="mt-5">Sort by:</p>
+						</v-navigation-drawer>
+						<!-- End side drawer -->
+
 					</div>
 				</v-content>
 			</v-app>

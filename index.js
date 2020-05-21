@@ -7,7 +7,8 @@ var app = new Vue({
         page: 'landing', // loading, landing
         hambugerMenuIcon: 'icons/hamburger_menuDark.svg',
         wildflowerIcon: 'icons/flowerDark.svg',
-        treesIcon: 'icons/treeDark.svg'
+        treesIcon: 'icons/treeDark.svg',
+        drawer: true
     },
     methods: {
         setAppBarIcon: function(tab){ 
