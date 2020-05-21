@@ -1,0 +1,18 @@
+@font-face{
+    font-family: "myRoboto";
+    src: url("fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face{
+    font-family: "robotoTitle";
+    src: url("fonts/Roboto_Slab/static/RobotoSlab-Regular.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+body{
+    font-family: 'myRoboto';
+    font-style: normal;
+    font-weight: normal;
+}
+html,body{
+    overflow-x: hidden;
+}
