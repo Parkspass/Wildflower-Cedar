@@ -1,15 +1,9 @@
 @font-face{
-    font-family: "myRoboto";
-    src: url("fonts/Roboto/Roboto-Regular.ttf");
-}
-@font-face{
-    font-family: "robotoTitle";
-    src: url("fonts/Roboto_Slab/static/RobotoSlab-Regular.ttf");
-    font-style: normal;
-    font-weight: normal;
+    font-family: "myBaskerville";
+    src: url("fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf");
 }
 body{
-    font-family: 'myRoboto';
+    font-family: 'myBaskerville' !important;
     font-style: normal;
     font-weight: normal;
 }
@@ -47,7 +41,7 @@ html,body{
 
 .loading--nps_div {
     position:absolute;
-    width:250px;
+    width:290px;
     height:50px;
     margin-left:-120px;
     bottom:0px;
@@ -62,7 +56,7 @@ html,body{
 /* START OF LANDING PAGE */
 
 .landing--nps_div {
-    width: 250px;
+    width: 290px;
     margin: 0 auto;
     margin-top: 24px;
 }
@@ -127,12 +121,13 @@ html,body{
     color: #3B4549;
 }
 .sideDrawer--sortBy {
-    margin-left: 20px;
-    margin-right: 13px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 .sortBy_tabs {
     padding: 5px;
     border: 1px solid #3B4549;
+    font-size: 14px;
 }
 .color {
     background: #3B4549;
@@ -141,4 +136,13 @@ html,body{
 .sortBy_focus{
     background: #3B4549;
     color: #fff;
+}
+#researchHeader{
+    height: 56px;
+    background-color: #829891;
+    text-align: center;
+    vertical-align: middle;
+    color: #E9DED9;
+    font-size: 20px;
+    font-weight: bold;
 }

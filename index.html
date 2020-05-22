@@ -6,12 +6,12 @@
 		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 		<meta content="utf-8" http-equiv="encoding">
 		<title>Parkdata Dashboard</title>
+		<link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="vuetify.min.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="apple-touch-icon" sizes="180x180" href="icons/favicon.ico">
 		<link rel="icon" type="image/png" sizes="192x192" href="./icons/favicon.ico">
 		<link rel="icon" type="image/png" sizes="512x512" href="./icons/favicon.ico">
-        <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
     </head>
     <body>
         <div id="app">
@@ -71,12 +71,18 @@
 							<div class="ml-4 mt-3 mb-3 sideDrawer--Titles">Additional Resources<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
 							<div class="ml-4 mt-3 mb-3 sideDrawer--Titles">General Information<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
 							<p class="ml-4 mt-5 sortBy">Sort by:</p>
-							<div class="sideDrawer--sortBy">
+							<div class="sideDrawer--sortBy ml-2">
 								<span class="sortBy_tabs" @click="commonSelected" :class="{sortBy_focus: common_selected}">Common Name</span><span class="sortBy_tabs" @click="latinSelected" :class="{sortBy_focus: latin_selected}">Latin Name</span>
 							</div>
 						</v-navigation-drawer>
 						<!-- End side drawer -->
 
+					</div>
+
+					<div v-if="page == 'research' ">
+						<div id="researchHeader">
+							<span>Search Wildflowers</span>
+						</div>
 					</div>
 				</v-content>
 			</v-app>
