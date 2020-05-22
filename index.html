@@ -28,7 +28,42 @@
 						</div>
 					</div>
 
-					<div v-if="page == 'landing' ">
+				<!-- MAIN NAVIGATION FOR EVERY PAGE -->
+				<!-- MADE GLOBAL SO EVERY PAGE HAS IT AND NO REPETITIVE CODE -->
+					<v-bottom-navigation background-color="#3B4549" color="#fff" absolute style="justify-content: space-between">
+						<v-btn value="sideDrawer" @click="drawer = !drawer">
+							<img :src="hambugerMenuIcon" alt="hamburgerMenu">
+						</v-btn>
+						<v-btn value="searchWildflowers" @click="setAppBarIcon('searchWildflowers');">
+							<img :src="wildflowerIcon" alt="flower">
+						</v-btn>
+						<v-btn value="serachTrees" @click="setAppBarIcon('serachTrees');">
+							<img :src="treesIcon" alt="tree">
+						</v-btn>
+					</v-bottom-navigation>
+
+					<!-- Start side drawer -->
+					<v-navigation-drawer class="fill-height" v-model="drawer" app>
+						<v-toolbar color="#fff" height="24" class="mb-4" dense flat></v-toolbar>
+						<!-- <v-list-item-title id="sideDrawerTitle" class="title ml-4">Menu</v-list-item-title> -->
+						<div id="sideDrawerTitle" class="ml-4">Menu</div>
+						<!-- <v-divider></v-divider> -->
+						<div class="ml-4 mt-9 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('home')">Home <img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""> </div><v-divider></v-divider>
+						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('searchWildflowers')">Wildflowers<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
+						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('serachTrees')">Trees<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
+						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('Instructions')">Instructions<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
+						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('Glossary')">Glossary<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
+						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('Resources')">Additional Resources<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
+						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('Info')">General Information<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
+						<p class="ml-4 mt-5 sortBy">Sort by:</p>
+						<div class="sideDrawer--sortBy ml-2">
+							<span class="sortBy_tabs" @click="commonSelected" :class="{sortBy_focus: common_selected}">Common Name</span><span class="sortBy_tabs" @click="latinSelected" :class="{sortBy_focus: latin_selected}">Latin Name</span>
+						</div>
+					</v-navigation-drawer>
+				<!-- End side drawer -->
+				<!-- END MAIN NAVIGATION FOR EVERY PAGE -->
+
+					<div v-if="page == 'home' ">
 						<div class="landing--nps_div">
 							<img class="landing--NPS_logo" src="nps_logo.svg" alt="npsLogo">
 							<p class="landing--NPS_logo ml-2">NATIONAL PARK SERVICE</p>
@@ -45,39 +80,19 @@
 							<v-btn class="button d-block mt-4" tile color="#3B4549" dark><img class="landing--buttons_image mr-2" src="icons/treeLight.svg" alt="flower"> Search Trees</v-btn>
 							<v-btn class="button d-block mt-4" tile color="#3B4549" dark><img class="landing--buttons_image mr-2" src="icons/question_mark.svg" alt="flower"> Instructions</v-btn>
 						</div>
-						<v-bottom-navigation background-color="#3B4549" color="#fff" absolute style="justify-content: space-between">
-							<v-btn value="sideDrawer" @click="setAppBarIcon('hamburger'); drawer = !drawer">
-								<img :src="hambugerMenuIcon" alt="hamburgerMenu">
-							</v-btn>
-							<v-btn value="wildflowers" @click="setAppBarIcon('flower');">
-								<img :src="wildflowerIcon" alt="flower">
-							</v-btn>
-							<v-btn value="trees" @click="setAppBarIcon('tree');">
-								<img :src="treesIcon" alt="tree">
-							</v-btn>
-						</v-bottom-navigation>
-
-						<!-- Start side drawer -->
-						<v-navigation-drawer class="fill-height" v-model="drawer" app>
-							<v-toolbar color="#fff" height="24" class="mb-4" dense flat></v-toolbar>
-							<!-- <v-list-item-title id="sideDrawerTitle" class="title ml-4">Menu</v-list-item-title> -->
-							<div id="sideDrawerTitle" class="ml-4">Menu</div>
-							<!-- <v-divider></v-divider> -->
-							<div class="ml-4 mt-9 mb-3 sideDrawer--Titles">Home <img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""> </div><v-divider></v-divider>
-							<div class="ml-4 mt-3 mb-3 sideDrawer--Titles">Wildflowers<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
-							<div class="ml-4 mt-3 mb-3 sideDrawer--Titles">Trees<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
-							<div class="ml-4 mt-3 mb-3 sideDrawer--Titles">Instructions<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
-							<div class="ml-4 mt-3 mb-3 sideDrawer--Titles">Glossary<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
-							<div class="ml-4 mt-3 mb-3 sideDrawer--Titles">Additional Resources<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
-							<div class="ml-4 mt-3 mb-3 sideDrawer--Titles">General Information<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
-							<p class="ml-4 mt-5 sortBy">Sort by:</p>
-							<div class="sideDrawer--sortBy ml-2">
-								<span class="sortBy_tabs" @click="commonSelected" :class="{sortBy_focus: common_selected}">Common Name</span><span class="sortBy_tabs" @click="latinSelected" :class="{sortBy_focus: latin_selected}">Latin Name</span>
-							</div>
-						</v-navigation-drawer>
-						<!-- End side drawer -->
-
 					</div>
+
+					<!-- searchWildflowers, serachTrees, Instructions, Glossary, Resources, Info -->
+					<div v-if="page == 'searchWildflowers' ">welcome to wildflowers</div>
+					<div v-if="page == 'serachTrees' ">welcome to searchTrees</div>
+					<div v-if="page == 'Instructions' ">welcome to Instructions</div>
+					<div v-if="page == 'Glossary' ">welcome to glossary</div>
+					<div v-if="page == 'Resources' ">welcome to Resources</div>
+					<div v-if="page == 'Info' ">welcome to Info</div>
+
+
+					
+
 
 					<div v-if="page == 'research' ">
 						<div id="researchHeader">
