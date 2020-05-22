@@ -252,3 +252,29 @@ h2{
 .space{
     height: 90px;
 }
+
+/* gloassary */
+#searchBox {
+    outline: none;
+    padding: 6px;
+    width: 210px;
+    /* border: 1px solid black; */
+}
+.searchBox {
+    margin: 0 auto;
+    width: 250px;
+    border: 1px solid black;
+}
+
+.glossaryName{
+    font-size: 16px;
+    font-weight: bold;
+    color: #3B4549;
+    display: inline;
+    padding-right: 5px;
+}
+.glossaryDesc {
+    font-size: 16px;
+    color: #3B4549;
+    display: inline;
+}

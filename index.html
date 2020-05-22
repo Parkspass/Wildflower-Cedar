@@ -12,7 +12,8 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="icons/favicon.ico">
 		<link rel="icon" type="image/png" sizes="192x192" href="./icons/favicon.ico">
 		<link rel="icon" type="image/png" sizes="512x512" href="./icons/favicon.ico">
-    </head>
+	</head>
+	
     <body>
         <div id="app">
 			<v-app>
@@ -83,10 +84,6 @@
 					</div>
 
 					<!-- searchWildflowers, serachTrees, Instructions, Glossary, Resources, Info -->
-<<<<<<< HEAD
-					<div v-if="page == 'searchWildflowers' ">
-=======
-					<div v-if="page == 'searchWildflowers' ">welcome to wildflowers</div>
 					<div v-if="page == 'serachTrees' ">welcome to searchTrees</div>
 
 					<div v-if="page == 'Instructions' ">
@@ -105,7 +102,21 @@
 
 					</div>
 
-					<div v-if="page == 'Glossary' ">welcome to glossary</div>
+					<div v-if="page == 'Glossary' ">
+						<v-app-bar dense  color="#829891" class="mb-9">
+							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">Glossary </span></v-toolbar-title>
+						</v-app-bar>
+						<div class="searchBox mt-n3">
+							<img class="ml-2 d-inline" src="icons/magnifying.svg" alt="">
+							<input type="text" class="d-inline" name="Serach" id="searchBox" color="#3B4549" placeholder="Search">
+						</div>
+						<div class="mt-6 ml-5"  v-for="item in glossaryItems">
+							<p class="glossaryName">{{item.name}}</p>
+							<p class="glossaryDesc">{{item.description}}</p>
+						</div>
+						<div class="space"></div>
+					</div>
+
 					<div v-if="page == 'Resources' ">welcome to Resources</div>
 					<div v-if="page == 'Info' ">
 						<v-app-bar dense  color="#829891" class="mb-9">
@@ -116,7 +127,6 @@
 
 
 					<div v-if="page == 'research' ">
->>>>>>> 9d56a65bfde130cfef41dcf6a6051978ef3b2856
 						<div> <!-- App bar for research page -->
 							<v-app-bar dense>
 								<v-toolbar-title id="researchHeader" v-on:click="page='home' "><img class="backButton" src="icons/backArrow.svg"><span>Search Wildflowers</span></v-toolbar-title>
@@ -157,27 +167,7 @@
 							</div>	
 						</div>
 					</div>
-					<div v-if="page == 'serachTrees' ">welcome to searchTrees</div>
-
-					<div v-if="page == 'Instructions' ">
-						<v-app-bar dense  color="#829891" class="mb-9">
-							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="mr-4" src="icons/backArrow.svg"><span class="tanColor">Instructions</span></v-toolbar-title>
-						</v-app-bar>
-						<p class="instruction--text">After locating a plant specimen you would like to use the app to identify, go to the respective tab (wildflower or tree) at the bottom of the screen. Go to the “Search Classifications</p>
-						<p class="instruction--headers">For Wildflowers</p>
-						<p class="instruction--text">Select the trait that most represents the plant that you are looking at. If you leave a section blank, that section will not be used when filtering the search results. For example, if you would like to see only the yellow wildflowers, select the ‘yellow’ tab and leave all other sections blank.</p>
-						<p class="instruction--sub-headers">Wildflower Example</p>
-
-						<p class="instruction--headers">For Trees</p>
-						<p class="instruction--text">Select the trait that most represents the tree that you are looking at. If you leave a section blank, that section will not be used when filtering the search results. For example, if you would like to see only the trees with needles, select the ‘needles’ tab and leave all other sections blank.</p>
-						<p class="instruction--sub-headers">Tree Example</p>
-						<div class="space"></div> <!-- must add empty space or it get cut off by app bar. -->
-
-					</div>
-
-					<div v-if="page == 'Glossary' ">welcome to glossary</div>
-					<div v-if="page == 'Resources' ">welcome to Resources</div>
-					<div v-if="page == 'Info' ">welcome to Info</div>
+					
 				</v-content>
 			</v-app>
 		</div>
