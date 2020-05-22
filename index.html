@@ -104,7 +104,12 @@
 
 					<div v-if="page == 'Glossary' ">welcome to glossary</div>
 					<div v-if="page == 'Resources' ">welcome to Resources</div>
-					<div v-if="page == 'Info' ">welcome to Info</div>
+					<div v-if="page == 'Info' ">
+						<v-app-bar dense  color="#829891" class="mb-9">
+							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="mr-4" src="icons/backArrow.svg"><span class="tanColor">General Information</span></v-toolbar-title>
+						</v-app-bar>
+						<p class="instruction--text">General Information coming soon.</p>
+					</div>
 
 
 					<div v-if="page == 'research' ">
