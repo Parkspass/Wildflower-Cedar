@@ -4,7 +4,7 @@ var app = new Vue({
     el: '#app',
     vuetify: new Vuetify(),
     data: {
-        page: 'home', // loading, home, searchWildflowers, serachTrees, Instructions, Glossary, Resources, Info
+        page: 'home', // loading, home, research, serachTrees, Instructions, Glossary, Resources, Info
         hambugerMenuIcon: 'icons/hamburger_menuDark.svg',
         wildflowerIcon: 'icons/flowerDark.svg',
         treesIcon: 'icons/treeDark.svg',
@@ -23,9 +23,9 @@ var app = new Vue({
             switch(tab){
                 // color change will never be seen so we dont need to change it.
                 //case 'hamburger': this.hambugerMenuIcon = 'icons/hamburger_menuLight.svg'; break;
-                case 'searchWildflowers': 
+                case 'research': 
                     this.wildflowerIcon = 'icons/appbar_flower.svg';
-                    this.page = 'searchWildflowers';
+                    this.page = 'research';
                     break;
                 case 'serachTrees': 
                     this.treesIcon = 'icons/treeLight.svg';
@@ -61,8 +61,8 @@ var app = new Vue({
         sideDrawerPageChange: function(page) {
             //console.log('page: ', page);
             this.resetAppBarTabs();
-            if(page == 'searchWildflowers') {
-                this.setAppBarIcon('searchWildflowers');
+            if(page == 'research') {
+                this.setAppBarIcon('research');
             }
             if(page == 'serachTrees') {
                 this.setAppBarIcon('serachTrees');
