@@ -30,7 +30,7 @@
 
 				<!-- MAIN NAVIGATION FOR EVERY PAGE -->
 				<!-- MADE GLOBAL SO EVERY PAGE HAS IT AND NO REPETITIVE CODE -->
-					<v-bottom-navigation background-color="#3B4549" color="#fff" absolute style="justify-content: space-between">
+					<v-bottom-navigation fixed background-color="#3B4549" color="#fff" style="justify-content: space-between">
 						<v-btn value="sideDrawer" @click="drawer = !drawer">
 							<img :src="hambugerMenuIcon" alt="hamburgerMenu">
 						</v-btn>
@@ -76,16 +76,32 @@
 						</div>
 						
 						<div>
-							<v-btn class="button d-block mt-9" tile color="#3B4549" dark><img class="landing--buttons_image mr-2" src="icons/appbar_flower.svg" alt="flower"> Search Wildflowers</v-btn>
-							<v-btn class="button d-block mt-4" tile color="#3B4549" dark><img class="landing--buttons_image mr-2" src="icons/treeLight.svg" alt="flower"> Search Trees</v-btn>
-							<v-btn class="button d-block mt-4" tile color="#3B4549" dark><img class="landing--buttons_image mr-2" src="icons/question_mark.svg" alt="flower"> Instructions</v-btn>
+							<v-btn class="button d-block mt-9" tile color="#3B4549" @click="sideDrawerPageChange('searchWildflowers');" dark><img class="landing--buttons_image mr-2" src="icons/appbar_flower.svg" alt="flower"> Search Wildflowers</v-btn>
+							<v-btn class="button d-block mt-4" tile color="#3B4549" @click="sideDrawerPageChange('serachTrees');" dark><img class="landing--buttons_image mr-2" src="icons/treeLight.svg" alt="flower"> Search Trees</v-btn>
+							<v-btn class="button d-block mt-4" tile color="#3B4549" @click="sideDrawerPageChange('Instructions');" dark><img class="landing--buttons_image mr-2" src="icons/question_mark.svg" alt="flower"> Instructions</v-btn>
 						</div>
 					</div>
 
 					<!-- searchWildflowers, serachTrees, Instructions, Glossary, Resources, Info -->
 					<div v-if="page == 'searchWildflowers' ">welcome to wildflowers</div>
 					<div v-if="page == 'serachTrees' ">welcome to searchTrees</div>
-					<div v-if="page == 'Instructions' ">welcome to Instructions</div>
+
+					<div v-if="page == 'Instructions' ">
+						<v-app-bar dense  color="#829891" class="mb-9">
+							<v-toolbar-title v-on:click="page='home' "><img class="mr-4" src="icons/backArrow.svg">Instructions</v-toolbar-title>
+						</v-app-bar>
+						<p class="instruction--text">After locating a plant specimen you would like to use the app to identify, go to the respective tab (wildflower or tree) at the bottom of the screen. Go to the “Search Classifications</p>
+						<p class="instruction--headers">For Wildflowers</p>
+						<p class="instruction--text">Select the trait that most represents the plant that you are looking at. If you leave a section blank, that section will not be used when filtering the search results. For example, if you would like to see only the yellow wildflowers, select the ‘yellow’ tab and leave all other sections blank.</p>
+						<p class="instruction--sub-headers">Wildflower Example</p>
+
+						<p class="instruction--headers">For Trees</p>
+						<p class="instruction--text">Select the trait that most represents the tree that you are looking at. If you leave a section blank, that section will not be used when filtering the search results. For example, if you would like to see only the trees with needles, select the ‘needles’ tab and leave all other sections blank.</p>
+						<p class="instruction--sub-headers">Tree Example</p>
+						<div class="space"></div> <!-- must add empty space or it get cut off by app bar. -->
+
+					</div>
+
 					<div v-if="page == 'Glossary' ">welcome to glossary</div>
 					<div v-if="page == 'Resources' ">welcome to Resources</div>
 					<div v-if="page == 'Info' ">welcome to Info</div>
