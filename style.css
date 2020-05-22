@@ -2,6 +2,9 @@
     font-family: "myBaskerville";
     src: url("fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf");
 }
+.tanColor {
+    color: #E9DED9;
+}
 body{
     font-family: 'myBaskerville' !important;
     font-style: normal;
