@@ -41,7 +41,7 @@ html,body{
 
 .loading--nps_div {
     position:absolute;
-    width:250px;
+    width:290px;
     height:50px;
     margin-left:-120px;
     bottom:0px;
@@ -56,7 +56,7 @@ html,body{
 /* START OF LANDING PAGE */
 
 .landing--nps_div {
-    width: 250px;
+    width: 290px;
     margin: 0 auto;
     margin-top: 24px;
 }
@@ -113,6 +113,29 @@ html,body{
 .sideDrawer--arrows {
     margin-right: 20px;
     float: right;
+}
+.sortBy{
+    /* font-family: Baskerville; */
+    font-size: 16px;
+    line-height: 18px;
+    color: #3B4549;
+}
+.sideDrawer--sortBy {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.sortBy_tabs {
+    padding: 5px;
+    border: 1px solid #3B4549;
+    font-size: 14px;
+}
+.color {
+    background: #3B4549;
+}
+
+.sortBy_focus{
+    background: #3B4549;
+    color: #fff;
 }
 #researchHeader{
     height: 56px;

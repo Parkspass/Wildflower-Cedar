@@ -70,7 +70,10 @@
 							<div class="ml-4 mt-3 mb-3 sideDrawer--Titles">Glossary<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
 							<div class="ml-4 mt-3 mb-3 sideDrawer--Titles">Additional Resources<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
 							<div class="ml-4 mt-3 mb-3 sideDrawer--Titles">General Information<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
-							<p class="mt-5">Sort by:</p>
+							<p class="ml-4 mt-5 sortBy">Sort by:</p>
+							<div class="sideDrawer--sortBy ml-2">
+								<span class="sortBy_tabs" @click="commonSelected" :class="{sortBy_focus: common_selected}">Common Name</span><span class="sortBy_tabs" @click="latinSelected" :class="{sortBy_focus: latin_selected}">Latin Name</span>
+							</div>
 						</v-navigation-drawer>
 						<!-- End side drawer -->
 					</div>

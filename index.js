@@ -4,11 +4,15 @@ var app = new Vue({
     el: '#app',
     vuetify: new Vuetify(),
     data: {
-        page: 'research', // loading, landing, research
+        page: 'landing', // loading, landing, research
         hambugerMenuIcon: 'icons/hamburger_menuDark.svg',
         wildflowerIcon: 'icons/flowerDark.svg',
         treesIcon: 'icons/treeDark.svg',
-        drawer: true
+        drawer: true,
+        common_selected: true,
+        latin_selected: false
+        
+
     },
     methods: {
         setAppBarIcon: function(tab){ 
@@ -25,6 +29,20 @@ var app = new Vue({
             this.wildflowerIcon = 'icons/flowerDark.svg';
             this.treesIcon = 'icons/treeDark.svg';
         },
+<<<<<<< HEAD
+=======
+        commonSelected: function() {
+            console.log('common clicked');
+            this.common_selected = true;
+            this.latin_selected = false;
+        },
+        latinSelected: function() {
+            console.log('latin clicked');
+            this.common_selected = false;
+            this.latin_selected = true;
+        }
+>>>>>>> a8b992d52c946f455a582772ae3690b20ec36283
+        
         
     },
     created: function(){
