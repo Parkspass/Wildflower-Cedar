@@ -34,7 +34,7 @@
 						<v-btn value="sideDrawer" @click="drawer = !drawer">
 							<img :src="hambugerMenuIcon" alt="hamburgerMenu">
 						</v-btn>
-						<v-btn value="searchWildflowers" @click="setAppBarIcon('searchWildflowers');">
+						<v-btn value="searchWildflowers" @click="setAppBarIcon('research');">
 							<img :src="wildflowerIcon" alt="flower">
 						</v-btn>
 						<v-btn value="serachTrees" @click="setAppBarIcon('serachTrees');">
@@ -49,7 +49,7 @@
 						<div id="sideDrawerTitle" class="ml-4">Menu</div>
 						<!-- <v-divider></v-divider> -->
 						<div class="ml-4 mt-9 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('home')">Home <img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""> </div><v-divider></v-divider>
-						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('searchWildflowers')">Wildflowers<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
+						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('research')">Wildflowers<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
 						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('serachTrees')">Trees<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
 						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('Instructions')">Instructions<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
 						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('Glossary')">Glossary<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
@@ -76,17 +76,50 @@
 						</div>
 						
 						<div>
-							<v-btn class="button d-block mt-9" tile color="#3B4549" @click="sideDrawerPageChange('searchWildflowers');" dark><img class="landing--buttons_image mr-2" src="icons/appbar_flower.svg" alt="flower"> Search Wildflowers</v-btn>
+							<v-btn class="button d-block mt-9" tile color="#3B4549" @click="sideDrawerPageChange('research');" dark><img class="landing--buttons_image mr-2" src="icons/appbar_flower.svg" alt="flower"> Search Wildflowers</v-btn>
 							<v-btn class="button d-block mt-4" tile color="#3B4549" @click="sideDrawerPageChange('serachTrees');" dark><img class="landing--buttons_image mr-2" src="icons/treeLight.svg" alt="flower"> Search Trees</v-btn>
 							<v-btn class="button d-block mt-4" tile color="#3B4549" @click="sideDrawerPageChange('Instructions');" dark><img class="landing--buttons_image mr-2" src="icons/question_mark.svg" alt="flower"> Instructions</v-btn>
 						</div>
 					</div>
 
 					<!-- searchWildflowers, serachTrees, Instructions, Glossary, Resources, Info -->
+<<<<<<< HEAD
 					<div v-if="page == 'searchWildflowers' ">
+=======
+					<div v-if="page == 'searchWildflowers' ">welcome to wildflowers</div>
+					<div v-if="page == 'serachTrees' ">welcome to searchTrees</div>
+
+					<div v-if="page == 'Instructions' ">
+						<v-app-bar dense  color="#829891" class="mb-9">
+							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">Instructions</span></v-toolbar-title>
+						</v-app-bar>
+						<p class="instruction--text">After locating a plant specimen you would like to use the app to identify, go to the respective tab (wildflower or tree) at the bottom of the screen. Go to the “Search Classifications</p>
+						<p class="instruction--headers">For Wildflowers</p>
+						<p class="instruction--text">Select the trait that most represents the plant that you are looking at. If you leave a section blank, that section will not be used when filtering the search results. For example, if you would like to see only the yellow wildflowers, select the ‘yellow’ tab and leave all other sections blank.</p>
+						<p class="instruction--sub-headers">Wildflower Example</p>
+
+						<p class="instruction--headers">For Trees</p>
+						<p class="instruction--text">Select the trait that most represents the tree that you are looking at. If you leave a section blank, that section will not be used when filtering the search results. For example, if you would like to see only the trees with needles, select the ‘needles’ tab and leave all other sections blank.</p>
+						<p class="instruction--sub-headers">Tree Example</p>
+						<div class="space"></div> <!-- must add empty space or it get cut off by app bar. -->
+
+					</div>
+
+					<div v-if="page == 'Glossary' ">welcome to glossary</div>
+					<div v-if="page == 'Resources' ">welcome to Resources</div>
+					<div v-if="page == 'Info' ">
+						<v-app-bar dense  color="#829891" class="mb-9">
+							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">General Information</span></v-toolbar-title>
+						</v-app-bar>
+						<p class="instruction--text">General Information coming soon.</p>
+					</div>
+
+
+					<div v-if="page == 'research' ">
+>>>>>>> 9d56a65bfde130cfef41dcf6a6051978ef3b2856
 						<div> <!-- App bar for research page -->
 							<v-app-bar dense>
-								<v-toolbar-title id="researchHeader" v-on:click="page='landing' "><img class="backButton" src="icons/backArrow.svg"><span>Search Wildflowers</span></v-toolbar-title>
+								<v-toolbar-title id="researchHeader" v-on:click="page='home' "><img class="backButton" src="icons/backArrow.svg"><span>Search Wildflowers</span></v-toolbar-title>
 								<v-spacer></v-spacer>
 							</v-app-bar>
 						</div>
