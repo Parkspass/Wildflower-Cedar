@@ -2,6 +2,9 @@
     font-family: "myBaskerville";
     src: url("fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf");
 }
+.tanColor {
+    color: #E9DED9;
+}
 body{
     font-family: 'myBaskerville' !important;
     font-style: normal;
@@ -219,4 +222,33 @@ h2{
     color: #3B4549;
     float: right;
     margin-right: 15px;
+}
+
+
+/* instructions page */
+.instruction--headers{
+    margin-left: 16px;
+    margin-right: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    color: #C47D3D;
+}
+.instruction--sub-headers{
+    margin-left: 16px;
+    margin-right: 16px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    color: #3B4549;
+}
+.instruction--text {
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #3B4549;
+}
+.space{
+    height: 90px;
 }

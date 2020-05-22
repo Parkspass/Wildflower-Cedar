@@ -8,7 +8,7 @@ var app = new Vue({
         hambugerMenuIcon: 'icons/hamburger_menuDark.svg',
         wildflowerIcon: 'icons/flowerDark.svg',
         treesIcon: 'icons/treeDark.svg',
-        drawer: true,
+        drawer: false,
         common_selected: true,
         latin_selected: false,
         abc_selected: true,
@@ -21,9 +21,16 @@ var app = new Vue({
             this.resetAppBarTabs();
             console.log('tab: ', tab);
             switch(tab){
-                case 'hamburger': this.hambugerMenuIcon = 'icons/hamburger_menuLight.svg'; break;
-                case 'flower': this.wildflowerIcon = 'icons/appbar_flower.svg'; break;
-                case 'tree': this.treesIcon = 'icons/treeLight.svg'; break;
+                // color change will never be seen so we dont need to change it.
+                //case 'hamburger': this.hambugerMenuIcon = 'icons/hamburger_menuLight.svg'; break;
+                case 'searchWildflowers': 
+                    this.wildflowerIcon = 'icons/appbar_flower.svg';
+                    this.page = 'searchWildflowers';
+                    break;
+                case 'serachTrees': 
+                    this.treesIcon = 'icons/treeLight.svg';
+                    this.page = 'serachTrees';
+                    break;
             }
         },
         resetAppBarTabs: function() {
@@ -51,6 +58,18 @@ var app = new Vue({
             this.abc_selected = false;
             this.class_selected = true;
         },
+        sideDrawerPageChange: function(page) {
+            //console.log('page: ', page);
+            this.resetAppBarTabs();
+            if(page == 'searchWildflowers') {
+                this.setAppBarIcon('searchWildflowers');
+            }
+            if(page == 'serachTrees') {
+                this.setAppBarIcon('serachTrees');
+            }
+            this.drawer = false;
+            this.page = page;
+        }
         
         
     },
