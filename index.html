@@ -41,7 +41,7 @@
 						</div>
 						
 						<div>
-							<v-btn class="button d-block mt-9" tile color="#3B4549" dark><img class="landing--buttons_image mr-2" src="icons/appbar_flower.svg" alt="flower"> Search Wildflowers</v-btn>
+							<v-btn class="button d-block mt-9" @click="page = 'research'" tile color="#3B4549" dark><img class="landing--buttons_image mr-2" src="icons/appbar_flower.svg" alt="flower"> Search Wildflowers</v-btn>
 							<v-btn class="button d-block mt-4" tile color="#3B4549" dark><img class="landing--buttons_image mr-2" src="icons/treeLight.svg" alt="flower"> Search Trees</v-btn>
 							<v-btn class="button d-block mt-4" tile color="#3B4549" dark><img class="landing--buttons_image mr-2" src="icons/question_mark.svg" alt="flower"> Instructions</v-btn>
 						</div>
@@ -79,18 +79,56 @@
 					</div>
 
 					<div v-if="page == 'research' ">
-						<div> <!-- App bar for login page -->
+						<div> <!-- App bar for research page -->
 							<v-app-bar dense>
-								<v-toolbar-title id="researchHeader" v-on:click="page='landing' "><img class="backButton" src="icons/backArrow.svg">Search Wildflowers</v-toolbar-title>
+								<v-toolbar-title id="researchHeader" v-on:click="page='landing' "><img class="backButton" src="icons/backArrow.svg"><span>Search Wildflowers</span></v-toolbar-title>
 								<v-spacer></v-spacer>
-								<v-btn text color="#507282" id="requestAccessButton" v-on:click="MainPage='requestAccess' ">Request Access</v-btn>
-								<v-btn text color="#507282" id="loginButton" v-on:click="MainPage='loggingIn' ">Login</v-btn>
 							</v-app-bar>
 						</div>
-						<div id="researchHeader">
-							<button class="backButton" @click="page = 'landing'"></button>
-							<h1 id="researchH1">Search Wildflowers</h1>
+						<div id="selectionWrapper">
+							<span class="sortBy_tabs" @click="abcSelected" :class="{sortBy_focus: abc_selected}">Search Alphabetically</span><span class="sortBy_tabs" @click="classSelected" :class="{sortBy_focus: class_selected}">Search Classifications</span>
 						</div>
+						<div id="contentWrapper">
+							<h2>Shape</h2>
+							<div class="gridContainer">
+								<img class="optionImg" src="icons/simple.svg">
+								<img class="optionImg" src="icons/daisy.svg">
+								<img class="optionImg" src="icons/irregular.svg">
+							</div>
+							<h2>Leaf Arrangement</h2>
+							<div class="gridContainer2">
+								<img class="optionImg" src="icons/basal.svg">
+								<img class="optionImg" src="icons/opposite.svg">
+								<img class="optionImg" src="icons/whorled.svg">
+								<img class="optionImg" src="icons/whorled.svg">
+							</div>
+							<h2>Color</h2>
+							<div class="gridContainer3">
+								<img class="optionImg" src="icons/blue.svg">
+								<img class="optionImg" src="icons/orange.svg">
+								<img class="optionImg" src="icons/pink.svg">
+								<img class="optionImg" src="icons/pink.svg">
+								<img class="optionImg" src="icons/red.svg">
+								<img class="optionImg" src="icons/purple.svg">
+								<img class="optionImg" src="icons/white.svg">
+								<img class="optionImg" src="icons/white.svg">
+							</div>
+							<div id="petalWrap">
+								<span id="numPetals">Number of Petals</span>
+								<span id="num">{{petalNumber}}</span>
+							</div>	
+						</div>
+						<v-bottom-navigation background-color="#3B4549" color="#fff" absolute style="justify-content: space-between">
+							<v-btn value="sideDrawer" @click="setAppBarIcon('hamburger'); drawer = !drawer">
+								<img :src="hambugerMenuIcon" alt="hamburgerMenu">
+							</v-btn>
+							<v-btn value="wildflowers" @click="setAppBarIcon('flower');">
+								<img :src="wildflowerIcon" alt="flower">
+							</v-btn>
+							<v-btn value="trees" @click="setAppBarIcon('tree');">
+								<img :src="treesIcon" alt="tree">
+							</v-btn>
+						</v-bottom-navigation>
 					</div>
 				</v-content>
 			</v-app>

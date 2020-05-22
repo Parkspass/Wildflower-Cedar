@@ -4,15 +4,17 @@ var app = new Vue({
     el: '#app',
     vuetify: new Vuetify(),
     data: {
-        page: 'landing', // loading, landing, research
+        page: 'research', // loading, landing, research
         hambugerMenuIcon: 'icons/hamburger_menuDark.svg',
         wildflowerIcon: 'icons/flowerDark.svg',
         treesIcon: 'icons/treeDark.svg',
         drawer: true,
         common_selected: true,
-        latin_selected: false
-        
+        latin_selected: false,
+        abc_selected: true,
+        class_selected: false,
 
+        petalNumber: "All",
     },
     methods: {
         setAppBarIcon: function(tab){ 
@@ -29,8 +31,6 @@ var app = new Vue({
             this.wildflowerIcon = 'icons/flowerDark.svg';
             this.treesIcon = 'icons/treeDark.svg';
         },
-<<<<<<< HEAD
-=======
         commonSelected: function() {
             console.log('common clicked');
             this.common_selected = true;
@@ -40,8 +40,17 @@ var app = new Vue({
             console.log('latin clicked');
             this.common_selected = false;
             this.latin_selected = true;
-        }
->>>>>>> a8b992d52c946f455a582772ae3690b20ec36283
+        },
+        abcSelected: function() {
+            console.log('abc clicked');
+            this.abc_selected = true;
+            this.class_selected = false;
+        },
+        classSelected: function() {
+            console.log('class clicked');
+            this.abc_selected = false;
+            this.class_selected = true;
+        },
         
         
     },
