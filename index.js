@@ -10,9 +10,11 @@ var app = new Vue({
         treesIcon: 'icons/treeDark.svg',
         drawer: false,
         common_selected: true,
-        latin_selected: false
-        
+        latin_selected: false,
+        abc_selected: true,
+        class_selected: false,
 
+        petalNumber: "All",
     },
     methods: {
         setAppBarIcon: function(tab){ 
@@ -45,6 +47,16 @@ var app = new Vue({
             console.log('latin clicked');
             this.common_selected = false;
             this.latin_selected = true;
+        },
+        abcSelected: function() {
+            console.log('abc clicked');
+            this.abc_selected = true;
+            this.class_selected = false;
+        },
+        classSelected: function() {
+            console.log('class clicked');
+            this.abc_selected = false;
+            this.class_selected = true;
         },
         sideDrawerPageChange: function(page) {
             //console.log('page: ', page);
