@@ -116,10 +116,28 @@ html,body{
 }
 #researchHeader{
     height: 56px;
+    line-height: 56px;
     background-color: #829891;
     text-align: center;
     vertical-align: middle;
     color: #E9DED9;
+    box-shadow: 0px 5px gray;
+}
+#researchH1{
     font-size: 20px;
     font-weight: bold;
+    left: 50%;
+    right: 50%;
+    display: inline;
+    margin-left: -42px;
+    line-height: 56px;
+}
+.backButton{
+    height: 45px;
+    width: 45px;
+    margin-left: 20px;
+    float: left;
+    margin-top: 20px;
+    background-image: url("icons/backArrow.svg");
+    background-size: 20px;
 }

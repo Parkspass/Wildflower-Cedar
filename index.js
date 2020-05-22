@@ -24,7 +24,7 @@ var app = new Vue({
             this.hambugerMenuIcon = 'icons/hamburger_menuDark.svg';
             this.wildflowerIcon = 'icons/flowerDark.svg';
             this.treesIcon = 'icons/treeDark.svg';
-        }
+        },
         
     },
     created: function(){

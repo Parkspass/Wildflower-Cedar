@@ -73,12 +73,20 @@
 							<p class="mt-5">Sort by:</p>
 						</v-navigation-drawer>
 						<!-- End side drawer -->
-
 					</div>
 
 					<div v-if="page == 'research' ">
+						<div> <!-- App bar for login page -->
+							<v-app-bar dense>
+								<v-toolbar-title id="researchHeader" v-on:click="page='landing' "><img class="backButton" src="icons/backArrow.svg">Search Wildflowers</v-toolbar-title>
+								<v-spacer></v-spacer>
+								<v-btn text color="#507282" id="requestAccessButton" v-on:click="MainPage='requestAccess' ">Request Access</v-btn>
+								<v-btn text color="#507282" id="loginButton" v-on:click="MainPage='loggingIn' ">Login</v-btn>
+							</v-app-bar>
+						</div>
 						<div id="researchHeader">
-							<span>Search Wildflowers</span>
+							<button class="backButton" @click="page = 'landing'"></button>
+							<h1 id="researchH1">Search Wildflowers</h1>
 						</div>
 					</div>
 				</v-content>
