@@ -278,3 +278,29 @@ h2{
     color: #3B4549;
     display: inline;
 }
+
+/* Resources */
+.resourceImage {
+    height: 60px;
+    width: 60px;
+}
+.image {
+    margin-right: 8px;
+    width: 60px;
+    float: left;
+}
+.text {
+    display: inline;
+}
+/* facts and questions */
+.factsPage--header {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #C47D3D;
+}
+.factsPage--info {
+    font-size: 16px;
+    line-height: 20px;
+    color: #3B4549;
+}

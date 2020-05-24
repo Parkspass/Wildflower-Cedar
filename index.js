@@ -5,7 +5,7 @@ var app = new Vue({
     el: '#app',
     vuetify: new Vuetify(),
     data: {
-        page: 'Glossary', // loading, home, research, serachTrees, Instructions, Glossary, Resources, Info
+        page: 'Resources', // loading, home, research, serachTrees, Instructions, Glossary, Resources, Info, Facts_questions
         hambugerMenuIcon: 'icons/hamburger_menuDark.svg',
         wildflowerIcon: 'icons/flowerDark.svg',
         treesIcon: 'icons/treeDark.svg',
