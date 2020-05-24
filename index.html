@@ -98,36 +98,52 @@
 						<div id="selectionWrapper">
 							<span class="sortBy_tabs" @click="abcSelected" :class="{sortBy_focus: abc_selected}">Search Alphabetically</span><span class="sortBy_tabs" @click="classSelected" :class="{sortBy_focus: class_selected}">Search Classifications</span>
 						</div>
-						<div id="contentWrapper">
-							<h2>Shape</h2>
-							<div class="gridContainer">
-								<img class="optionImg" src="icons/simple.svg">
-								<img class="optionImg" src="icons/daisy.svg">
-								<img class="optionImg" src="icons/irregular.svg">
+						<div v-if="abc_selected" class="mt-5">
+							<div class="searchBox mb-3">
+								<img class="ml-2 d-inline" src="icons/magnifying.svg" alt="">
+								<input type="text" class="d-inline" name="Serach" id="searchBox" color="#3B4549" placeholder="Search">
 							</div>
-							<h2>Leaf Arrangement</h2>
-							<div class="gridContainer2">
-								<img class="optionImg" src="icons/basal.svg">
-								<img class="optionImg" src="icons/opposite.svg">
-								<img class="optionImg" src="icons/whorled.svg">
-								<img class="optionImg" src="icons/whorled.svg">
+							<div class="aBar"><p class="pl-4">A</p></div>
+							<div class="ml-4 mt-4" >
+								<img src="icons/alfalfa.png"  @click="flowerDetailPage('alfalfa');" class="alfalfa" alt="alfalfaTest">
 							</div>
-							<h2>Color</h2>
-							<div class="gridContainer3">
-								<img class="optionImg" src="icons/blue.svg">
-								<img class="optionImg" src="icons/orange.svg">
-								<img class="optionImg" src="icons/pink.svg">
-								<img class="optionImg" src="icons/pink.svg">
-								<img class="optionImg" src="icons/red.svg">
-								<img class="optionImg" src="icons/purple.svg">
-								<img class="optionImg" src="icons/white.svg">
-								<img class="optionImg" src="icons/white.svg">
-							</div>
-							<div id="petalWrap">
-								<span id="numPetals">Number of Petals</span>
-								<span id="num">{{petalNumber}}</span>
-							</div>	
 						</div>
+						<div v-if="class_selected">
+							<div id="contentWrapper">
+								<h2>Shape</h2>
+								<div class="gridContainer">
+									<img class="optionImg" src="icons/simple.svg">
+									<img class="optionImg" src="icons/daisy.svg">
+									<img class="optionImg" src="icons/irregular.svg">
+								</div>
+								<h2>Leaf Arrangement</h2>
+								<div class="gridContainer2">
+									<img class="optionImg" src="icons/basal.svg">
+									<img class="optionImg" src="icons/opposite.svg">
+									<img class="optionImg" src="icons/whorled.svg">
+									<img class="optionImg" src="icons/whorled.svg">
+								</div>
+								<h2>Color</h2>
+								<div class="gridContainer3">
+									<img class="optionImg" src="icons/blue.svg">
+									<img class="optionImg" src="icons/orange.svg">
+									<img class="optionImg" src="icons/pink.svg">
+									<img class="optionImg" src="icons/pink.svg">
+									<img class="optionImg" src="icons/red.svg">
+									<img class="optionImg" src="icons/purple.svg">
+									<img class="optionImg" src="icons/white.svg">
+									<img class="optionImg" src="icons/white.svg">
+								</div>
+								<div id="petalWrap">
+									<span id="numPetals">Number of Petals</span>
+									<span id="num">{{petalNumber}}</span>
+								</div>	
+							</div>
+						</div>
+					</div>
+
+					<div v-if="flowerdetailPage">
+						{{selectedFlower}}
 					</div>
 
 					<div v-if="page =='serachTrees' ">search trees</div>

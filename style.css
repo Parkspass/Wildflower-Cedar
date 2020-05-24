@@ -223,6 +223,16 @@ h2{
     float: right;
     margin-right: 15px;
 }
+.aBar {
+    width: 100%;
+    height: 30px;
+    background-color: #829891;
+    color: #E9DED9;
+}
+.alfalfa {
+    width: 140px;
+    height: 140px;
+}
 
 
 /* instructions page */
