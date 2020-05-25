@@ -91,7 +91,7 @@
 					<div v-if="page == 'research' ">
 						<div> <!-- App bar for research page -->
 							<v-app-bar dense>
-								<v-toolbar-title id="researchHeader" v-on:click="page='home' "><img class="backButton" src="icons/backArrow.svg"><span>Search Wildflowers</span></v-toolbar-title>
+								<v-toolbar-title id="researchHeader" v-on:click="page='home'; resetAppBarTabs(); "><img class="backButton" src="icons/backArrow.svg"><span>Search Wildflowers</span></v-toolbar-title>
 								<v-spacer></v-spacer>
 							</v-app-bar>
 						</div>
@@ -105,7 +105,7 @@
 							</div>
 							<div class="aBar"><p class="pl-4">A</p></div>
 							<div class="ml-4 mt-4" >
-								<img src="icons/alfalfa.png"  @click="flowerDetailPage('alfalfa');" class="alfalfa" alt="alfalfaTest">
+								<img src="icons/alfalfa.png"  @click="flowerDetailPage('alfalfa'); resetAppBarTabs(); " class="alfalfa" alt="alfalfaTest">
 							</div>
 						</div>
 						<div v-if="class_selected">
@@ -142,8 +142,11 @@
 						</div>
 					</div>
 
-					<div v-if="flowerdetailPage">
-						{{selectedFlower}}
+					<div v-if="page == 'flowerdetailPage' ">
+						<v-app-bar dense  color="#829891" class="mb-9">
+							<v-toolbar-title v-on:click="page='research'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">{{selectedFlower}}</span></v-toolbar-title>
+						</v-app-bar>
+						flower detail page
 					</div>
 
 					<div v-if="page =='serachTrees' ">search trees</div>

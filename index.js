@@ -5,7 +5,7 @@ var app = new Vue({
     el: '#app',
     vuetify: new Vuetify(),
     data: {
-        page: 'research', // loading, home, research, serachTrees, Instructions, Glossary, Resources, Info, Facts_questions
+        page: 'research', // loading, home, research, serachTrees, Instructions, Glossary, Resources, Info, Facts_questions, flowerdetailPage
         flowerdetailPage: false,
         selectedFlower: '',
         hambugerMenuIcon: 'icons/hamburger_menuDark.svg',
@@ -76,7 +76,7 @@ var app = new Vue({
         },
         flowerDetailPage: function(flowerType) {
             console.log('clicked')
-            this.flowerdetailPage = true;
+            this.page = 'flowerdetailPage';
             this.selectedFlower = flowerType;
         }
         
