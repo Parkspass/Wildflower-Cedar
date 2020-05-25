@@ -8,6 +8,7 @@ var app = new Vue({
         page: 'research', // loading, home, research, serachTrees, Instructions, Glossary, Resources, Info, Facts_questions, flowerdetailPage
         flowerdetailPage: false,
         selectedFlower: '',
+        selectedFlowerImage: '',
         hambugerMenuIcon: 'icons/hamburger_menuDark.svg',
         wildflowerIcon: 'icons/flowerDark.svg',
         treesIcon: 'icons/treeDark.svg',
@@ -74,10 +75,11 @@ var app = new Vue({
             this.drawer = false;
             this.page = page;
         },
-        flowerDetailPage: function(flowerType) {
+        flowerDetailPage: function(flowerType, flowerImage) {
             console.log('clicked')
             this.page = 'flowerdetailPage';
             this.selectedFlower = flowerType;
+            this.selectedFlowerImage = flowerImage;
         }
         
         

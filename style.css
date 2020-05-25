@@ -233,6 +233,11 @@ h2{
     width: 140px;
     height: 140px;
 }
+.flowerDetailImage {
+    height: 300px;
+    width: 300px;
+    margin-left: 20px;
+}
 
 
 /* instructions page */
