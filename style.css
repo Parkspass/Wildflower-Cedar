@@ -228,6 +228,22 @@ h2{
 .selected_focus{
     background-color: rgba(130, 152, 145, 0.5);
 }
+.aBar {
+    width: 100%;
+    height: 30px;
+    background-color: #829891;
+    color: #E9DED9;
+}
+.alfalfa {
+    width: 140px;
+    height: 140px;
+}
+.flowerDetailImage {
+    height: 300px;
+    width: 300px;
+    margin-left: 20px;
+}
+
 
 /* instructions page */
 .instruction--headers{
@@ -255,4 +271,56 @@ h2{
 }
 .space{
     height: 90px;
+}
+
+/* gloassary */
+#searchBox {
+    outline: none;
+    padding: 6px;
+    width: 210px;
+    /* border: 1px solid black; */
+}
+.searchBox {
+    margin: 0 auto;
+    width: 250px;
+    border: 1px solid black;
+}
+
+.glossaryName{
+    font-size: 16px;
+    font-weight: bold;
+    color: #3B4549;
+    display: inline;
+    padding-right: 5px;
+}
+.glossaryDesc {
+    font-size: 16px;
+    color: #3B4549;
+    display: inline;
+}
+
+/* Resources */
+.resourceImage {
+    height: 60px;
+    width: 60px;
+}
+.image {
+    margin-right: 8px;
+    width: 60px;
+    float: left;
+}
+.text {
+    display: inline;
+}
+/* facts and questions */
+.factsPage--header {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #C47D3D;
+}
+.factsPage--info {
+    font-size: 16px;
+    line-height: 20px;
+    color: #3B4549;
 }

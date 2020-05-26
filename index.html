@@ -12,24 +12,15 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="icons/favicon.ico">
 		<link rel="icon" type="image/png" sizes="192x192" href="./icons/favicon.ico">
 		<link rel="icon" type="image/png" sizes="512x512" href="./icons/favicon.ico">
-    </head>
+	</head>
+	
     <body>
         <div id="app">
 			<v-app>
 				<v-content>
-					<div v-if="page == 'loading' " >
-						<img src="landing_flower.png" class="loading--flower" alt="flower">
-						<p class="loading--title">Cedar Breaks</p>
-						<p class="loading--title"> National Monument</p>
-						<p class="loading--sub-title">Wildflowers</p>
-						<div class="loading--nps_div">
-							<img class="loading--NPS_logo" src="nps_logo.svg" alt="npsLogo">
-							<p class="loading--NPS_logo ml-2">NATIONAL PARK SERVICE</p>
-						</div>
-					</div>
 
-				<!-- MAIN NAVIGATION FOR EVERY PAGE -->
-				<!-- MADE GLOBAL SO EVERY PAGE HAS IT AND NO REPETITIVE CODE -->
+					<!-- MAIN NAVIGATION FOR EVERY PAGE -->
+					<!-- MADE GLOBAL SO EVERY PAGE HAS IT AND NO REPETITIVE CODE -->
 					<v-bottom-navigation fixed background-color="#3B4549" color="#fff" style="justify-content: space-between">
 						<v-btn value="sideDrawer" @click="drawer = !drawer">
 							<img :src="hambugerMenuIcon" alt="hamburgerMenu">
@@ -60,9 +51,23 @@
 							<span class="sortBy_tabs" @click="commonSelected" :class="{sortBy_focus: common_selected}">Common Name</span><span class="sortBy_tabs" @click="latinSelected" :class="{sortBy_focus: latin_selected}">Latin Name</span>
 						</div>
 					</v-navigation-drawer>
-				<!-- End side drawer -->
-				<!-- END MAIN NAVIGATION FOR EVERY PAGE -->
+					<!-- End side drawer -->
+					<!-- END MAIN NAVIGATION FOR EVERY PAGE -->
 
+					<!-- Pages -->
+					<div v-if="page == 'loading' " >
+						<img src="landing_flower.png" class="loading--flower" alt="flower">
+						<p class="loading--title">Cedar Breaks</p>
+						<p class="loading--title"> National Monument</p>
+						<p class="loading--sub-title">Wildflowers</p>
+						<div class="loading--nps_div">
+							<img class="loading--NPS_logo" src="nps_logo.svg" alt="npsLogo">
+							<p class="loading--NPS_logo ml-2">NATIONAL PARK SERVICE</p>
+						</div>
+					</div>
+
+				
+					<!-- home research, serachTrees, Instructions, Glossary, Resources, Info -->
 					<div v-if="page == 'home' ">
 						<div class="landing--nps_div">
 							<img class="landing--NPS_logo" src="nps_logo.svg" alt="npsLogo">
@@ -82,7 +87,70 @@
 						</div>
 					</div>
 
-					<!-- searchWildflowers, serachTrees, Instructions, Glossary, Resources, Info -->
+					<!-- research, serachTrees, Instructions, Glossary, Resources, Info -->
+					
+					<div v-if="page == 'research' ">
+						<div> <!-- App bar for research page -->
+							<v-app-bar dense>
+								<v-toolbar-title id="researchHeader" v-on:click="page='home'; resetAppBarTabs(); "><img class="backButton" src="icons/backArrow.svg"><span>Search Wildflowers</span></v-toolbar-title>
+								<v-spacer></v-spacer>
+							</v-app-bar>
+						</div>
+						<div id="selectionWrapper">
+							<span class="sortBy_tabs" @click="abcSelected" :class="{sortBy_focus: abc_selected}">Search Alphabetically</span><span class="sortBy_tabs" @click="classSelected" :class="{sortBy_focus: class_selected}">Search Classifications</span>
+						</div>
+						<div v-if="abc_selected" class="mt-5">
+							<div class="searchBox mb-3">
+								<img class="ml-2 d-inline" src="icons/magnifying.svg" alt="">
+								<input type="text" class="d-inline" name="Serach" id="searchBox" color="#3B4549" placeholder="Search">
+							</div>
+							<div class="aBar"><p class="pl-4">A</p></div>
+							<div class="ml-4 mt-4" >
+								<img src="icons/alfalfa.png"  @click="flowerDetailPage('alfalfa', 'icons/alfalfa.png'); resetAppBarTabs(); " class="alfalfa" alt="alfalfaTest">
+							</div>
+						</div>
+						<div v-if="class_selected">
+							<div id="contentWrapper">
+								<h2>Shape</h2>
+								<div class="gridContainer">
+									<img class="optionImg" src="icons/simple.svg">
+									<img class="optionImg" src="icons/daisy.svg">
+									<img class="optionImg" src="icons/irregular.svg">
+								</div>
+								<h2>Leaf Arrangement</h2>
+								<div class="gridContainer2">
+									<img class="optionImg" src="icons/basal.svg">
+									<img class="optionImg" src="icons/opposite.svg">
+									<img class="optionImg" src="icons/whorled.svg">
+									<img class="optionImg" src="icons/whorled.svg">
+								</div>
+								<h2>Color</h2>
+								<div class="gridContainer3">
+									<img class="optionImg" src="icons/blue.svg">
+									<img class="optionImg" src="icons/orange.svg">
+									<img class="optionImg" src="icons/pink.svg">
+									<img class="optionImg" src="icons/pink.svg">
+									<img class="optionImg" src="icons/red.svg">
+									<img class="optionImg" src="icons/purple.svg">
+									<img class="optionImg" src="icons/white.svg">
+									<img class="optionImg" src="icons/white.svg">
+								</div>
+								<div id="petalWrap">
+									<span id="numPetals">Number of Petals</span>
+									<span id="num">{{petalNumber}}</span>
+								</div>	
+							</div>
+						</div>
+					</div>
+
+					<div v-if="page == 'flowerdetailPage' ">
+						<v-app-bar dense  color="#829891" class="mb-9">
+							<v-toolbar-title v-on:click="page='research'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">{{selectedFlower}}</span></v-toolbar-title>
+						</v-app-bar>
+						<img class="flowerDetailImage" :src="selectedFlowerImage" alt="flowerImage">
+					</div>
+
+					<div v-if="page =='serachTrees' ">search trees</div>
 
 					<div v-if="page == 'Instructions' ">
 						<v-app-bar dense  color="#829891" class="mb-9">
@@ -100,25 +168,27 @@
 
 					</div>
 
-					<div v-if="page == 'Glossary' ">welcome to glossary</div>
-					<div v-if="page == 'Resources' ">welcome to Resources</div>
-					<div v-if="page == 'Info' ">
+					<div v-if="page == 'Glossary' ">
 						<v-app-bar dense  color="#829891" class="mb-9">
-							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">General Information</span></v-toolbar-title>
+							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">Glossary </span></v-toolbar-title>
 						</v-app-bar>
 						<p class="instruction--text">General Information coming soon.</p>
 					</div>
 
 
-					<div v-if="page == 'research' ">
-						<div> <!-- App bar for research page -->
+					<!-- <div v-if="page == 'research' ">
+						<div>
 							<v-app-bar dense>
 								<v-toolbar-title id="researchHeader" v-on:click="page='home' "><img class="backButton" src="icons/backArrow.svg"><span>Search Wildflowers</span></v-toolbar-title>
 								<v-spacer></v-spacer>
 							</v-app-bar>
+						<div class="searchBox mt-n3">
+							<img class="ml-2 d-inline" src="icons/magnifying.svg" alt="">
+							<input type="text" class="d-inline" name="Serach" id="searchBox" color="#3B4549" placeholder="Search">
 						</div>
-						<div id="selectionWrapper">
-							<span class="sortBy_tabs" @click="abcSelected" :class="{sortBy_focus: abc_selected}">Search Alphabetically</span><span class="sortBy_tabs" @click="classSelected" :class="{sortBy_focus: class_selected}">Search Classifications</span>
+						<div class="mt-6 ml-5"  v-for="item in glossaryItems">
+							<p class="glossaryName">{{item.name}}</p>
+							<p class="glossaryDesc">{{item.description}}</p>
 						</div>
 						<div id="contentWrapper">
 							<h2>Shape</h2>
@@ -126,52 +196,63 @@
 								<img class="optionImg" src="icons/simple.svg" @click="simpleSelected" :class="{selected_focus: simple_selected}">
 								<img class="optionImg" src="icons/daisy.svg" @click="daisySelected" :class="{selected_focus: daisy_selected}">
 								<img class="optionImg" src="icons/irregular.svg" @click="irregularSelected" :class="{selected_focus: irregular_selected}">
+						<div class="space"></div>
+					</div> -->
+
+					<div v-if="page == 'Resources' ">
+						<v-app-bar dense  color="#829891" class="mb-9">
+							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">Additional Resources</span></v-toolbar-title>
+						</v-app-bar>
+						<div class="ml-4 mr-3">
+							<div class="image">
+								<img class="resourceImage" src="icons/flowerApp.png" alt="appIcon">
 							</div>
-							<h2>Leaf Arrangement</h2>
-							<div class="gridContainer2">
-								<img class="optionImg" src="icons/basal.svg">
-								<img class="optionImg" src="icons/opposite.svg">
-								<img class="optionImg" src="icons/whorled.svg">
-								<img class="optionImg" src="icons/whorled.svg">
+							<div class="text">
+								<p class="factsPage--header d-inline">Cedar Breaks National Monument-Flowers App</p>
+								<p class="factsPage--info">Find more details on the large variety of wildflowers.</p>
 							</div>
-							<h2>Color</h2>
-							<div class="gridContainer3">
-								<img class="optionImg" src="icons/blue.svg">
-								<img class="optionImg" src="icons/orange.svg">
-								<img class="optionImg" src="icons/pink.svg">
-								<img class="optionImg" src="icons/pink.svg">
-								<img class="optionImg" src="icons/red.svg">
-								<img class="optionImg" src="icons/purple.svg">
-								<img class="optionImg" src="icons/white.svg">
-								<img class="optionImg" src="icons/white.svg">
+						</div>
+						<div class="ml-4 mr-3 mt-7">
+							<div class="image">
+								<img class="resourceImage" src="icons/instagram.svg" alt="appIcon">
 							</div>
-							<div id="petalWrap">
-								<span id="numPetals">Number of Petals</span>
-								<span id="num">{{petalNumber}}</span>
-							</div>	
+							<div class="text">
+								<p class="factsPage--header d-inline">Cedar Breaks National Monument Instagram</p>
+								<p class="factsPage--info">Explore photos found in Cedar Breaks via Instagram.</p>
+							</div>
 						</div>
 					</div>
-					<div v-if="page == 'serachTrees' ">welcome to searchTrees</div>
 
-					<div v-if="page == 'Instructions' ">
+					<div v-if="page == 'Facts_questions'">
 						<v-app-bar dense  color="#829891" class="mb-9">
-							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="mr-4" src="icons/backArrow.svg"><span class="tanColor">Instructions</span></v-toolbar-title>
+							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">Facts and Questions</span></v-toolbar-title>
 						</v-app-bar>
-						<p class="instruction--text">After locating a plant specimen you would like to use the app to identify, go to the respective tab (wildflower or tree) at the bottom of the screen. Go to the “Search Classifications</p>
-						<p class="instruction--headers">For Wildflowers</p>
-						<p class="instruction--text">Select the trait that most represents the plant that you are looking at. If you leave a section blank, that section will not be used when filtering the search results. For example, if you would like to see only the yellow wildflowers, select the ‘yellow’ tab and leave all other sections blank.</p>
-						<p class="instruction--sub-headers">Wildflower Example</p>
-
-						<p class="instruction--headers">For Trees</p>
-						<p class="instruction--text">Select the trait that most represents the tree that you are looking at. If you leave a section blank, that section will not be used when filtering the search results. For example, if you would like to see only the trees with needles, select the ‘needles’ tab and leave all other sections blank.</p>
-						<p class="instruction--sub-headers">Tree Example</p>
-						<div class="space"></div> <!-- must add empty space or it get cut off by app bar. -->
-
+						<div class="ml-2 mt-6 mr-2">
+							<p class="factsPage--header">Do I need to make a selection for all criteria when searching?</p>
+							<p class="factsPage--info">No. Just a single criteria may be used, though selecting more will narrow down your search faster.</p>
+							<p class="factsPage--header">What if the features vary from plant to plant?</p>
+							<p class="factsPage--info">Use the most commonly occurring feature in a population. For example, if some flowers are red, but more are orange, use “orange” as the search option.</p>
+							<p class="factsPage--header">What if the features vary on a plant?</p>
+							<p class="factsPage--info">Use the most commonly occuring feature. For example, if most leaves are alternate, but a few are opposite, use “alternate” as the search option.</p>
+							<p class="factsPage--header">What if there is more than one color on the flowers?</p>
+							<p class="factsPage--info">Select the color that occupies the most area.</p>
+							<p class="factsPage--header">How many plants Are in This App? How many are in Cedar Breaks National Monument?</p>
+							<p class="factsPage--info">In this first version of the app there are 44 wildflowers and...</p>
+							<p class="factsPage--header">How were the plants chosen for this app?</p>
+							<p class="factsPage--info">The likelihood of visitors encountering the species and the potential interest in that species were taken into account.</p>
+							<p class="factsPage--header">Will this app work in areas outside of Cedar Breaks?</p>
+							<p class="factsPage--info">Yes, but with limitations, as the focus of the app is Cedar Breaks. The distribution of many of the plants found in Cedar Breaks extend throughout southern Utah and beyond. However, some of the plants common at higher or lower elevations in the surrounding areas may not be found at Zion and therefore are not included in this app.</p>
+						</div>
+						<div class="space"></div>
 					</div>
 
-					<div v-if="page == 'Glossary' ">welcome to glossary</div>
-					<div v-if="page == 'Resources' ">welcome to Resources</div>
-					<div v-if="page == 'Info' ">welcome to Info</div>
+					<div v-if="page == 'Info' ">
+						<v-app-bar dense  color="#829891" class="mb-9">
+							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">General Information</span></v-toolbar-title>
+						</v-app-bar>
+						<p class="instruction--text">General Information coming soon.</p>
+					</div>
+
 				</v-content>
 			</v-app>
 		</div>

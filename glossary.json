@@ -1,0 +1,474 @@
+[
+    {
+        "name": "Alkaline",
+        "description": "Basic as opposed to acidic; high pH."
+    },
+    {
+        "name": "Alkaloids",
+        "description": "Water-insoluble, nitrogen containing compounds that often exhibit pharmacological action, such as nicotine."
+    },
+    { 
+        "name": "Alpine",
+        "description": "Found above timberline at high altitude."
+    },
+    {
+        "name": "Alternate",
+        "description": "Arranged individually at different heights along the stem. Not opposite: one leaf per node."
+    },
+    {
+        "name": "Annual",
+        "description": "Plant that germinates, flowers, seeds, and dies in about one year."
+    },
+    {
+        "name": "Anther",
+        "description": "Pollen-producing (male sex organ) segment of the stamen."
+    },
+    {
+        "name": "Apex",
+        "description": "Refers to the highest point or vertex of a plant stem or root. The shoot apex is where fresh stems, leaves and other parts of a plant grow after the old parts fall off or dry up."
+    },
+    {
+        "name": "Ascending",
+        "description" :"Curving or angling upward from the base."
+    },
+    { 
+        "name": "Axil",
+        "description": "The upper angle between the leaf and the stem."
+    },
+    {
+        "name": "Banner", 
+        "description": "Upper and usually largest petal of many members of the pea family."
+    },
+    {
+        "name": "Basal",
+        "description": "Found at or near the base of a plant or plant part."
+    },
+    { 
+        "name": "Berry", 
+        "description": "Fleshy fruit with more than one seed within the soft tissue." 
+    },
+ 
+            {   "name": "Biennial", 
+        "description": "Plant that completes its life cycle in two years. The first year usually producing leaves and a thick taproot, the second year developing an erect stem with flowers." 
+    },
+    {    
+        "name": "Blade", 
+        "description": "The expanded (flat) part of the leaf."
+    },
+    {
+        "name": "Brackish", 
+        "description": "Small secondary bract."
+    },
+    {
+        "name": "Bract", 
+        "description": "Small leaf like structure associated with an inflorescence. Small scale or leaf like structure on a stem." 
+    },
+    {
+        "name": "Capsule", 
+        "description": "Dry, many-seeded fruit." 
+    },
+    {
+        "name": "Chlorophyll", 
+        "description": "The green pigment of leaves and other organs; important as a light absorbing agent in photosynthesis." 
+    },
+    {
+        "name": "Ciliate", 
+        "description": "With a fringe of fine hairs."
+    },
+    {
+        "name": "Circumboreal", 
+        "description": "Around the world at northern latitudes."
+    },
+    {
+        "name": "Classification", 
+        "description": "Act of separating plants into different categories. It is used to identify and organize the different types of plans in the world. Scientists created a way to organize plants so they would keep track of them." 
+    },
+    {
+        "name": "Composite", 
+        "description": "Composite family flowering structure is that the head brings together several to many tiny flowers, or florets, so that they look like just one large flower. The two flower types are disc flowers and ray flowers. Disc flowers form the flower head’s ‘eye’, while ray flowers look like petals on a simpler flower. Beneath the flower head is a collection of modified leaves or bracts, forming the involucre. Each individual bract is technically known as a phyllary. ( FIL-uh-ree). Three kinds of composite flowers: Heads composed of only ray flowers, such as dandelion, endive, chicory and wild lettuce. Heads composed of only disc flowers as in thistles, or burdock, or heads composed of both disc and ray flowers, with disc flowers tightly packed together in the head’s ‘eye, while enlarged ray flowers function as petals radiating outward from the eye, such as sunflowers, asters, Black eyes Susan, chrysanthemums, dahlias and the red zinnia. Stamens in disc and ray flowers number four to five and are fused together by their anthers to form a cylinder around the style."
+    },
+    {
+        "name": "Compound leaf", 
+        "description": "Leaf with blade dissected into separate leaflets, or divided into lobe perhaps many times. Having two or more parts." 
+    },
+    {
+        "name": "Corm", 
+        "description": "A thick underground stem comprised of several internodes." 
+    },
+    {
+        "name": "Corolla", 
+        "description": "Collective term for the petals and reproductive parts of a flower, often brightly colored." 
+    },
+    {
+        "name": "Deciduous", 
+        "description": "Falling off at the growing season or sooner. Also said of plants that are leaflets part of the year." 
+    },
+    {
+        "name": "Decumbent", 
+        "description": "Lying on the ground with the tips pointing upward." 
+    },
+    {
+        "name": "Dicot", 
+        "description": "A type of classification of flowering plants. They have two seeds (cotyledons), which absorb and store the nutrients from the endosperm before the seed germinates. When germination takes place, two embryonic leaves sprout and are often of a netlike structure (rather like a feather) and are not organized in parallel lines like monocots. The roots are straight and thick, meaning that they grow straight downwards rather than in a non-organized structure. Dicot pollen is triporate, which means it has three pores on the stem. Flower parts are in multiple of three or four, or 5, 10, 15 petals going up in multiples of five. Dicots include magnolias, nutmeg cinnamon, avocado, water lily, sunflowers, and roses." 
+    },
+    {
+        "name": "Disk flower", 
+        "description": "In Asteraceae, the part of the head made up of disk flowers. One of the central flowers on the head of a sunflower, or other species in the Asteraceae family; a tubular-shaped flower typically with 5 teeth or lobes and lacking a ray (flattened extension)." 
+    },
+    {
+        "name": "Diurnal", 
+        "description": "During the day, as describing flowers that only open in the day."
+    },
+    {
+        "name": "Egg shaped leaves", 
+        "description": "Oval leaves that are wider at the base and narrower at the tip."
+    },
+    {
+        "name": "Elliptic leaf", 
+        "description": "Two to three longer than wide. Oval and flat in a plane, narrowed to each end which is rounded." 
+    },
+    {
+        "name": "Endosperm", 
+        "description": "Tissue rich in nutrients which surrounds the embryo in most seeds; orchid seeds lack endosperm." 
+    },
+    {    
+        "name": "Erect", 
+        "description": "Upright from the ground." 
+    },
+    {   
+        "name": "Evergreen", 
+        "description": "Remaining green throughout the year." 
+    },
+    {   
+        "name": "Family", 
+        "description": "A taxonomic group of related genera."
+    },
+    {   
+        "name": "Fertile", 
+        "description": "Mature plant capable of flowering and producing seed." 
+    },
+    {   
+        "name": "Fibrous Root", 
+        "description": "Lots of roots growing in many directions. There is not one main root. A fibrous root system is usually wider than deep."
+    },
+    {   
+        "name": "Filament", 
+        "description": "Stalk of the stamen that holds the anther. Fleshy. Thick and juicy. Often said of plants in the stonecrop family." 
+    },
+    {   
+        "name": "Florets", 
+        "description": "Small individual flowers in the larger flower head, such as sunflowers." 
+    },
+    {   
+        "name": "Floriferous", 
+        "description": "Producing individual flowers in the larger flower head, such as sunflowers." 
+    },
+    {   
+        "name": "Forb",
+        "description": "Any herb that is not a grass or grass like. A broad-leaf herb (as opposed to grass), especially one growing in a field, prairie or meadow."
+    },
+    {   
+        "name": "Fruit", 
+        "description": "Any ripened ovary where seed it held. Developed after fertilization." 
+    },
+    {   
+        "name": "Fused", 
+        "description": "United, as petals to the calyx or to each other, not free." 
+    },
+    {   
+        "name": "Genus", 
+        "description": "The name of ‘species’ or the specific name forms the second part of the binomial nomenclature. Genus means race in Latin. Closely related species. A genus can have many species. Category of classification, ranking above a species; the Latinized genus name is capitalized and precedes the species name. It is the largest group of organisms that can interbreed to produce a fertile offspring. Organisms have similar set of DNA and similar physical attributes are said to be of the same species. They have the same number of chromosomes." 
+    },
+    {   
+        "name": "Gland", 
+        "description": "Small, round body that emits a sticky substance on the outer plant surface, sessile or on the end of the hair." 
+    },
+    {   
+        "name": "Haustoria", 
+        "description": "Organ of a parasitic plant that penetrates the host tissues and absorbs food and water from them." 
+    },
+    {   
+        "name": "Head", 
+        "description": "Dense collection of sessile or nearly sessile flowers making up the inflorescence. Often used to describe plants in the aster family." 
+    },
+    {   
+        "name": "Hemiparasite", 
+        "description": "A parasitic plant, such as Mistletoe, that carries out photosynthesis, but also obtains food from its host. An organism that can live independently or parasitically." 
+    },
+    {   
+        "name": "Herb", 
+        "description": "A flowering plant whose stem above ground does not become woody. Produces a fleshy stem." 
+    },
+    {   
+        "name": "Herbaceous", 
+        "description": "A perennial plant which dies down each year after flowering (also see deciduous)." 
+    },
+    {   
+        "name": "Hybrid", 
+        "description": "Plant created when two different species interbreed."
+    },
+    {
+        "name": "Inferior Ovary", 
+        "description": "Ovary attached below the sepals, petals and stamens." 
+    },
+    {   
+        "name": "Inflorescence", 
+        "description": "The flowering structure of a plant." 
+    },
+    {   
+        "name": "Involucre", 
+        "description": "A whorl of bracts surrounding an inflorescence, such as the head of a composite." 
+    },
+    {   
+        "name": "Lanceolate Leaves", 
+        "description": "Spear shaped. Gradually extending at the base and lessening to the apex." 
+    },
+    {   
+        "name": "Ligule", 
+        "description": "In Asteraceae, a complete, fertile floret with a long, outer, petal like portion that is typically five-toothed." 
+    },
+    {   
+        "name": "Linear leaves", 
+        "description": "Narrow, with parallel sides. Strip-shapes, several times longer than wide. Not pointed at the apex." 
+    },
+    {   
+        "name": "Lip", 
+        "description": "Upper or lower section of an unequal corolla or calyx." 
+    },
+    {   
+        "name": "Native", 
+        "description": "Growing in a place without the aid of people or because human activities."  
+    },
+    {   
+        "name": "Nectary",
+        "description": "Nectar-producing part of a flower" 
+    },
+    {   
+        "name": "NoddingNectary",
+        "description": "As related to a flower, handing with the face of the flower downward."
+    },
+    {
+        "name": "NodeNectary",
+        "description": "A joint on a stem, the point where the leaves are borne."
+    },
+    {
+        "name": "Nut", 
+        "description": "Dry fruit containing a single seed. Monocarpic. Producing fruit only once and then dying."
+    },
+    {   
+        "name": "Monocot", 
+        "description": "A type of plant classification. The word ‘mono’ means ‘one’. Monocots get their names from having one cotyledon. A cotyledon is part of the seed that will grow into leaves. Flower parts on a monocot plant come in multiples of three. This means the flowers will have either 3,6,9,12 or more, going up in multiples of three petals. Veins of leaves are not arranged in circles, but are scattered and on the leaves, you will see that the veins are arranged in parallel lines. Roots are adventitious, this means that they are not organized and do not have a formation as to how they grow. The pollen of monocots also has just one pore. Examples of Monocots include banana, lilies, garlic, daffodils, orchids, apples, bluebells and tulips." 
+    },
+    {   
+        "name": "Monophagous", 
+        "description": "Feeding on only one kind of feed." 
+    },
+    {   
+        "name": "Montane", 
+        "description": "Lower vegetation belt on mountains." 
+    },
+    {   
+        "name": "Mycorrhizal fungi", 
+        "description": "Most plant roots do not work their best unless they have help from fungi. The symbiosis between roots and fungus." 
+    },
+    {   
+        "name": "Oblong", 
+        "description": "Longer than wide, rounded."
+    },
+    {   
+        "name": "Opposite",
+        "description": "Arranged in pairs at the same level and on opposite sides. Often said of leaves on the stem." 
+    },
+    {   
+        "name": "Oval",
+        "description": "Nearly round."
+    },
+    {   
+        "name": "Ovate Leaves", 
+        "description": "Egg shaped, wider at the base than at the apex." 
+    },
+    {   
+        "name": "Ovary",
+        "description": "Organ that develops into fruit after fertilization and contains seeds. The wide portion of the pistil. Seed containing part of the flower that matures into a fruit." 
+    },
+    {   
+        "name": "Palmately compound or divided",
+        "description": "As applied to leaves, divided into the midvein, so the leaflets are borne at the same point and spread out like fingers. Leaf is divided into 3 or more distinct lobes." 
+    },
+    {   
+        "name": "Panicle",
+        "description": "A branched raceme." 
+    },
+    {   
+        "name": "Parasite",
+        "description": "A plant growing on and deriving nourishment from another living plant."
+    },
+    {   
+        "name": "Pedicel",
+        "description": "The stalk of a flower or fruit." 
+    },
+    {   
+        "name": "Perennial",
+        "description": "A plant that lives more than two years; it may die down to their roots each year but sprouts up the next. Lasting for an indefinitely long time." 
+    },
+    {   
+        "name": "Petal",
+        "description": "Flower part, brightly colored." 
+    },
+    {   
+        "name": "Petiole.",
+        "description": "Stalk part of the leaf attached to the blade."
+    },
+    {   
+        "name": "Pinnate",
+        "description": "Featherlike, with a central axis and perpendicular projections; typically applied to a leaf." 
+    },
+    {   
+        "name": "Pistil",
+        "description": "The central (female) part of the flower, containing the ovary, style and stigma." 
+    },
+    {   
+        "name": "Pod",
+        "description": "A dry, dehiscent fruit, especially of the legume family." 
+    },
+    {   
+        "name": "Pollination",
+        "description": "Transfer of pollen from the anther to the Stigma." 
+    },
+    {   
+        "name": "Phyllary",
+        "description": "Bract on the cup of many members of the aster family." 
+    },
+    {   
+        "name": "Raceme",
+        "description": "An elongate, unbranched flower cluster, each flower having a stalk or pedicel." 
+    },
+    {   
+        "name": "Radially",
+        "description": "With all petals, the same shape and size." 
+    },
+    {   
+        "name": "Ray",
+        "description": "A bladelike extension of a ray flower." 
+    },
+    {   
+        "name": "Ray flower",
+        "description": "One of the outer flowers of a sunflower, daisy or similar plant, which is a flattened, elongate, colorful extension." 
+    },
+    {   
+        "name": "Reflexed",
+        "description": "Bent of curved downward or backward." 
+    },
+    {   
+        "name": "Regular flower",
+        "description": "Flower with parts similar in size and shape and arranged symmetrically. Can be divided in many ways to mirror-image halves." 
+    },
+    {   
+        "name": "Rhizome",
+        "description": "Creeping underground stem." 
+    },
+    {   
+        "name": "Riparian",
+        "description": "Inhabiting or situated on the bank of a river." 
+    },
+    {   
+        "name": "Root",
+        "description": "Underground structure from the base of the stem, anchors the plant and allows." 
+    },
+    {   
+        "name": "Rosette",
+        "description": "Cluster of leaves at ground level. Usually in a circle." 
+    },
+    {   
+        "name": "Taproot",
+        "description": "There is one very big, thicker root that goes down to the ground and many smaller roots that come out it." 
+    },
+    {   
+        "name": "Tepals",
+        "description": "One of the divisions of a flower perianth (non-reproductive part of the flower and structure that forms an envelope surrounding the sexual organs, consisting of the calyx -sepals and the corolla- petals) especially one that is not clearly differentiated into petals and sepals, as in lilies and tulips." 
+    },
+    {   
+        "name": "Scopa",
+        "description": "A tuft of hairs on the abdomen or hind legs of bees, used for collecting pollen." 
+    },
+    {   
+        "name": "Seed",
+        "description": "Product of fertilization. Sepal. Fused or free member of the calyx, usually green and leaf-like." 
+    },
+    {   
+        "name": "Sessile",
+        "description": "Without a stalk or petiole." 
+    },
+    {   
+        "name": "Shrub",
+        "description": "Woody plant, branched from the base. Simple. Composed of one part, unbranched, undivided." 
+    },
+    {   
+        "name": "Species",
+        "description": "Refers to ‘specific’ name. The species name is the basic unit of classification. It describes one kind of plant within the genus, and is almost always an adjective. A group of similar living things that ranks below the genus in scientific classification and it made up of individuals able to reproduce. There are over 1.8 million species on earth." 
+    },
+    {   
+        "name": "Stalk",
+        "description": "Secondary stem, often referring to the structure supporting the flower." 
+    },
+    {   
+        "name": "Stamen",
+        "description": "Male organ bearing pollen composed of a stalk (filament) and pollen sacs (anther." 
+    },
+    {   
+        "name": "Staminode",
+        "description": "Modified stamen that does not produce pollen." 
+    },
+    {   
+        "name": "Stem",
+        "description": "Central support of a plant, bearing other organs such as leaves and flowers." 
+    },
+    { 
+        "name": "Stolon",
+        "description": "Elongated stem lying along the ground (runner), forms new roots and stems. Subalpine. Just below timberline." 
+    },
+    {    
+        "name": "Subshrub",
+        "description": "A dwarf shrub, especially one that is woody only at the base." 
+    },
+    {   
+        "name": "Superior Ovary",
+        "description": "Ovary attached above the sepals, petals and stamens." 
+    },
+    {   
+        "name": "Talus",
+        "description": "Mass of rock fragments at the base of a cliff. Tuft. Cluster of short-stemmed leaves and flowers growing from a common point." 
+    },
+    {   
+        "name": "Umbel",
+        "description": "Inflorescence with three or more stalks radiating from a common point." 
+    },
+    {   
+        "name": "Vascular",
+        "description": "Pertaining to plants with veins or to the veins in a plant structure." 
+    },
+    {   
+        "name": "Vein",
+        "description": "Vessels by which water nutrients are transported. Often easily seen in leaves."
+    },
+    {   
+        "name": "Viscin threads",
+        "description": "In some flower species, pollen grains are bound together by threads of a clear, sticky substance (viscin) in masses called pollinia. Plants such as mistletoe, rhododendron." 
+    },
+    {   
+        "name": "Vernal",
+        "description": "Pertaining to spring."
+    },
+    {   
+        "name": "Vine",
+        "description": "Trailing or climbing plant with long, flexible stem often supported by tendrils."
+    },
+    {   
+        "name": "Whorl",
+        "description": "Three or more segments (of leaves, flowers) in a circle at a node."
+    },
+    {   
+        "name": "Wings",
+        "description": "Thin, flat extensions of a surface or edge. In many plants in the pea family, the two lateral petals."
+    }
+]
