@@ -15,8 +15,8 @@ var app = new Vue({
         drawer: false,
         common_selected: true,
         latin_selected: false,
-        abc_selected: true,
-        class_selected: false,
+        abc_selected: false,
+        class_selected: true,
         simple_selected: false,
         daisy_selected: false,
         irregular_selected: false,
@@ -33,6 +33,7 @@ var app = new Vue({
         white_selected: false,
         all_selected: false,
         glossaryItems: [],
+        numPetals: ["All", "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven+"],
 
         petalNumber: "All",
     },
@@ -92,6 +93,127 @@ var app = new Vue({
             this.simple_selected = false;
             this.daisy_selected = false;
             this.irregular_selected = true;
+        },
+        basalSelected: function(){
+            this.basal_selected = true;
+            this.opposite_selected = false;
+            this.whorled_selected = false;
+            this.alternate_selected = false;
+        },
+        oppositeSelected: function(){
+            this.basal_selected = false;
+            this.opposite_selected = true;
+            this.whorled_selected = false;
+            this.alternate_selected = false;
+        },
+        whorledSelected: function(){
+            this.basal_selected = false;
+            this.opposite_selected = false;
+            this.whorled_selected = true;
+            this.alternate_selected = false;
+        },
+        alternateSelected: function(){
+            this.basal_selected = false;
+            this.opposite_selected = false;
+            this.whorled_selected = false;
+            this.alternate_selected = true;
+        },
+        blueSelected: function(){
+            this.blue_selected = true;
+            this.orange_selected = false;
+            this.pink_selected = false;
+            this.yellow_selected = false;
+            this.red_selected = false;
+            this.white_selected = false;
+            this.purple_selected = false;
+            this.all_selected = false;
+        },
+        orangeSelected: function(){
+            this.blue_selected = false;
+            this.orange_selected = true;
+            this.pink_selected = false;
+            this.yellow_selected = false;
+            this.red_selected = false;
+            this.white_selected = false;
+            this.purple_selected = false;
+            this.all_selected = false;
+        },
+        pinkSelected: function(){
+            this.blue_selected = false;
+            this.orange_selected = false;
+            this.pink_selected = true;
+            this.yellow_selected = false;
+            this.red_selected = false;
+            this.white_selected = false;
+            this.purple_selected = false;
+            this.all_selected = false;
+        },
+        yellowSelected: function(){
+            this.blue_selected = false;
+            this.orange_selected = false;
+            this.pink_selected = false;
+            this.yellow_selected = true;
+            this.red_selected = false;
+            this.white_selected = false;
+            this.purple_selected = false;
+            this.all_selected = false;
+        },
+        redSelected: function(){
+            this.blue_selected = false;
+            this.orange_selected = false;
+            this.pink_selected = false;
+            this.yellow_selected = false;
+            this.red_selected = true;
+            this.white_selected = false;
+            this.purple_selected = false;
+            this.all_selected = false;
+        },
+        purpleSelected: function(){
+            this.blue_selected = false;
+            this.orange_selected = false;
+            this.pink_selected = false;
+            this.yellow_selected = false;
+            this.red_selected = false;
+            this.purple_selected = true;
+            this.white_selected = false;
+            this.all_selected = false;
+        },
+        whiteSelected: function(){
+            this.blue_selected = false;
+            this.orange_selected = false;
+            this.pink_selected = false;
+            this.yellow_selected = false;
+            this.red_selected = false;
+            this.white_selected = true;
+            this.purple_selected = false;
+            this.all_selected = false;
+        },
+        allSelected: function(){
+            this.blue_selected = false;
+            this.orange_selected = false;
+            this.pink_selected = false;
+            this.yellow_selected = false;
+            this.red_selected = false;
+            this.white_selected = false;
+            this.purple_selected = false;
+            this.all_selected = true;
+        },
+        reset: function(){
+            this.blue_selected = false;
+            this.orange_selected = false;
+            this.pink_selected = false;
+            this.yellow_selected = false;
+            this.red_selected = false;
+            this.white_selected = false;
+            this.purple_selected = false;
+            this.all_selected = false;
+            this.basal_selected = false;
+            this.opposite_selected = false;
+            this.whorled_selected = false;
+            this.alternate_selected = false;
+            this.simple_selected = false;
+            this.daisy_selected = false;
+            this.irregular_selected = false;
         },
         sideDrawerPageChange: function(page) {
             //console.log('page: ', page);

@@ -119,28 +119,42 @@
 								</div>
 								<h2>Leaf Arrangement</h2>
 								<div class="gridContainer2">
-									<img class="optionImg" src="icons/basal.svg">
-									<img class="optionImg" src="icons/opposite.svg">
-									<img class="optionImg" src="icons/whorled.svg">
-									<img class="optionImg" src="icons/alternate.svg">
+									<img class="optionImg" src="icons/basal.svg" @click="basalSelected" :class="{selected_focus: basal_selected}">
+									<img class="optionImg" src="icons/opposite.svg" @click="oppositeSelected" :class="{selected_focus: opposite_selected}">
+									<img class="optionImg" src="icons/whorled.svg" @click="whorledSelected" :class="{selected_focus: whorled_selected}">
+									<img class="optionImg" src="icons/alternate.svg" @click="alternateSelected" :class="{selected_focus: alternate_selected}">
 								</div>
 								<h2>Color</h2>
 								<div class="gridContainer3">
-									<img class="optionImg" src="icons/blue.svg">
-									<img class="optionImg" src="icons/orange.svg">
-									<img class="optionImg" src="icons/pink.svg">
-									<img class="optionImg" src="icons/yellow.svg">
-									<img class="optionImg" src="icons/red.svg">
-									<img class="optionImg" src="icons/purple.svg">
-									<img class="optionImg" src="icons/white.svg">
-									<img class="optionImg" src="icons/all.svg">
+									<img class="optionImg" src="icons/blue.svg" @click="blueSelected" :class="{selected_focus: blue_selected}">
+									<img class="optionImg" src="icons/orange.svg" @click="orangeSelected" :class="{selected_focus: orange_selected}">
+									<img class="optionImg" src="icons/pink.svg" @click="pinkSelected" :class="{selected_focus: pink_selected}">
+									<img class="optionImg" src="icons/yellow.svg" @click="yellowSelected" :class="{selected_focus: yellow_selected}">
+									<img class="optionImg" src="icons/red.svg" @click="redSelected" :class="{selected_focus: red_selected}">
+									<img class="optionImg" src="icons/purple.svg" @click="purpleSelected" :class="{selected_focus: purple_selected}">
+									<img class="optionImg" src="icons/white.svg" @click="whiteSelected" :class="{selected_focus: white_selected}">
+									<img class="optionImg" src="icons/all.svg" @click="allSelected" :class="{selected_focus: all_selected}">
 								</div>
-								<div id="petalWrap">
+								<div id="petalWrap" @click="page = 'petals'">
 									<span id="numPetals">Number of Petals</span>
 									<span id="num">{{petalNumber}}</span>
-								</div>	
+								</div>
+								<div id="reset" @click="reset();">Reset Filters</div>
 							</div>
 						</div>
+					</div>
+
+					<div v-if="page == 'petals'">
+						<div> <!-- App bar for petals page -->
+							<v-app-bar dense>
+								<v-toolbar-title id="petalHeader"><img class="xButton" src="icons/x.svg" @click="page = 'research'"><span>Number of Petals</span></v-toolbar-title>
+								<v-spacer></v-spacer>
+							</v-app-bar>
+						</div>
+						<ul id="listWrapper">
+							<li id="listItem" v-for="petalNum in numPetals" style="list-style-type:none">{{petalNum}}</li>
+						</ul>
+						<div id="cancelButton">Cancel</div>
 					</div>
 
 					<div v-if="page == 'flowerdetailPage' ">
