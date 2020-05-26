@@ -69,21 +69,23 @@
 				
 					<!-- home research, serachTrees, Instructions, Glossary, Resources, Info -->
 					<div v-if="page == 'home' ">
-						<div class="landing--nps_div">
-							<img class="landing--NPS_logo" src="nps_logo.svg" alt="npsLogo">
-							<p class="landing--NPS_logo ml-2">NATIONAL PARK SERVICE</p>
-						</div>
-						<div class="landing--title_div">
-							<p class="landing--title">Cedar Breaks</p>
-							<p class="landing--title"> National Monument</p>
-							<img src="landing_flower.png" class="loading--flower mt-5" alt="flower">
-							<p class="landing--sub-title mt-2">Wildflowers</p>
-						</div>
-						
-						<div>
-							<v-btn class="button d-block mt-9" tile color="#3B4549" @click="sideDrawerPageChange('research');" dark><img class="landing--buttons_image mr-2" src="icons/appbar_flower.svg" alt="flower"> Search Wildflowers</v-btn>
-							<v-btn class="button d-block mt-4" tile color="#3B4549" @click="sideDrawerPageChange('serachTrees');" dark><img class="landing--buttons_image mr-2" src="icons/treeLight.svg" alt="flower"> Search Trees</v-btn>
-							<v-btn class="button d-block mt-4" tile color="#3B4549" @click="sideDrawerPageChange('Instructions');" dark><img class="landing--buttons_image mr-2" src="icons/question_mark.svg" alt="flower"> Instructions</v-btn>
+						<div id="homeHero">
+							<div class="landing--nps_div">
+								<img class="landing--NPS_logo" src="nps_logo.svg" alt="npsLogo">
+								<p class="landing--NPS_logo ml-2">NATIONAL PARK SERVICE</p>
+							</div>
+							<div class="landing--title_div">
+								<p class="landing--title">Cedar Breaks</p>
+								<p class="landing--title"> National Monument</p>
+								<img src="landing_flower.png" class="loading--flower mt-5" alt="flower">
+								<p class="landing--sub-title mt-2">Wildflowers</p>
+							</div>
+							
+							<div>
+								<v-btn class="button d-block mt-9" tile color="#3B4549" @click="sideDrawerPageChange('research');" dark><img class="landing--buttons_image mr-2" src="icons/appbar_flower.svg" alt="flower"> Search Wildflowers</v-btn>
+								<v-btn class="button d-block mt-4" tile color="#3B4549" @click="sideDrawerPageChange('serachTrees');" dark><img class="landing--buttons_image mr-2" src="icons/treeLight.svg" alt="flower"> Search Trees</v-btn>
+								<v-btn class="button d-block mt-4" tile color="#3B4549" @click="sideDrawerPageChange('Instructions');" dark><img class="landing--buttons_image mr-2" src="icons/question_mark.svg" alt="flower"> Instructions</v-btn>
+							</div>
 						</div>
 					</div>
 
@@ -152,9 +154,9 @@
 							</v-app-bar>
 						</div>
 						<ul id="listWrapper">
-							<li id="listItem" v-for="petalNum in numPetals" style="list-style-type:none">{{petalNum}}</li>
+							<li id="listItem" v-for="petalNum in numPetals" style="list-style-type:none" @click="petalNumber = petalNum; page = 'research'">{{petalNum}}</li>
 						</ul>
-						<div id="cancelButton">Cancel</div>
+						<div id="cancelButton" @click="page = 'research'">Cancel</div>
 					</div>
 
 					<div v-if="page == 'flowerdetailPage' ">

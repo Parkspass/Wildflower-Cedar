@@ -214,6 +214,7 @@ var app = new Vue({
             this.simple_selected = false;
             this.daisy_selected = false;
             this.irregular_selected = false;
+            this.petalNumber = "All";
         },
         sideDrawerPageChange: function(page) {
             //console.log('page: ', page);
