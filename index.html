@@ -113,27 +113,27 @@
 							<div id="contentWrapper">
 								<h2>Shape</h2>
 								<div class="gridContainer">
-									<img class="optionImg" src="icons/simple.svg">
-									<img class="optionImg" src="icons/daisy.svg">
-									<img class="optionImg" src="icons/irregular.svg">
+									<img class="optionImg" src="icons/simple.svg" @click="simpleSelected" :class="{selected_focus: simple_selected}">
+									<img class="optionImg" src="icons/daisy.svg" @click="daisySelected" :class="{selected_focus: daisy_selected}">
+									<img class="optionImg" src="icons/irregular.svg" @click="irregularSelected" :class="{selected_focus: irregular_selected}">
 								</div>
 								<h2>Leaf Arrangement</h2>
 								<div class="gridContainer2">
 									<img class="optionImg" src="icons/basal.svg">
 									<img class="optionImg" src="icons/opposite.svg">
 									<img class="optionImg" src="icons/whorled.svg">
-									<img class="optionImg" src="icons/whorled.svg">
+									<img class="optionImg" src="icons/alternate.svg">
 								</div>
 								<h2>Color</h2>
 								<div class="gridContainer3">
 									<img class="optionImg" src="icons/blue.svg">
 									<img class="optionImg" src="icons/orange.svg">
 									<img class="optionImg" src="icons/pink.svg">
-									<img class="optionImg" src="icons/pink.svg">
+									<img class="optionImg" src="icons/yellow.svg">
 									<img class="optionImg" src="icons/red.svg">
 									<img class="optionImg" src="icons/purple.svg">
 									<img class="optionImg" src="icons/white.svg">
-									<img class="optionImg" src="icons/white.svg">
+									<img class="optionImg" src="icons/all.svg">
 								</div>
 								<div id="petalWrap">
 									<span id="numPetals">Number of Petals</span>

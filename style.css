@@ -192,12 +192,12 @@ h2{
 }
 .gridContainer, .gridContainer2, .gridContainer3{
     display: grid;
-    grid-template-columns: 90px 90px 90px;
+    grid-template-columns: auto auto auto;
     padding: 10px 10px 10px 0px;
     margin-bottom: 10px;
 }
 .gridContainer2, .gridContainer3{
-    grid-template-columns: 90px 90px 90px 90px;
+    grid-template-columns: auto auto auto auto;
 }
 .gridContainer3{
     grid-template-rows: 50px;
