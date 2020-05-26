@@ -13,6 +13,21 @@ var app = new Vue({
         latin_selected: false,
         abc_selected: true,
         class_selected: false,
+        simple_selected: false,
+        daisy_selected: false,
+        irregular_selected: false,
+        basal_selected: false,
+        opposite_selected: false,
+        whorled_selected: false,
+        alternate_selected: false,
+        blue_selected: false,
+        orange_selected: false,
+        pink_selected: false,
+        yellow_selected: false,
+        red_selected: false,
+        purple_selected: false,
+        white_selected: false,
+        all_selected: false,
 
         petalNumber: "All",
     },
@@ -57,6 +72,21 @@ var app = new Vue({
             console.log('class clicked');
             this.abc_selected = false;
             this.class_selected = true;
+        },
+        simpleSelected: function(){
+            this.simple_selected = true;
+            this.daisy_selected = false;
+            this.irregular_selected = false;
+        },
+        daisySelected: function(){
+            this.simple_selected = false;
+            this.daisy_selected = true;
+            this.irregular_selected = false;
+        },
+        irregularSelected: function(){
+            this.simple_selected = false;
+            this.daisy_selected = false;
+            this.irregular_selected = true;
         },
         sideDrawerPageChange: function(page) {
             //console.log('page: ', page);

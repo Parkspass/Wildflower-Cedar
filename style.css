@@ -140,6 +140,8 @@ html,body{
     background: #3B4549;
     color: #fff;
 }
+
+/* Research Focus Page */
 #researchHeader{
     height: 48px;
     line-height: 48px;
@@ -223,7 +225,9 @@ h2{
     float: right;
     margin-right: 15px;
 }
-
+.selected_focus{
+    background-color: rgba(130, 152, 145, 0.5);
+}
 
 /* instructions page */
 .instruction--headers{
