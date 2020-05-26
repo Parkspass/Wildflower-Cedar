@@ -76,6 +76,11 @@ html,body{
     top: 0;
     left: 0;
 }
+.homeBtn{
+    width: 80%;
+    height: 36px;
+    line-height: 36px;
+}
 .landing--nps_div {
     width: 290px;
     margin: 0 auto;
@@ -117,6 +122,7 @@ html,body{
 .landing--buttons_image {
     height: 20px; 
     width: 20px;
+    float: left;
 }
 
 #sideDrawerTitle {

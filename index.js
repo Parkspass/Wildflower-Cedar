@@ -5,7 +5,7 @@ var app = new Vue({
     el: '#app',
     vuetify: new Vuetify(),
     data: {
-        page: 'searchTrees', // loading, home, research, serachTrees, Instructions, Glossary, Resources, Info, Facts_questions, flowerdetailPage
+        page: 'home', // loading, home, research, serachTrees, Instructions, Glossary, Resources, Info, Facts_questions, flowerdetailPage
         flowerdetailPage: false,
         selectedFlower: '',
         selectedFlowerImage: '',
