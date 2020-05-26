@@ -32,6 +32,16 @@ var app = new Vue({
         purple_selected: false,
         white_selected: false,
         all_selected: false,
+        leaves_selected: false,
+        needles_selected: false,
+        palmate_selected: false,
+        compound_selected: false,
+        oval_selected: false,
+        other_selected: false,
+        one_selected: false,
+        two_selected: false,
+        three_selected: false,
+        four_selected: false,
         glossaryItems: [],
         numPetals: ["All", "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven+"],
 
@@ -198,6 +208,62 @@ var app = new Vue({
             this.purple_selected = false;
             this.all_selected = true;
         },
+        leavesSelected: function(){
+            this.leaves_selected = true;
+            this.needles_selected = false;
+        },
+        needlesSelected: function(){
+            this.leaves_selected = false;
+            this.needles_selected = true;
+        },
+        palmateSelected: function(){
+            this.palmate_selected = true;
+            this.compound_selected = false;
+            this.oval_selected = false;
+            this.other_selected = false;
+        },
+        compoundSelected: function(){
+            this.palmate_selected = false;
+            this.compound_selected = true;
+            this.oval_selected = false;
+            this.other_selected = false;
+        },
+        ovalSelected: function(){
+            this.palmate_selected = false;
+            this.compound_selected = false;
+            this.oval_selected = true;
+            this.other_selected = false;
+        },
+        otherSelected: function(){
+            this.palmate_selected = false;
+            this.compound_selected = false;
+            this.oval_selected = false;
+            this.other_selected = true;
+        },
+        oneSelected: function(){
+            this.one_selected = true;
+            this.two_selected = false;
+            this.three_selected = false;
+            this.four_selected = false;
+        },
+        twoSelected: function(){
+            this.one_selected = false;
+            this.two_selected = true;
+            this.three_selected = false;
+            this.four_selected = false;
+        },
+        threeSelected: function(){
+            this.one_selected = false;
+            this.two_selected = false;
+            this.three_selected = true;
+            this.four_selected = false;
+        },
+        fourSelected: function(){
+            this.one_selected = false;
+            this.two_selected = false;
+            this.three_selected = false;
+            this.four_selected = true;
+        },
         reset: function(){
             this.blue_selected = false;
             this.orange_selected = false;
@@ -215,6 +281,16 @@ var app = new Vue({
             this.daisy_selected = false;
             this.irregular_selected = false;
             this.petalNumber = "All";
+            this.one_selected = false;
+            this.two_selected = false;
+            this.three_selected = false;
+            this.four_selected = false;
+            this.palmate_selected = false;
+            this.compound_selected = false;
+            this.oval_selected = false;
+            this.other_selected = false;
+            this.leaves_selected = false;
+            this.needles_selected = false;
         },
         sideDrawerPageChange: function(page) {
             //console.log('page: ', page);
