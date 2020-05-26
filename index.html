@@ -76,29 +76,32 @@
 				
 					<!-- home research, serachTrees, Instructions, Glossary, Resources, Info -->
 					<div v-if="page == 'home' ">
-						<div class="landing--nps_div">
-							<img class="landing--NPS_logo" src="nps_logo.svg" alt="npsLogo">
-							<p class="landing--NPS_logo ml-2">NATIONAL PARK SERVICE</p>
-						</div>
-						<div class="landing--title_div">
-							<p class="landing--title">Cedar Breaks</p>
-							<p class="landing--title"> National Monument</p>
-							<img src="landing_flower.png" class="loading--flower mt-5" alt="flower">
-							<p class="landing--sub-title mt-2">Wildflowers</p>
-						</div>
-						
-						<div>
-							<v-btn class="button d-block mt-9" tile color="#3B4549" @click="sideDrawerPageChange('research');" dark><img class="landing--buttons_image mr-2" src="icons/appbar_flower.svg" alt="flower"> Search Wildflowers</v-btn>
-							<v-btn class="button d-block mt-4" tile color="#3B4549" @click="sideDrawerPageChange('serachTrees');" dark><img class="landing--buttons_image mr-2" src="icons/treeLight.svg" alt="flower"> Search Trees</v-btn>
-							<v-btn class="button d-block mt-4" tile color="#3B4549" @click="sideDrawerPageChange('Instructions');" dark><img class="landing--buttons_image mr-2" src="icons/question_mark.svg" alt="flower"> Instructions</v-btn>
+						<div id="homeHero">
+							<div class="landing--nps_div">
+								<img class="landing--NPS_logo" src="nps_logo.svg" alt="npsLogo">
+								<p class="landing--NPS_logo ml-2">NATIONAL PARK SERVICE</p>
+							</div>
+							<div class="landing--title_div">
+								<p class="landing--title">Cedar Breaks</p>
+								<p class="landing--title"> National Monument</p>
+								<img src="landing_flower.png" class="loading--flower mt-5" alt="flower">
+								<p class="landing--sub-title mt-2">Wildflowers</p>
+							</div>
+							
+							<div>
+								<v-btn class="button d-block mt-9" tile color="#3B4549" @click="sideDrawerPageChange('research');" dark><img class="landing--buttons_image mr-2" src="icons/appbar_flower.svg" alt="flower"> Search Wildflowers</v-btn>
+								<v-btn class="button d-block mt-4" tile color="#3B4549" @click="sideDrawerPageChange('serachTrees');" dark><img class="landing--buttons_image mr-2" src="icons/treeLight.svg" alt="flower"> Search Trees</v-btn>
+								<v-btn class="button d-block mt-4" tile color="#3B4549" @click="sideDrawerPageChange('Instructions');" dark><img class="landing--buttons_image mr-2" src="icons/question_mark.svg" alt="flower"> Instructions</v-btn>
+							</div>
 						</div>
 					</div>
 
+					<!-- research, serachTrees, Instructions, Glossary, Resources, Info -->
 					
 					<div v-if="page == 'research' ">
 						<div> <!-- App bar for research page -->
 							<v-app-bar dense>
-								<v-toolbar-title id="researchHeader" v-on:click="page='home'; resetAppBarTabs(); "><img class="backButton" src="icons/backArrow.svg"><span>Search Wildflowers</span></v-toolbar-title>
+								<v-toolbar-title class="researchHeader" v-on:click="page='home'; resetAppBarTabs(); "><img class="backButton" src="icons/backArrow.svg"><span>Search Wildflowers</span></v-toolbar-title>
 								<v-spacer></v-spacer>
 							</v-app-bar>
 						</div>
@@ -116,37 +119,51 @@
 							</div>
 						</div>
 						<div v-if="class_selected">
-							<div id="contentWrapper">
+							<div class="contentWrapper">
 								<h2>Shape</h2>
 								<div class="gridContainer">
-									<img class="optionImg" src="icons/simple.svg">
-									<img class="optionImg" src="icons/daisy.svg">
-									<img class="optionImg" src="icons/irregular.svg">
+									<img class="optionImg" src="icons/simple.svg" @click="simpleSelected" :class="{selected_focus: simple_selected}">
+									<img class="optionImg" src="icons/daisy.svg" @click="daisySelected" :class="{selected_focus: daisy_selected}">
+									<img class="optionImg" src="icons/irregular.svg" @click="irregularSelected" :class="{selected_focus: irregular_selected}">
 								</div>
 								<h2>Leaf Arrangement</h2>
-								<div class="gridContainer2">
-									<img class="optionImg" src="icons/basal.svg">
-									<img class="optionImg" src="icons/opposite.svg">
-									<img class="optionImg" src="icons/whorled.svg">
-									<img class="optionImg" src="icons/whorled.svg">
+								<div class="gridContainer">
+									<img class="optionImg" src="icons/basal.svg" @click="basalSelected" :class="{selected_focus: basal_selected}">
+									<img class="optionImg" src="icons/opposite.svg" @click="oppositeSelected" :class="{selected_focus: opposite_selected}">
+									<img class="optionImg" src="icons/whorled.svg" @click="whorledSelected" :class="{selected_focus: whorled_selected}">
+									<img class="optionImg" src="icons/alternate.svg" @click="alternateSelected" :class="{selected_focus: alternate_selected}">
 								</div>
 								<h2>Color</h2>
-								<div class="gridContainer3">
-									<img class="optionImg" src="icons/blue.svg">
-									<img class="optionImg" src="icons/orange.svg">
-									<img class="optionImg" src="icons/pink.svg">
-									<img class="optionImg" src="icons/pink.svg">
-									<img class="optionImg" src="icons/red.svg">
-									<img class="optionImg" src="icons/purple.svg">
-									<img class="optionImg" src="icons/white.svg">
-									<img class="optionImg" src="icons/white.svg">
+								<div class="gridContainer2">
+									<img class="optionImg" src="icons/blue.svg" @click="blueSelected" :class="{selected_focus: blue_selected}">
+									<img class="optionImg" src="icons/orange.svg" @click="orangeSelected" :class="{selected_focus: orange_selected}">
+									<img class="optionImg" src="icons/pink.svg" @click="pinkSelected" :class="{selected_focus: pink_selected}">
+									<img class="optionImg" src="icons/yellow.svg" @click="yellowSelected" :class="{selected_focus: yellow_selected}">
+									<img class="optionImg" src="icons/red.svg" @click="redSelected" :class="{selected_focus: red_selected}">
+									<img class="optionImg" src="icons/purple.svg" @click="purpleSelected" :class="{selected_focus: purple_selected}">
+									<img class="optionImg" src="icons/white.svg" @click="whiteSelected" :class="{selected_focus: white_selected}">
+									<img class="optionImg" src="icons/all.svg" @click="allSelected" :class="{selected_focus: all_selected}">
 								</div>
-								<div id="petalWrap">
+								<div id="petalWrap" @click="page = 'petals'">
 									<span id="numPetals">Number of Petals</span>
 									<span id="num">{{petalNumber}}</span>
-								</div>	
+								</div>
+								<div id="reset" @click="reset();">Reset Filters</div>
 							</div>
 						</div>
+					</div>
+
+					<div v-if="page == 'petals'">
+						<div> <!-- App bar for petals page -->
+							<v-app-bar dense>
+								<v-toolbar-title id="petalHeader"><img class="xButton" src="icons/x.svg" @click="page = 'research'"><span>Number of Petals</span></v-toolbar-title>
+								<v-spacer></v-spacer>
+							</v-app-bar>
+						</div>
+						<ul id="listWrapper">
+							<li id="listItem" v-for="petalNum in numPetals" style="list-style-type:none" @click="petalNumber = petalNum; page = 'research'">{{petalNum}}</li>
+						</ul>
+						<div id="cancelButton" @click="page = 'research'">Cancel</div>
 					</div>
 
 					<div v-if="page == 'flowerdetailPage' ">
@@ -156,7 +173,52 @@
 						<img class="flowerDetailImage" :src="selectedFlowerImage" alt="flowerImage">
 					</div>
 
-					<div v-if="page =='serachTrees' ">search trees</div>
+					<div v-if="page == 'searchTrees' ">
+						<div> <!-- App bar for research page -->
+							<v-app-bar dense>
+								<v-toolbar-title class="researchHeader" v-on:click="page='home'; resetAppBarTabs(); "><img class="backButton" src="icons/backArrow.svg"><span>Search Trees</span></v-toolbar-title>
+								<v-spacer></v-spacer>
+							</v-app-bar>
+						</div>
+						<div id="selectionWrapper">
+							<span class="sortBy_tabs" @click="abcSelected" :class="{sortBy_focus: abc_selected}">Search Alphabetically</span><span class="sortBy_tabs" @click="classSelected" :class="{sortBy_focus: class_selected}">Search Classifications</span>
+						</div>
+						<div v-if="abc_selected" class="mt-5">
+							<div class="searchBox mb-3">
+								<img class="ml-2 d-inline" src="icons/magnifying.svg" alt="">
+								<input type="text" class="d-inline" name="Serach" id="searchBox" color="#3B4549" placeholder="Search">
+							</div>
+							<div class="aBar"><p class="pl-4">A</p></div>
+							<div class="ml-4 mt-4" >
+								<img src="icons/alfalfa.png"  @click="flowerDetailPage('alfalfa', 'icons/alfalfa.png'); resetAppBarTabs(); " class="alfalfa" alt="alfalfaTest">
+							</div>
+						</div>
+
+						<div v-if="class_selected">
+							<div class="contentWrapper">
+								<h2>Leaves or Needles</h2>
+								<div class="gridContainer">
+									<img class="optionImg" src="icons/leaves.svg" @click="leavesSelected" :class="{selected_focus: leaves_selected}">
+									<img class="optionImg" src="icons/needles.svg" @click="needlesSelected" :class="{selected_focus: needles_selected}">
+								</div>
+								<h2>Leaf Shape</h2>
+								<div class="gridContainer">
+									<img class="optionImg" src="icons/palmate.svg" @click="palmateSelected" :class="{selected_focus: palmate_selected}">
+									<img class="optionImg" src="icons/compound.svg" @click="compoundSelected" :class="{selected_focus: compound_selected}">
+									<img class="optionImg" src="icons/oval.svg" @click="ovalSelected" :class="{selected_focus: oval_selected}">
+									<img class="optionImg" src="icons/other.svg" @click="otherSelected" :class="{selected_focus: other_selected}">
+								</div>
+								<h2>Color</h2>
+								<div class="gridContainer">
+									<img class="optionImg" src="icons/one.svg" @click="oneSelected" :class="{selected_focus: one_selected}">
+									<img class="optionImg" src="icons/two.svg" @click="twoSelected" :class="{selected_focus: two_selected}">
+									<img class="optionImg" src="icons/three.svg" @click="threeSelected" :class="{selected_focus: three_selected}">
+									<img class="optionImg" src="icons/four+.svg" @click="fourSelected" :class="{selected_focus: four_selected}">
+								</div>
+								<div id="reset" @click="reset();">Reset Filters</div>
+							</div>
+						</div>
+					</div>
 
 					<div v-if="page == 'Instructions' ">
 						<v-app-bar dense  color="#829891" class="mb-9">
@@ -178,6 +240,16 @@
 						<v-app-bar dense  color="#829891" class="mb-9">
 							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">Glossary </span></v-toolbar-title>
 						</v-app-bar>
+						<p class="instruction--text">General Information coming soon.</p>
+					</div>
+
+
+					<!-- <div v-if="page == 'research' ">
+						<div>
+							<v-app-bar dense>
+								<v-toolbar-title id="researchHeader" v-on:click="page='home' "><img class="backButton" src="icons/backArrow.svg"><span>Search Wildflowers</span></v-toolbar-title>
+								<v-spacer></v-spacer>
+							</v-app-bar>
 						<div class="searchBox mt-n3">
 							<img class="ml-2 d-inline" src="icons/magnifying.svg" alt="">
 							<input type="text" class="d-inline" name="Serach" id="searchBox" color="#3B4549" placeholder="Search">
@@ -186,8 +258,14 @@
 							<p class="glossaryName">{{item.name}}</p>
 							<p class="glossaryDesc">{{item.description}}</p>
 						</div>
+						<div class="contentWrapper">
+							<h2>Shape</h2>
+							<div class="gridContainer">
+								<img class="optionImg" src="icons/simple.svg" @click="simpleSelected" :class="{selected_focus: simple_selected}">
+								<img class="optionImg" src="icons/daisy.svg" @click="daisySelected" :class="{selected_focus: daisy_selected}">
+								<img class="optionImg" src="icons/irregular.svg" @click="irregularSelected" :class="{selected_focus: irregular_selected}">
 						<div class="space"></div>
-					</div>
+					</div> -->
 
 					<div v-if="page == 'Resources' ">
 						<v-app-bar dense  color="#829891" class="mb-9">
