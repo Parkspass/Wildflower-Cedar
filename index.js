@@ -5,6 +5,8 @@ glossary = [{"name":"Alkaline","description":"Basic as opposed to acidic; high p
 //     {"name":"Alfalfa","Common":"Alfalfa","Latin":"Medicago Sativa","Family":"Fabaceae (pea)","petals":"5","Size":"1-4+ feet (30-120+ cm) tall","Leaves":"Alternate","Blooming":"May-Sep","Description":"Perennial exotic (Europe). Leaves composed of three leaflets with the middle (terminal) one on a bent stalk, typicallywith ragged teeh. Flowers can be a variety of colors including purple, blue, pink and white. Flower typical pea shape with the petals forming the banner, wings and keel.","General":"Mostly a plant of roadsides and other heavily disturbed areas. Cultivated as a high-protein forage crop."}
 // ];
 
+// const axios = require('axios');
+
 var app = new Vue({
     el: '#app',
     vuetify: new Vuetify(),
@@ -314,14 +316,21 @@ var app = new Vue({
             this.page = 'flowerdetailPage';
             this.selectedFlower = flowerType;
             this.selectedFlowerImage = flowerImage;
-        },   
+        },
+        getGlossaryData: function() {
+            axios.get('./glossary.json').then(res => {
+                console.log('res from axios', res);
+            });
+        }
+        
         
     },
     created: function(){
+        //this.getGlossaryData();
         for(i=0; i< glossary.length; i++){
             this.glossaryItems.push(glossary[i]);
         }
-        console.log(this.glossaryItems);
+        // console.log(this.glossaryItems);
     },
     
 });

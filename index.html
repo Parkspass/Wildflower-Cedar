@@ -12,6 +12,13 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="icons/favicon.ico">
 		<link rel="icon" type="image/png" sizes="192x192" href="./icons/favicon.ico">
 		<link rel="icon" type="image/png" sizes="512x512" href="./icons/favicon.ico">
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script type="module" src="./glossary.json">
+			import glos from './glossary.json'
+			export default {
+				
+			}
+		</script>
 	</head>
 	
     <body>
@@ -221,10 +228,12 @@
 						<p class="instruction--headers">For Wildflowers</p>
 						<p class="instruction--text">Select the trait that most represents the plant that you are looking at. If you leave a section blank, that section will not be used when filtering the search results. For example, if you would like to see only the yellow wildflowers, select the ‘yellow’ tab and leave all other sections blank.</p>
 						<p class="instruction--sub-headers">Wildflower Example</p>
+						<img src="./wildflowerExample.png" alt="WF_Example" class="InstructionExample">
 
 						<p class="instruction--headers">For Trees</p>
 						<p class="instruction--text">Select the trait that most represents the tree that you are looking at. If you leave a section blank, that section will not be used when filtering the search results. For example, if you would like to see only the trees with needles, select the ‘needles’ tab and leave all other sections blank.</p>
 						<p class="instruction--sub-headers">Tree Example</p>
+						<img src="./TreeExample.png" alt="T_Example" class="InstructionExample">
 						<div class="space"></div> <!-- must add empty space or it get cut off by app bar. -->
 
 					</div>
@@ -233,7 +242,14 @@
 						<v-app-bar dense  color="#829891" class="mb-9">
 							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">Glossary </span></v-toolbar-title>
 						</v-app-bar>
-						<p class="instruction--text">General Information coming soon.</p>
+						<div class="searchBox mt-n3">
+							<img class="ml-2 d-inline" src="icons/magnifying.svg" alt="">
+							<input type="text" class="d-inline" name="search" id="searchBox" color="#3B4549" placeholder="Search">
+						</div>
+						<div class="mt-6 ml-5"  v-for="item in glossaryItems">
+							<p class="glossaryName">{{item.name}}</p>
+							<p class="glossaryDesc">{{item.description}}</p>
+						</div>
 					</div>
 
 
