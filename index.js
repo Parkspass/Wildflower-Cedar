@@ -11,11 +11,7 @@ var app = new Vue({
     el: '#app',
     vuetify: new Vuetify(),
     data: {
-<<<<<<< HEAD
-        page: 'Glossary', // loading, home, research, searchTrees, Instructions, Glossary, Resources, Info, Facts_questions, flowerdetailPage
-=======
         page: 'research', // loading, home, research, searchTrees, Instructions, Glossary, Resources, Info, Facts_questions, flowerdetailPage
->>>>>>> 536d110b6a1839e2f222610ad807f838e8d8389a
         flowerdetailPage: false,
         selectedFlower: '',
         selectedFlowerImage: '',
@@ -339,10 +335,6 @@ var app = new Vue({
     },
     computed: {
         filteredGlossary: function() {
-            if(this.glossarySearch.length > 0){
-                this.glossarySearch.charAt(0).toUpperCase() +  this.glossarySearch.slice(1);
-                console.log('string: ', this.glossarySearch);
-            }
             return this.glossaryItems.filter((item) => {
                 return item.name.match(this.glossarySearch.charAt(0).toUpperCase() +  this.glossarySearch.slice(1));
             });
