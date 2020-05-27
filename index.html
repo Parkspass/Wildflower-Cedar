@@ -244,12 +244,13 @@
 						</v-app-bar>
 						<div class="searchBox mt-n3">
 							<img class="ml-2 d-inline" src="icons/magnifying.svg" alt="">
-							<input type="text" class="d-inline" name="search" id="searchBox" color="#3B4549" placeholder="Search">
+							<input type="text" class="d-inline" name="search" id="searchBox" color="#3B4549" placeholder="Search" v-model="glossarySearch">
 						</div>
-						<div class="mt-6 ml-5"  v-for="item in glossaryItems">
-							<p class="glossaryName">{{item.name}}</p>
+						<div class="mt-6 ml-5"  v-for="item in filteredGlossary">
+							<p class="glossaryName">{{item.name | to-uppercase}}</p>
 							<p class="glossaryDesc">{{item.description}}</p>
 						</div>
+						<div class="space"></div>
 					</div>
 
 

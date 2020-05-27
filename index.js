@@ -7,7 +7,7 @@ var app = new Vue({
     el: '#app',
     vuetify: new Vuetify(),
     data: {
-        page: 'home', // loading, home, research, searchTrees, Instructions, Glossary, Resources, Info, Facts_questions, flowerdetailPage
+        page: 'Glossary', // loading, home, research, searchTrees, Instructions, Glossary, Resources, Info, Facts_questions, flowerdetailPage
         flowerdetailPage: false,
         selectedFlower: '',
         selectedFlowerImage: '',
@@ -45,8 +45,9 @@ var app = new Vue({
         three_selected: false,
         four_selected: false,
         glossaryItems: [],
+        glossarySearch: '',
         numPetals: ["All", "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven+"],
-
+        
         petalNumber: "All",
     },
     methods: {
@@ -327,6 +328,17 @@ var app = new Vue({
         }
         // console.log(this.glossaryItems);
     },
+    computed: {
+        filteredGlossary: function() {
+            if(this.glossarySearch.length > 0){
+                this.glossarySearch.charAt(0).toUpperCase() +  this.glossarySearch.slice(1);
+                console.log('string: ', this.glossarySearch);
+            }
+            return this.glossaryItems.filter((item) => {
+                return item.name.match(this.glossarySearch.charAt(0).toUpperCase() +  this.glossarySearch.slice(1));
+            });
+        }
+    }
     
 });
 
