@@ -11,7 +11,7 @@ var app = new Vue({
     el: '#app',
     vuetify: new Vuetify(),
     data: {
-        page: 'home', // loading, home, research, searchTrees, Instructions, Glossary, Resources, Info, Facts_questions, flowerdetailPage
+        page: 'research', // loading, home, research, searchTrees, Instructions, Glossary, Resources, Info, Facts_questions, flowerdetailPage
         flowerdetailPage: false,
         selectedFlower: '',
         selectedFlowerImage: '',
@@ -21,8 +21,8 @@ var app = new Vue({
         drawer: false,
         common_selected: true,
         latin_selected: false,
-        abc_selected: false,
-        class_selected: true,
+        abc_selected: true,
+        class_selected: false,
         simple_selected: false,
         daisy_selected: false,
         irregular_selected: false,

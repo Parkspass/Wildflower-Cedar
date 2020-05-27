@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 		<meta content="utf-8" http-equiv="encoding">
-		<title>Parkdata Dashboard</title>
+		<title>Wildflower</title>
 		<link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="vuetify.min.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
@@ -114,10 +114,14 @@
 								<input type="text" class="d-inline" name="search" id="searchBox" color="#3B4549" placeholder="Search">
 							</div>
 							<div class="aBar"><p class="pl-4">A</p></div>
-							<div class="ml-4 mt-4" >
-								<img src="icons/alfalfa.png"  @click="flowerDetailPage('alfalfa', 'icons/alfalfa.png'); resetAppBarTabs(); " class="alfalfa" alt="alfalfaTest">
+							<div class="picWrapper">
+								<img src="icons/alfalfa.png" @click="flowerDetailPage('alfalfa', 'icons/alfalfa.png'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
+								<img src="icons/alfalfa.png" @click="flowerDetailPage('alfalfa', 'icons/alfalfa.png'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
+								<img src="icons/alfalfa.png" @click="flowerDetailPage('alfalfa', 'icons/alfalfa.png'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
+								<img src="icons/alfalfa.png" @click="flowerDetailPage('alfalfa', 'icons/alfalfa.png'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
 							</div>
 						</div>
+
 						<div v-if="class_selected">
 							<div class="contentWrapper">
 								<h2>Shape</h2>
@@ -251,30 +255,6 @@
 							<p class="glossaryDesc">{{item.description}}</p>
 						</div>
 					</div>
-
-
-					<!-- <div v-if="page == 'research' ">
-						<div>
-							<v-app-bar dense>
-								<v-toolbar-title id="researchHeader" v-on:click="page='home' "><img class="backButton" src="icons/backArrow.svg"><span>Search Wildflowers</span></v-toolbar-title>
-								<v-spacer></v-spacer>
-							</v-app-bar>
-						<div class="searchBox mt-n3">
-							<img class="ml-2 d-inline" src="icons/magnifying.svg" alt="">
-							<input type="text" class="d-inline" name="search" id="searchBox" color="#3B4549" placeholder="Search">
-						</div>
-						<div class="mt-6 ml-5"  v-for="item in glossaryItems">
-							<p class="glossaryName">{{item.name}}</p>
-							<p class="glossaryDesc">{{item.description}}</p>
-						</div>
-						<div class="contentWrapper">
-							<h2>Shape</h2>
-							<div class="gridContainer">
-								<img class="optionImg" src="icons/simple.svg" @click="simpleSelected" :class="{selected_focus: simple_selected}">
-								<img class="optionImg" src="icons/daisy.svg" @click="daisySelected" :class="{selected_focus: daisy_selected}">
-								<img class="optionImg" src="icons/irregular.svg" @click="irregularSelected" :class="{selected_focus: irregular_selected}">
-						<div class="space"></div>
-					</div> -->
 
 					<div v-if="page == 'Resources' ">
 						<v-app-bar dense  color="#829891" class="mb-9">
