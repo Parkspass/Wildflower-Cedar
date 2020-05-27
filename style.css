@@ -214,6 +214,18 @@ h2{
     line-height: 17px;
     color: #3B4549;
 }
+.picWrapper{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 8px;
+    grid-column-gap: 8px;
+    padding: 18px;
+    justify-items: center;
+}
+.pic{
+    height: 150px;
+    width: 160px;
+}
 .gridContainer, .gridContainer2{
     display: grid;
     grid-template-columns: 90px 90px 90px 90px;
