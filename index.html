@@ -35,7 +35,7 @@
 						<v-btn value="searchWildflowers" @click="setAppBarIcon('research');">
 							<img :src="wildflowerIcon" alt="flower">
 						</v-btn>
-						<v-btn value="serachTrees" @click="setAppBarIcon('serachTrees');">
+						<v-btn value="searchTrees" @click="setAppBarIcon('searchTrees');">
 							<img :src="treesIcon" alt="tree">
 						</v-btn>
 					</v-bottom-navigation>
@@ -48,7 +48,7 @@
 						<!-- <v-divider></v-divider> -->
 						<div class="ml-4 mt-9 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('home')">Home <img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""> </div><v-divider></v-divider>
 						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('research')">Wildflowers<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
-						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('serachTrees')">Trees<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
+						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('searchTrees')">Trees<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
 						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('Instructions')">Instructions<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
 						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('Glossary')">Glossary<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
 						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('Resources')">Additional Resources<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
@@ -74,7 +74,7 @@
 					</div>
 
 				
-					<!-- home research, serachTrees, Instructions, Glossary, Resources, Info -->
+					<!-- home research, searchTrees, Instructions, Glossary, Resources, Info -->
 					<div v-if="page == 'home' ">
 						<div id="homeHero">
 							<div class="landing--nps_div">
@@ -90,13 +90,13 @@
 							
 							<div>
 								<v-btn class="button d-block mt-9" tile color="#3B4549" @click="sideDrawerPageChange('research');" dark><img class="landing--buttons_image mr-2" src="icons/appbar_flower.svg" alt="flower"> Search Wildflowers</v-btn>
-								<v-btn class="button d-block mt-4" tile color="#3B4549" @click="sideDrawerPageChange('serachTrees');" dark><img class="landing--buttons_image mr-2" src="icons/treeLight.svg" alt="flower"> Search Trees</v-btn>
+								<v-btn class="button d-block mt-4" tile color="#3B4549" @click="sideDrawerPageChange('searchTrees');" dark><img class="landing--buttons_image mr-2" src="icons/treeLight.svg" alt="flower"> Search Trees</v-btn>
 								<v-btn class="button d-block mt-4" tile color="#3B4549" @click="sideDrawerPageChange('Instructions');" dark><img class="landing--buttons_image mr-2" src="icons/question_mark.svg" alt="flower"> Instructions</v-btn>
 							</div>
 						</div>
 					</div>
 
-					<!-- research, serachTrees, Instructions, Glossary, Resources, Info -->
+					<!-- research, searchTrees, Instructions, Glossary, Resources, Info -->
 					
 					<div v-if="page == 'research' ">
 						<div> <!-- App bar for research page -->
@@ -111,7 +111,7 @@
 						<div v-if="abc_selected" class="mt-5">
 							<div class="searchBox mb-3">
 								<img class="ml-2 d-inline" src="icons/magnifying.svg" alt="">
-								<input type="text" class="d-inline" name="Serach" id="searchBox" color="#3B4549" placeholder="Search">
+								<input type="text" class="d-inline" name="search" id="searchBox" color="#3B4549" placeholder="Search">
 							</div>
 							<div class="aBar"><p class="pl-4">A</p></div>
 							<div class="ml-4 mt-4" >
@@ -186,7 +186,7 @@
 						<div v-if="abc_selected" class="mt-5">
 							<div class="searchBox mb-3">
 								<img class="ml-2 d-inline" src="icons/magnifying.svg" alt="">
-								<input type="text" class="d-inline" name="Serach" id="searchBox" color="#3B4549" placeholder="Search">
+								<input type="text" class="d-inline" name="search" id="searchBox" color="#3B4549" placeholder="Search">
 							</div>
 							<div class="aBar"><p class="pl-4">A</p></div>
 							<div class="ml-4 mt-4" >
@@ -252,7 +252,7 @@
 							</v-app-bar>
 						<div class="searchBox mt-n3">
 							<img class="ml-2 d-inline" src="icons/magnifying.svg" alt="">
-							<input type="text" class="d-inline" name="Serach" id="searchBox" color="#3B4549" placeholder="Search">
+							<input type="text" class="d-inline" name="search" id="searchBox" color="#3B4549" placeholder="Search">
 						</div>
 						<div class="mt-6 ml-5"  v-for="item in glossaryItems">
 							<p class="glossaryName">{{item.name}}</p>

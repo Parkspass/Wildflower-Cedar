@@ -7,7 +7,7 @@ var app = new Vue({
     el: '#app',
     vuetify: new Vuetify(),
     data: {
-        page: 'home', // loading, home, research, serachTrees, Instructions, Glossary, Resources, Info, Facts_questions, flowerdetailPage
+        page: 'home', // loading, home, research, searchTrees, Instructions, Glossary, Resources, Info, Facts_questions, flowerdetailPage
         flowerdetailPage: false,
         selectedFlower: '',
         selectedFlowerImage: '',
@@ -60,9 +60,9 @@ var app = new Vue({
                     this.wildflowerIcon = 'icons/appbar_flower.svg';
                     this.page = 'research';
                     break;
-                case 'serachTrees': 
+                case 'searchTrees': 
                     this.treesIcon = 'icons/treeLight.svg';
-                    this.page = 'serachTrees';
+                    this.page = 'searchTrees';
                     break;
             }
         },
@@ -300,8 +300,8 @@ var app = new Vue({
             if(page == 'research') {
                 this.setAppBarIcon('research');
             }
-            if(page == 'serachTrees') {
-                this.setAppBarIcon('serachTrees');
+            if(page == 'searchTrees') {
+                this.setAppBarIcon('searchTrees');
             }
             this.drawer = false;
             this.page = page;
