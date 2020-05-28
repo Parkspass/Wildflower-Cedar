@@ -15,6 +15,8 @@ var app = new Vue({
         flowerdetailPage: false,
         selectedFlower: '',
         selectedFlowerImage: '',
+        selectedFlowerImage2: '',
+        selectedFlowerImage3: '',
         hambugerMenuIcon: 'icons/hamburger_menuDark.svg',
         wildflowerIcon: 'icons/flowerDark.svg',
         treesIcon: 'icons/treeDark.svg',
@@ -54,6 +56,7 @@ var app = new Vue({
         
         petalNumber: "All",
         flower: "Alfalfa",
+        slideIndex: 1,
     },
     methods: {
         setAppBarIcon: function(tab){ 
@@ -316,15 +319,34 @@ var app = new Vue({
             console.log('clicked');
             this.page = 'flowerdetailPage';
             this.selectedFlower = flowerType;
-            this.selectedFlowerImage = flowerImage;
+            this.selectedFlowerImage = "icons/"+flowerImage+".png";
+            this.selectedFlowerImage2 = "icons/"+flowerImage+"2"+".png";
+            this.selectedFlowerImage3 = "icons/"+flowerImage+"3"+".png";
         },
         getGlossaryData: function() {
             axios.get('./glossary.json').then(res => {
                 console.log('res from axios', res);
             });
-        }
-        
-        
+        },
+
+        // Thumbnail image controls
+        currentSlide: function(n) {
+            this.showSlides(this.slideIndex = n);
+        },
+
+        showSlides: function(n) {
+            var i;
+            var slides = document.getElementsByClassName("slidesContainer");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[this.slideIndex-1].style.display = "block";
+            dots[this.slideIndex-1].className += " active";
+        }  
     },
     created: function(){
         //this.getGlossaryData();
@@ -332,6 +354,7 @@ var app = new Vue({
             this.glossaryItems.push(glossary[i]);
         }
         // console.log(this.glossaryItems);
+        this.showSlides(this.slideIndex);
     },
     computed: {
         filteredGlossary: function() {

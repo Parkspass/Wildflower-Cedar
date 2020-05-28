@@ -115,10 +115,10 @@
 							</div>
 							<div class="aBar"><p class="pl-4">A</p></div>
 							<div class="picWrapper">
-								<img src="icons/alfalfa.png" @click="flowerDetailPage('alfalfa', 'icons/alfalfa.png'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
-								<img src="icons/alfalfa.png" @click="flowerDetailPage('alfalfa', 'icons/alfalfa.png'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
-								<img src="icons/alfalfa.png" @click="flowerDetailPage('alfalfa', 'icons/alfalfa.png'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
-								<img src="icons/alfalfa.png" @click="flowerDetailPage('alfalfa', 'icons/alfalfa.png'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
+								<img src="icons/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
+								<img src="icons/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
+								<img src="icons/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
+								<img src="icons/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
 							</div>
 						</div>
 
@@ -171,10 +171,35 @@
 					</div>
 
 					<div v-if="page == 'flowerdetailPage' ">
-						<v-app-bar dense  color="#829891" class="mb-9">
-							<v-toolbar-title v-on:click="page='research'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">{{selectedFlower}}</span></v-toolbar-title>
+						<v-app-bar dense>
+							<v-toolbar-title class="researchHeader" v-on:click="page='research'; resetAppBarTabs(); "><img class="backButton" src="icons/backArrow.svg"><span>{{selectedFlower}}</span></v-toolbar-title>
+							<v-spacer></v-spacer>
 						</v-app-bar>
-						<img class="flowerDetailImage" :src="selectedFlowerImage" alt="flowerImage">
+						<div id="slideshowContainer">
+							<div class="slidesContainer fade">
+								<img class="flowerDetailImage" :src="selectedFlowerImage">
+							</div>
+							<div class="slidesContainer fade">
+								<img class="flowerDetailImage" :src="selectedFlowerImage2">
+							</div>
+							<div class="slidesContainer fade">
+								<img class="flowerDetailImage" :src="selectedFlowerImage3">
+							</div>
+							<div class="dots">
+								<span class="dot" @click="currentSlide(1)"></span>
+								<span class="dot" @click="currentSlide(2)"></span>
+								<span class="dot" @click="currentSlide(3)"></span>
+							</div>
+						</div>
+						<p class="details"><b>Common Name:</b> {{selectedFlower}}</p>
+						<p class="details"><b>Latin Name:</b> N/A</p>
+						<p class="details"><b>Family Name:</b> N/A</p>
+						<p class="details"><b>Number of Petals:</b> N/A</p>
+						<p class="details"><b>Size:</b> N/A</p>
+						<p class="details"><b>Leaf Arrangement:</b> N/A</p>
+						<p class="details"><b>Blooming Months:</b> N/A</p><br>
+						<p class="details"><b>Physical Description:</b> N/A</p><br>
+						<p class="details"><b>General Info:</b> N/A</p><br><br><br>
 					</div>
 
 					<div v-if="page == 'searchTrees' ">
@@ -225,8 +250,9 @@
 					</div>
 
 					<div v-if="page == 'Instructions' ">
-						<v-app-bar dense  color="#829891" class="mb-9">
-							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">Instructions</span></v-toolbar-title>
+						<v-app-bar dense>
+							<v-toolbar-title class="researchHeader" v-on:click="page='home'; resetAppBarTabs(); "><img class="backButton" src="icons/backArrow.svg"><span>Instructions</span></v-toolbar-title>
+							<v-spacer></v-spacer>
 						</v-app-bar>
 						<p class="instruction--text">After locating a plant specimen you would like to use the app to identify, go to the respective tab (wildflower or tree) at the bottom of the screen. Go to the “Search Classifications</p>
 						<p class="instruction--headers">For Wildflowers</p>
