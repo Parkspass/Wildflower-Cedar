@@ -1,8 +1,11 @@
 {
-    "name": "Wildflower Cedar Breaks",
-    "short_name": "Wildflower Cedar Breaks",
+    "name": "Cedar Breaks Wildflowers",
+    "short_name": "CedarBreaksWildflowers",
     "lang": "en-US",
     "start_url": "index.html",
+    "theme_color": "#829891",
+    "background_color": "#829891",
+    "display": "standalone",
     "icons": [
         {
             "src": "icons/android-chrome-192x192.png",
@@ -14,8 +17,5 @@
             "sizes": "512x512",
             "type": "image/png"
         }
-    ],
-    "theme_color": "#829891",
-    "background_color": "#829891",
-    "display": "standalone"
+    ]
 }
