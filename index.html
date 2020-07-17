@@ -9,9 +9,25 @@
 		<link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="vuetify.min.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="apple-touch-icon" sizes="180x180" href="icons/favicon.ico">
-		<link rel="icon" type="image/png" sizes="192x192" href="./icons/favicon.ico">
-		<link rel="icon" type="image/png" sizes="512x512" href="./icons/favicon.ico">
+		<link rel="manifest" href="manifest.json">
+
+		<!-- PWA STUFF -->
+		<meta name="theme-color" content="#829891"/>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="Cedar Breaks Wildflowers">
+		<meta name="apple-mobile-web-app-status-bar" content="black-translucent">
+		<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/icon_828x1792.png"/>
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/icon_1242x2688.png"/>
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/icon_1125x2436.png"/>
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/icon_1242x2208.png"/>
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/icon_750x1334.png"/>
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/icon_2048x2732.png"/>
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/icon_1668x2224.png"/>
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/icon_640x1136.png"/>
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/icon_1668x2388.png"/>
+		<link rel="apple-touch-startup-image" media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/icon_1536x2048.png"/>
+
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script type="module" src="./glossary.json">
 			import glos from './glossary.json'
@@ -115,73 +131,206 @@
 							</div>
 							<div class="aBar"><p class="pl-4">A</p></div>
 
-							<div class="picWrapper">
+							<!-- ALL FLOWER IMAGES/SELECTION -->
+							<!--<div class="picWrapper">
 								<div class="containerPics">
 									<img src="flowers/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
 									<div class="text-block" v-if="common_selected">Alfalfa</div><div class="text-block latin" v-if="latin_selected">Medicago sativa</div>
 								</div>
 								<div class="containerPics">
-									<img src="flowers/burRagweed.png" @click="flowerDetailPage('Bur Ragweed', 'burRagweed'); resetAppBarTabs();" class="pic">
-									<div class="text-block" v-if="common_selected">Bur Ragweed</div><div class="text-block latin" v-if="latin_selected">Ambrosia acanthicarpa</div>
+									<img src="flowers/alpinePennycress.png" @click="flowerDetailPage('Alpine Pennycress', 'alpinePennycress'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Alpine Pennycress</div><div class="text-block latin" v-if="latin_selected">Thlaspi montanum</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/alpinePricklyCurrant.png" @click="flowerDetailPage('Alpine Prickly Currant', 'alpinePricklyCurrant'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Alpine Prickly Currant</div><div class="text-block latin" v-if="latin_selected">Ribes montigenum</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/americanAlpineSpeedwell.png" @click="flowerDetailPage('American Alpine Speedwell', 'americanAlpineSpeedwell'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">American Alpine Speedwell</div><div class="text-block latin" v-if="latin_selected">Veronica wormskjoldii</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/americanBistort.png" @click="flowerDetailPage('American Bistort', 'americanBistort'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">American Bistort</div><div class="text-block latin" v-if="latin_selected">Bistorta bistortoides</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/aspenBluebells.png" @click="flowerDetailPage('Aspen Bluebells', 'aspenBluebells'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Aspen Bluebells</div><div class="text-block latin" v-if="latin_selected">Mertensia arizonica</div>
 								</div>
 								<div class="containerPics">
 									<img src="flowers/bigSagebrush.png" @click="flowerDetailPage('Big Sagebrush', 'bigSagebrush'); resetAppBarTabs();" class="pic">
 									<div class="text-block" v-if="common_selected">Big Sagebrush</div><div class="text-block latin" v-if="latin_selected">Artemisia tridentata</div>
 								</div>
 								<div class="containerPics">
+									<img src="flowers/blueFlax.png" @click="flowerDetailPage('Blue Flax', 'blueFlax'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Blue Flax</div><div class="text-block latin" v-if="latin_selected">Linum lewisii</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/burRagweed.png" @click="flowerDetailPage('Bur Ragweed', 'burRagweed'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Bur Ragweed</div><div class="text-block latin" v-if="latin_selected">Ambrosia acanthicarpa</div>
+								</div>
+								<div class="containerPics">
 									<img src="flowers/butterflyMilkweed.png" @click="flowerDetailPage('Butterfly Milkweed', 'butterflyMilkweed'); resetAppBarTabs();" class="pic zoom">
 									<div class="text-block" v-if="common_selected">Butterfly Milkweed</div><div class="text-block latin" v-if="latin_selected">Asclepias tuberosa</div>
 								</div>
-								<!--"Name": "Alfalfa",
-									"Name": "Alpine Pennycress"
-									"Name": "Alpine Prickly Currant"
-									"Name": "American Alpine Speedwell"
-									"Name": "American Bistort","Latin"
-									"Name": "Aspen Bluebells"
-									"Name": "Big Sagebrush
-									"Name": "Blue Flax"
-									"Name": "Bur Ragweed"
-									"Name": "Butterfly Milkweed"
-									"Name": "Canada Violet"
-									"Name": "Cedar Breaks Gilia
-									"Name": "Colorado Columbine
-									"Name": "Cushion Phlox"
-									"Name": "Elephanthead"
-									"Name": "Elkweed"
-									"Name": "Fireweed"
-									"Name": "Heartleaf Arnica"
-									"Name": "Heartleaf Bittercress"
-									"Name": "Lanceleaf Springbeauty"
-									"Name": "Little Sunflower"
-									"Name": "Markagunt Penstemon"
-									"Name": "Marsh Marigold"
-									"Name": "Meadow Gentian"
-									"Name": "Monkshood"
-									"Name": "Mountain Deathcamas"
-									"Name": "Mountain KittenTails"
-									"Name": "Orange Sneezeweed"
-									"Name": "Panguitch Buckwheat"
-									"Name": "Parry's Primrose"
-									"Name": "Prairie Smoke"
-									"Name": "Plantainleaf Buttercup"
-									"Name": "Pretty Shooting Star"
-									"Name": "Red Elderberry"
-									"Name": "Richardson Geranium"
-									"Name": "Rusby's Clover"
-									"Name": "Rydberg's Penstemon"
-									"Name": "Scarlet Paintbrush"
-									"Name": "Showy Goldeneye"
-									"Name": "Shrubby Cinquefoil"
-									"Name": "Silvery Lupine"
-									"Name": "Southern Lingusticum"
-									"Name": "Starry False Solomon's Seal"
-									"Name": "Subalpine Larkspur"
-									"Name": "Sulphur Buckwheat"
-									"Name": "Twinberry Honeysuckle"
-									"Name": "Virginia Strawberry"
-									"Name": "Yarrow"
-									"Name": "Yellow Evening Primrose"-->
-							</div>
+								<div class="containerPics">
+									<img src="flowers/canadaViolet.png" @click="flowerDetailPage('Canada Violet', 'canadaViolet'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Canada Violet</div><div class="text-block latin" v-if="latin_selected">Viola Canadensis</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/cedarBreaksGilia.png" @click="flowerDetailPage('Cedar Breaks Gilia', 'cedarBreaksGilia'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Cedar Breaks Gilia</div><div class="text-block latin" v-if="latin_selected">Ipomopsis tridactyla</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/coloradoColumbine.png" @click="flowerDetailPage('Colorado Columbine', 'coloradoColumbine'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Colorado Columbine</div><div class="text-block latin" v-if="latin_selected">Aquilegia caerulea</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/cushionPhlox.png" @click="flowerDetailPage('Cushion Phlox', 'cushionPhlox'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Cushion Phlox</div><div class="text-block latin" v-if="latin_selected">Phlox pulvinata</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/elephanthead.png" @click="flowerDetailPage('Elephanthead', 'elephanthead'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Elephanthead</div><div class="text-block latin" v-if="latin_selected">Pedicularis groenlandica</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/elkweed.png" @click="flowerDetailPage('Elkweed', 'elkweed'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Elkweed</div><div class="text-block latin" v-if="latin_selected">Frasera speciosa</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/fireweed.png" @click="flowerDetailPage('Fireweed', 'fireweed'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Fireweed</div><div class="text-block latin" v-if="latin_selected">Chamerion angustifolium</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/heartleafArnica.png" @click="flowerDetailPage('Heartleaf Arnica', 'heartleafArnica'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Heartleaf Arnica</div><div class="text-block latin" v-if="latin_selected">Arnica cordifolia</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/heartleafBittercress.png" @click="flowerDetailPage('Heartleaf Bittercress', 'heartleafBittercress'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Heartleaf Bittercress</div><div class="text-block latin" v-if="latin_selected">Cardaine cordifolia</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/lanceleafSpringbeauty.png" @click="flowerDetailPage('Lanceleaf Springbeauty', 'lanceleafSpringbeauty'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Lanceleaf Springbeauty</div><div class="text-block latin" v-if="latin_selected">Claytonia lanceolata</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/littleSunflower.png" @click="flowerDetailPage('Little Sunflower', 'littleSunflower'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Little Sunflower</div><div class="text-block latin" v-if="latin_selected">Helianthella uniflora</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/markaguntPenstemon.png" @click="flowerDetailPage('Markagunt Penstemon', 'markaguntPenstemon'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Markagunt Penstemon</div><div class="text-block latin" v-if="latin_selected">Penstemon leiophyllus</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/marshMarigold.png" @click="flowerDetailPage('Marsh Marigold', 'marshMarigold'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Marsh Marigold</div><div class="text-block latin" v-if="latin_selected">Caltha leptosepala</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/meadowGentian.png" @click="flowerDetailPage('Meadow Gentian', 'meadowGentian'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Meadow Gentian</div><div class="text-block latin" v-if="latin_selected">Gentianopsis detonsa</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/monkshood.png" @click="flowerDetailPage('Monkshood', 'monkshood'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Monkshood</div><div class="text-block latin" v-if="latin_selected">Aconitum columbianum</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/mountainDeathcamas.png" @click="flowerDetailPage('Mountain Deathcamas', 'mountainDeathcamas'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Mountain Deathcamas</div><div class="text-block latin" v-if="latin_selected">Zigadenus elegans</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/mountainKittenTails.png" @click="flowerDetailPage('Mountain KittenTails', 'mountainKittenTails'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Mountain KittenTails</div><div class="text-block latin" v-if="latin_selected">Synthyris missurica</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/orangeSneezeWeed.png" @click="flowerDetailPage('Orange Sneezeweed', 'orangeSneezeWeed'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Orange Sneezeweed</div><div class="text-block latin" v-if="latin_selected">Hymenoxys hoopesii</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/panguitchBuckwheat.png" @click="flowerDetailPage('Panguitch Buckwheat', 'panguitchBuckwheat'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Panguitch Buckwheat</div><div class="text-block latin" v-if="latin_selected">Eriogonum panguicense</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/parrysPrimrose.png" @click="flowerDetailPage('Parry's Primrose', 'parrysPrimrose'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Parry's Primrose</div><div class="text-block latin" v-if="latin_selected">Primula parryi</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/prairieSmoke.png" @click="flowerDetailPage('Prairie Smoke', 'prairieSmoke'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Prairie Smoke</div><div class="text-block latin" v-if="latin_selected">Geum triflorum</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/plantainleafButtercup.png" @click="flowerDetailPage('Plantainleaf Buttercup', 'plantainleafButtercup'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Plantainleaf Buttercup</div><div class="text-block latin" v-if="latin_selected">Ranunculus alismifolius</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/prettyShootingStar.png" @click="flowerDetailPage('Pretty Shooting Star', 'prettyShootingStar'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Pretty Shooting Star</div><div class="text-block latin" v-if="latin_selected">Dodecatheon pulchellum</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/redElderBerry.png" @click="flowerDetailPage('Red Elderberry', 'redElderBerry'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Red Elderberry</div><div class="text-block latin" v-if="latin_selected">Sambucus racemosa</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/richardsonGeranium.png" @click="flowerDetailPage('Richardson Geranium', 'richardsonGeranium'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Richardson Geranium</div><div class="text-block latin" v-if="latin_selected">Geranium richardsonii</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/rusbysClover.png" @click="flowerDetailPage('Rusby's Clover', 'rusbysClover'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Rusby's Clover</div><div class="text-block latin" v-if="latin_selected">Trifolium longipes var.rusbyi</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/rydbergsPenstemon.png" @click="flowerDetailPage('Rydberg's Penstemon', 'rydbergsPenstemon'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Rydberg's Penstemon</div><div class="text-block latin" v-if="latin_selected">Penstemon rydbergii</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/scarletPaintbrush.png" @click="flowerDetailPage('Scarlet Paintbrush', 'scarletPaintbrush'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Scarlet Paintbrush</div><div class="text-block latin" v-if="latin_selected">Castilleja miniata</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/showyGoldeneye.png" @click="flowerDetailPage('Showy Goldeneye', 'showyGoldeneye'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Showy Goldeneye</div><div class="text-block latin" v-if="latin_selected">Heliomeris multiflora</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/shrubbyCinquefoil.png" @click="flowerDetailPage('Shrubby Cinquefoil', 'shrubbyCinquefoil'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Shrubby Cinquefoil</div><div class="text-block latin" v-if="latin_selected">Potentilla fruticose</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/silveryLupine.png" @click="flowerDetailPage('Silvery Lupine', 'silveryLupine'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Silvery Lupine</div><div class="text-block latin" v-if="latin_selected">Lupines argenteus</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/southernLingusticum.png" @click="flowerDetailPage('Southern Lingusticum', 'southernLingusticum'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Southern Lingusticum</div><div class="text-block latin" v-if="latin_selected">Ligusticum porteri</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/starryFalseSolomonsSeal.png" @click="flowerDetailPage('Starry False Solomon's Seal', 'starryFalseSolomonsSeal'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Starry False Solomon's Seal</div><div class="text-block latin" v-if="latin_selected">Maianthemum stellatum</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/subalpineLarkspur.png" @click="flowerDetailPage('Subalpine Larkspur', 'subalpineLarkspur'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Subalpine Larkspur</div><div class="text-block latin" v-if="latin_selected">Delphinium barbeyi</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/sulphurBuckwheat.png" @click="flowerDetailPage('Sulphur Buckwheat', 'sulphurBuckwheat'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Sulphur Buckwheat</div><div class="text-block latin" v-if="latin_selected">Eriogonum umbellatum</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/twinberryHoneysuckle.png" @click="flowerDetailPage('Twinberry Honeysuckle', 'twinberryHoneysuckle'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Twinberry Honeysuckle</div><div class="text-block latin" v-if="latin_selected">Lonicera involucrate</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/virginiaStrawberry.png" @click="flowerDetailPage('Virginia Strawberry', 'virginiaStrawberry'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Virginia Strawberry</div><div class="text-block latin" v-if="latin_selected">Fragaria virginiana</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/yarrow.png" @click="flowerDetailPage('Yarrow', 'yarrow'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Yarrow</div><div class="text-block latin" v-if="latin_selected">Achillea millefolium</div>
+								</div>
+								<div class="containerPics">
+									<img src="flowers/yellowEveningPrimrose.png" @click="flowerDetailPage('Yellow Evening Primrose', 'yellowEveningPrimrose'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Yellow Evening Primrose</div><div class="text-block latin" v-if="latin_selected">Oenothera flava</div>
+								</div>
+							</div>-->
+
 						</div>
 
 						<div v-if="class_selected">
@@ -330,7 +479,7 @@
 						<v-app-bar dense>
 							<v-toolbar-title class="researchHeader" v-on:click="page='home'; resetAppBarTabs(); "><img class="backButton" src="icons/backArrow.svg"><span>Instructions</span></v-toolbar-title>
 							<v-spacer></v-spacer>
-						</v-app-bar>
+						</v-app-bar><br>
 						<p class="instruction--text">After locating a plant specimen you would like to use the app to identify, go to the respective tab (wildflower or tree) at the bottom of the screen. Go to the “Search Classifications</p>
 						<p class="instruction--headers">For Wildflowers</p>
 						<p class="instruction--text">Select the trait that most represents the plant that you are looking at. If you leave a section blank, that section will not be used when filtering the search results. For example, if you would like to see only the yellow wildflowers, select the ‘yellow’ tab and leave all other sections blank.</p>
@@ -411,7 +560,8 @@
 						<v-app-bar dense  color="#829891" class="mb-9">
 							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">General Information</span></v-toolbar-title>
 						</v-app-bar>
-						<p class="instruction--text">General Information coming soon.</p>
+						<p class="instruction--text">Every summer Cedar Breaks exhibits a spectacular display of wildflowers. Early bloomers such as cushion phlox, kittentails, and aspen bluebells emerge in late June. The wildflower variety and display then peaks in mid-July as countless other wildflowers bloom: scarlet paintbrushes, Colorado columbines, little sunflowers, elkweeds, and many more fill the forests and meadows with color. Later in the summer carpets of yellow showy goldeneye and purple Oregon fleabane pop-up for a final show of color, ushering in Autumn and the changing of the leaves.
+						<br><br>Not all plant species found in the park could be included in this app. Plant species were chosen for this app based on the likelihood of visitors encountering the species, the potential interest in that species, and the ease of field identification. Although many of the tree species found in the park aren’t truly “flowering” plants, they are included in a separate tree section of the app due to visitor interest in them.</p><br><br>
 					</div>
 
 				</v-main>
@@ -420,7 +570,7 @@
 		
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-		<script src="index.js"></script>
+		<script src="app.js"></script>
 		<noscript>Please install Javascript</noscript>
     </body>
 </html>
