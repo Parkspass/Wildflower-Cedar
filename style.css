@@ -228,6 +228,9 @@ h2{
     line-height: 17px;
     color: #3B4549;
 }
+.zoom{
+    zoom: 100%;
+}
 .gridContainer, .gridContainer2{
     display: grid;
     grid-template-columns: 23vw 23vw 23vw 23vw;
@@ -285,25 +288,29 @@ h2{
 .picWrapper{
     display: grid;
     grid-template-columns: auto auto;
-    grid-row-gap: 0px;
-    grid-column-gap: 2px;
     justify-items: center;
-    margin-bottom: 15vw;
+    justify-content: space-evenly;
+    margin-bottom: 0vw;
+}
+.containerPics{
+    margin: 8px;
+    margin-bottom: -30px;
 }
 .pic{
-    width: 100%;
-    height: auto;
+    width: 170px;
+    height: 170px;
 }
 .text-block{
     text-align: center;
     background-color: rgba(59, 69, 73, 0.8);
     position: relative;
-    bottom: 9vw;
+    bottom: 35px;
     width: 100%;
     height: 8vw;
     line-height: 8vw;
     color: #E9DED9;
     font-size: 4vw;
+    overflow: hidden;
 }
 .container {
     position: relative;
@@ -432,7 +439,7 @@ h2{
 }
 /* Detailed Flowers*/
 .details{
-    margin: 0px 0px 0px 16px !important;
+    margin: 0px 16px 0px 16px !important;
     font-family: "mySans";
     font-size: 16px;
     line-height: 30px;

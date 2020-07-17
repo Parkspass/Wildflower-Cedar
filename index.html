@@ -24,7 +24,7 @@
     <body>
         <div id="app">
 			<v-app>
-				<v-content>
+				<v-main>
 
 					<!-- MAIN NAVIGATION FOR EVERY PAGE -->
 					<!-- MADE GLOBAL SO EVERY PAGE HAS IT AND NO REPETITIVE CODE -->
@@ -116,22 +116,71 @@
 							<div class="aBar"><p class="pl-4">A</p></div>
 
 							<div class="picWrapper">
-								<div class="container">
-									<img src="icons/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
-									<div class="text-block" v-if="common_selected">Alfalfa</div><div class="text-block latin" v-if="latin_selected">Alfalfa</div>
+								<div class="containerPics">
+									<img src="flowers/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
+									<div class="text-block" v-if="common_selected">Alfalfa</div><div class="text-block latin" v-if="latin_selected">Medicago sativa</div>
 								</div>
-								<div class="container">
-									<img src="icons/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
-									<div class="text-block" v-if="common_selected">Alfalfa</div><div class="text-block latin" v-if="latin_selected">Alfalfa</div>
+								<div class="containerPics">
+									<img src="flowers/burRagweed.png" @click="flowerDetailPage('Bur Ragweed', 'burRagweed'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Bur Ragweed</div><div class="text-block latin" v-if="latin_selected">Ambrosia acanthicarpa</div>
 								</div>
-								<div class="container">
-									<img src="icons/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
-									<div class="text-block" v-if="common_selected">Alfalfa</div><div class="text-block latin" v-if="latin_selected">Alfalfa</div>
+								<div class="containerPics">
+									<img src="flowers/bigSagebrush.png" @click="flowerDetailPage('Big Sagebrush', 'bigSagebrush'); resetAppBarTabs();" class="pic">
+									<div class="text-block" v-if="common_selected">Big Sagebrush</div><div class="text-block latin" v-if="latin_selected">Artemisia tridentata</div>
 								</div>
-								<div class="container">
-									<img src="icons/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
-									<div class="text-block" v-if="common_selected">Alfalfa</div><div class="text-block latin" v-if="latin_selected">Alfalfa</div>
+								<div class="containerPics">
+									<img src="flowers/butterflyMilkweed.png" @click="flowerDetailPage('Butterfly Milkweed', 'butterflyMilkweed'); resetAppBarTabs();" class="pic zoom">
+									<div class="text-block" v-if="common_selected">Butterfly Milkweed</div><div class="text-block latin" v-if="latin_selected">Asclepias tuberosa</div>
 								</div>
+								<!--"Name": "Alfalfa",
+									"Name": "Alpine Pennycress"
+									"Name": "Alpine Prickly Currant"
+									"Name": "American Alpine Speedwell"
+									"Name": "American Bistort","Latin"
+									"Name": "Aspen Bluebells"
+									"Name": "Big Sagebrush
+									"Name": "Blue Flax"
+									"Name": "Bur Ragweed"
+									"Name": "Butterfly Milkweed"
+									"Name": "Canada Violet"
+									"Name": "Cedar Breaks Gilia
+									"Name": "Colorado Columbine
+									"Name": "Cushion Phlox"
+									"Name": "Elephanthead"
+									"Name": "Elkweed"
+									"Name": "Fireweed"
+									"Name": "Heartleaf Arnica"
+									"Name": "Heartleaf Bittercress"
+									"Name": "Lanceleaf Springbeauty"
+									"Name": "Little Sunflower"
+									"Name": "Markagunt Penstemon"
+									"Name": "Marsh Marigold"
+									"Name": "Meadow Gentian"
+									"Name": "Monkshood"
+									"Name": "Mountain Deathcamas"
+									"Name": "Mountain KittenTails"
+									"Name": "Orange Sneezeweed"
+									"Name": "Panguitch Buckwheat"
+									"Name": "Parry's Primrose"
+									"Name": "Prairie Smoke"
+									"Name": "Plantainleaf Buttercup"
+									"Name": "Pretty Shooting Star"
+									"Name": "Red Elderberry"
+									"Name": "Richardson Geranium"
+									"Name": "Rusby's Clover"
+									"Name": "Rydberg's Penstemon"
+									"Name": "Scarlet Paintbrush"
+									"Name": "Showy Goldeneye"
+									"Name": "Shrubby Cinquefoil"
+									"Name": "Silvery Lupine"
+									"Name": "Southern Lingusticum"
+									"Name": "Starry False Solomon's Seal"
+									"Name": "Subalpine Larkspur"
+									"Name": "Sulphur Buckwheat"
+									"Name": "Twinberry Honeysuckle"
+									"Name": "Virginia Strawberry"
+									"Name": "Yarrow"
+									"Name": "Yellow Evening Primrose"-->
 							</div>
 						</div>
 
@@ -204,15 +253,15 @@
 								<span class="dot" @click="currentSlide(3)"></span>
 							</div>
 						</div>
-						<p class="details"><b>Common Name:</b> {{selectedFlower}}</p>
-						<p class="details"><b>Latin Name:</b> N/A</p>
-						<p class="details"><b>Family Name:</b> N/A</p>
-						<p class="details"><b>Number of Petals:</b> N/A</p>
-						<p class="details"><b>Size:</b> N/A</p>
-						<p class="details"><b>Leaf Arrangement:</b> N/A</p>
-						<p class="details"><b>Blooming Months:</b> N/A</p><br>
-						<p class="details"><b>Physical Description:</b> N/A</p><br>
-						<p class="details"><b>General Info:</b> N/A</p><br><br><br>
+						<p class="details"><b>Common Name:</b> {{selectedFlowerCommon}}</p>
+						<p class="details"><b>Latin Name:</b> {{selectedFlowerLatin}}</p>
+						<p class="details"><b>Family Name:</b> {{selectedFlowerFamily}}</p>
+						<p class="details"><b>Number of Petals:</b> {{selectedFlowerPetals}}</p>
+						<p class="details"><b>Size:</b> {{selectedFlowerSize}}</p>
+						<p class="details"><b>Leaf Arrangement:</b> {{selectedFlowerLeaves}}</p>
+						<p class="details"><b>Blooming Months:</b> {{selectedFlowerBloomingMonths}}</p><br>
+						<p class="details"><b>Physical Description:</b> {{selectedFlowerDescription}}</p><br>
+						<p class="details"><b>General Info:</b> {{selectedFlowerInfo}}</p><br><br><br>
 					</div>
 
 					<div v-if="page == 'searchTrees' ">
@@ -233,19 +282,19 @@
 							<div class="aBar"><p class="pl-4">A</p></div>
 							<div class="picWrapper">
 								<div class="container">
-									<img src="icons/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
+									<img src="flowers/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
 									<div class="text-block" v-if="common_selected">Alfalfa</div><div class="text-block latin" v-if="latin_selected">Alfalfa</div>
 								</div>
 								<div class="container">
-									<img src="icons/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
+									<img src="flowers/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
 									<div class="text-block" v-if="common_selected">Alfalfa</div><div class="text-block latin" v-if="latin_selected">Alfalfa</div>
 								</div>
 								<div class="container">
-									<img src="icons/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
+									<img src="flowers/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
 									<div class="text-block" v-if="common_selected">Alfalfa</div><div class="text-block latin" v-if="latin_selected">Alfalfa</div>
 								</div>
 								<div class="container">
-									<img src="icons/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
+									<img src="flowers/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
 									<div class="text-block" v-if="common_selected">Alfalfa</div><div class="text-block latin" v-if="latin_selected">Alfalfa</div>
 								</div>
 							</div>
@@ -365,7 +414,7 @@
 						<p class="instruction--text">General Information coming soon.</p>
 					</div>
 
-				</v-content>
+				</v-main>
 			</v-app>
 		</div>
 		
