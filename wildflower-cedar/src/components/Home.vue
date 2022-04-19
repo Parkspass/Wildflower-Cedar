@@ -11,136 +11,39 @@
       </v-col>
 
       <v-col class="mb-4">
-        <h2>
-          Cedar Breaks
-        </h2>
-        <h1>
-          Wildflowers
-        </h1>
+        <h2>Cedar Breaks</h2>
+        <h1>Wildflowers</h1>
       </v-col>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-          <v-btn
-            class="primary-button"
-            href="/search"
-            color="sageGreen"
-          >
-            Search
-          </v-btn>
-
-        <v-row justify="center">
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
-        </v-row>
+      <v-col class="mb-5" cols="12">
+        <v-btn class="primary-button" href="/color" color="sageGreen" rounded>
+          Step by Step Verification
+        </v-btn>
       </v-col>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-5">
-          Important Links
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ link.text }}
-          </a>
-        </v-row>
+      <v-col class="mb-5" cols="12">
+        <v-btn
+          light
+          color="lightSage white--text"
+          href="/search"
+          rounded
+          class="primary-button"
+        >
+          Search by Name
+        </v-btn>
       </v-col>
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-5">
-          Ecosystem
-        </h2>
-
-        <v-row justify="center">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-row>
+      <v-col class="mb-5" cols="12">
+        <p class="link" color="sageGreen--text">
+          <u> Wildflower Festival - July 2022 </u>
+        </p>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-
 export default {
-  name: 'HelloWorld',
-
-  data: () => ({
-    ecosystem: [
-      {
-        text: 'vuetify-loader',
-        href: 'https://github.com/vuetifyjs/vuetify-loader',
-      },
-      {
-        text: 'github',
-        href: 'https://github.com/vuetifyjs/vuetify',
-      },
-      {
-        text: 'awesome-vuetify',
-        href: 'https://github.com/vuetifyjs/awesome-vuetify',
-      },
-    ],
-    importantLinks: [
-      {
-        text: 'Chat',
-        href: 'https://community.vuetifyjs.com',
-      },
-      {
-        text: 'Made with Vuetify',
-        href: 'https://madewithvuejs.com/vuetify',
-      },
-      {
-        text: 'Twitter',
-        href: 'https://twitter.com/vuetifyjs',
-      },
-      {
-        text: 'Articles',
-        href: 'https://medium.com/vuetify',
-      },
-    ],
-    whatsNext: [
-      {
-        text: 'Explore components',
-        href: 'https://vuetifyjs.com',
-      },
-      {
-        text: 'Roadmap',
-        href: 'https://vuetifyjs.com/introduction/roadmap/',
-      },
-      {
-        text: 'Frequently Asked Questions',
-        href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-      },
-    ],
-  }),
-}
+  name: "Home",
+};
 </script>
