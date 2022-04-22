@@ -31,4 +31,7 @@ export default createVuetify({
     defaultTheme: "cedarBreaksWildFlowersTheme",
     themes: { cedarBreaksWildFlowersTheme },
   },
+  icons: {
+    iconfont: "mdiSvg" || "mdi", // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
+  },
 });

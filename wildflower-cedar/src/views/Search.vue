@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row class="text-center">
+    <v-row>
       <v-col cols="12">
         <v-img
           :src="require('../assets/home_flower.svg')"
@@ -9,18 +9,15 @@
           height="200"
         />
       </v-col>
-
       <v-col class="mb-4">
-        <h2>Cedar Breaks</h2>
+        <h2>SEARCH LINK</h2>
         <h1>Wildflowers</h1>
       </v-col>
-
       <v-col class="mb-5" cols="12">
         <v-btn class="primary-button" href="/color" color="sageGreen" rounded>
           Step by Step Verification
         </v-btn>
       </v-col>
-
       <v-col class="mb-5" cols="12">
         <v-btn
           light
@@ -32,7 +29,6 @@
           Search by Name
         </v-btn>
       </v-col>
-
       <v-col class="mb-5" cols="12">
         <p class="link" color="sageGreen--text">
           <u> Wildflower Festival - July 2022 </u>
@@ -44,6 +40,8 @@
 
 <script>
 export default {
-  name: "Home",
+  name: "Search",
 };
 </script>
+
+<style scoped></style>

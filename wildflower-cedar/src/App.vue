@@ -1,69 +1,86 @@
 <template>
   <v-app>
-    <v-main>
-      <Home />
-    </v-main>
+    <router-view />
   </v-app>
 </template>
 
-<script>
-import Home from "./components/Home.vue";
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;600&family=Source+Sans+Pro:wght@400;600;700&display=swap");
 
-export default {
-  name: "App",
+* {
+  margin: 0;
+  padding: 0;
+}
 
-  components: {
-    Home,
-  },
-
-  data: () => ({
-    //
-  }),
-};
-</script>
-
-<style>
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,600;0,700;1,600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;600&display=swap");
 h1 {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces";
+  font-style: normal;
   font-weight: 400;
-  font-size: 3em;
+  font-size: 48px;
+  line-height: 59px;
+  color: #000000;
 }
+
 h2 {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces";
+  font-style: normal;
   font-weight: 300;
-  font-size: 2em;
+  font-size: 24px;
+  line-height: 30px;
 }
+
 h3 {
-  font-family: "Fraunces", sans-serif;
+  font-family: "Fraunces";
+  font-style: normal;
   font-weight: 600;
-  font-size: 1.125em;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
 }
+
 .link {
-  font-family: "Fraunces", serif;
+  font-family: "Fraunces";
+  font-style: normal;
   font-weight: 600;
-  font-size: 1em;
-  color: #8ea396;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration-line: underline;
+  cursor: pointer;
 }
+
 .subtitle {
-  font-family: "Fraunces", serif;
+  font-family: "Source Sans Pro";
+  font-style: normal;
   font-weight: 400;
-  font-size: 1em;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
 }
+
 .primary-button {
-  font-family: "Sans Source Pro", serif;
+  font-family: "Source Sans Pro";
+  font-style: normal;
   font-weight: 700;
-  font-size: 1.125em;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
 }
-.search {
-  font-family: "Sans Source Pro", sans-serif;
-  font-weight: 600;
-  font-size: 1em;
-}
+
 .navigation {
-  font-family: "Sans Source Pro", sans-serif;
+  font-family: "Source Sans Pro";
+  font-style: normal;
   font-weight: 600;
-  font-size: 0.875em;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.search {
+  font-family: "Source Sans Pro";
+  font-style: italic;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
 }
 </style>
