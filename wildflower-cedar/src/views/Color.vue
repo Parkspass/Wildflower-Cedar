@@ -1,13 +1,16 @@
 <template>
   <v-container>
     <v-row no-gutters class="text-center">
+      <v-icon float-right>$close</v-icon>
       <v-col cols="12" class="mb-4">
-        <v-icon float-right>$close</v-icon>
         <h1>Color</h1>
-        <p class="subtitle">
-          Pick which color(s) best matches your flower! You can always change
-          your answer later.
-        </p>
+        <p class="subtitle">Pick which color(s) best matches your flower!</p>
+        <p class="subtitle">You can always change your answer later.</p>
+        <v-col cols="12">
+          <div class="btn" id="red" @click="red ? check : null">
+            <p>Red</p>
+          </div>
+        </v-col>
         <v-col v-for="color in colors" :key="color">
           <div>
             <v-btn
@@ -20,22 +23,7 @@
           </div>
         </v-col>
       </v-col>
-      <v-col class="mb-5" cols="12">
-        <v-btn class="primary-button" href="/color" color="sageGreen" rounded>
-          Step by Step Verification
-        </v-btn>
-      </v-col>
-      <v-col class="mb-5" cols="12">
-        <v-btn
-          light
-          color="lightSage white--text"
-          href="/search"
-          rounded
-          class="primary-button"
-        >
-          Search by Name
-        </v-btn>
-      </v-col>
+
       <v-col col="4">
         <v-icon>mdi-circle-small</v-icon>
         <v-icon>mdi-circle-small</v-icon>
@@ -56,7 +44,7 @@ export default {
   name: "Color",
   data() {
     return {
-      selected_color: null,
+      selected_colors: [],
       colors: [
         {
           name: "Reds",
@@ -91,5 +79,19 @@ export default {
 <style scoped>
 #hover {
   cursor: pointer;
+}
+
+#red {
+  background-color: #f2362a;
+}
+
+.btn {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.check {
+  background-image: url("~@/assets/check.svg");
 }
 </style>

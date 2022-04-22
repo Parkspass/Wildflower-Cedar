@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Color from "../views/Color.vue";
 import Search from "../views/Search.vue";
+import Shape from "../views/Shape.vue";
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: "/search",
     name: "search",
     component: Search,
+  },
+  {
+    path: "/shape",
+    name: "shape",
+    component: Shape,
   },
   {
     path: "/about",
