@@ -1,31 +1,38 @@
 <template>
   <v-container>
-    <v-row no-gutters class="text-center">
+    <v-row no-gutters class="text-center" justify="center" align="center">
       <v-icon @click="$router.push('/home')" float-right>$close</v-icon>
       <v-col cols="12" class="mb-4">
         <h1>Color</h1>
         <p class="subtitle">Pick which color(s) best matches your flower!</p>
         <p class="subtitle">You can always change your answer later.</p>
-        <v-col
-          md="12"
-          v-for="color in colors"
-          :key="color"
-          justify-center
-          align-center
-        >
-          <div
-            :style="inlineImage(color.location)"
-            class="full-picture"
-            @click="pushIntoSelectedColor(color.name)"
-          ></div>
-        </v-col>
+      </v-col>
+      <v-col cols="4" v-for="color in colors" :key="color">
+        <div
+          :style="inlineImage(color.location)"
+          class="full-picture hover"
+          @click="pushIntoSelectedColor(color.name)"
+        ></div>
+      </v-col>
+      <v-col
+        cols="4"
+        v-for="color in colors2"
+        :key="color"
+        justify-center
+        align-center
+      >
+        <div
+          :style="inlineImage(color.location)"
+          class="full-picture hover"
+          @click="pushIntoSelectedColor(color.name)"
+        ></div>
       </v-col>
 
-      <v-col col="4">
+      <v-col col="5">
         <v-icon color="sageGreen">mdi-circle-small</v-icon>
         <v-icon color="sageGreen">mdi-circle-small</v-icon>
         <v-icon color="sageGreen">mdi-circle-small</v-icon>
-        <v-icon color="sageGreen" id="hover" @click="$router.push('/shape')"
+        <v-icon color="sageGreen" class="hover" @click="$router.push('/shape')"
           >mdi-arrow-right-circle</v-icon
         >
       </v-col>
@@ -55,6 +62,8 @@ export default {
           name: "Yellow",
           location: "yellows.svg",
         },
+      ],
+      colors2: [
         {
           name: "Pinks",
           location: "pinks.svg",
@@ -87,7 +96,7 @@ export default {
 </script>
 
 <style scoped>
-#hover {
+.hover {
   cursor: pointer;
 }
 
@@ -108,6 +117,5 @@ export default {
 
 .full-picture {
   min-height: 100px;
-  min-width: 50px;
 }
 </style>
