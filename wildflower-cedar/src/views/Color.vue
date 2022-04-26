@@ -6,34 +6,23 @@
         <h1>Color</h1>
         <p class="subtitle">Pick which color(s) best matches your flower!</p>
         <p class="subtitle">You can always change your answer later.</p>
-        <v-col cols="12">
-          <div class="btn" id="red" @click="red ? check : null">
-            <p>Red</p>
-          </div>
-        </v-col>
-        <v-col v-for="color in colors" :key="color">
+        <v-col cols="12" v-for="color in colors" :key="color">
           <div>
-            <v-btn
-              fab
-              color="color.value"
-              @click="selected_color = color.value"
-              >{{ color.name }}</v-btn
-            >
-            <p>{{ color.name }}</p>
+            <v-btn outlined :style="inlineImage(color.location)"> </v-btn>
           </div>
         </v-col>
       </v-col>
 
       <v-col col="4">
-        <v-icon>mdi-circle-small</v-icon>
-        <v-icon>mdi-circle-small</v-icon>
-        <v-icon>mdi-circle-small</v-icon>
-        <v-icon id="hover" @click="$router.push('/shape')"
+        <v-icon color="sageGreen">mdi-circle-small</v-icon>
+        <v-icon color="sageGreen">mdi-circle-small</v-icon>
+        <v-icon color="sageGreen">mdi-circle-small</v-icon>
+        <v-icon color="sageGreen" id="hover" @click="$router.push('/shape')"
           >mdi-arrow-right-circle</v-icon
         >
       </v-col>
       <v-col class="mb-5" cols="12">
-        <p>40 results</p>
+        <p class="navigation">{{ results }} results</p>
       </v-col>
     </v-row>
   </v-container>
@@ -48,30 +37,40 @@ export default {
       colors: [
         {
           name: "Reds",
-          value: "red",
+          location: "reds.svg",
         },
         {
           name: "Orange",
-          value: "orange",
+          location: "oranges.svg",
         },
         {
           name: "Yellow",
-          value: "yellow",
+          location: "yellows.svg",
         },
         {
           name: "Pinks",
-          value: "pink",
+          location: "pinks.svg",
         },
         {
           name: "Blues/Violets",
-          value: "blue_purple",
+          location: "bluesviolets.svg",
         },
         {
           name: "Whites",
-          value: "white",
+          location: "whites.svg",
         },
       ],
+      results: 40,
     };
+  },
+  methods: {
+    inlineImage(src) {
+      let bgImage = require("@/assets/" + src);
+
+      return {
+        backgroundImage: `url("${bgImage}")`,
+      };
+    },
   },
 };
 </script>
@@ -93,5 +92,14 @@ export default {
 
 .check {
   background-image: url("~@/assets/check.svg");
+  position: inherit;
+}
+
+div.btn__content {
+  padding: 0;
+}
+
+div.card__actions .btn {
+  min-width: 0;
 }
 </style>
