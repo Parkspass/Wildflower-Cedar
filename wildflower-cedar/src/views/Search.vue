@@ -1,14 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12">
-        <v-img
-          :src="require('../assets/home_flower.svg')"
-          class="my-3"
-          contain
-          height="200"
-        />
-      </v-col>
+      <v-col cols="12"> </v-col>
       <v-col class="mb-4">
         <h2>SEARCH LINK</h2>
         <h1>Wildflowers</h1>

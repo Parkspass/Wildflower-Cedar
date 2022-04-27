@@ -29,9 +29,9 @@
       </v-col>
 
       <v-col col="5">
-        <v-icon color="sageGreen">mdi-circle-small</v-icon>
-        <v-icon color="sageGreen">mdi-circle-small</v-icon>
-        <v-icon color="sageGreen">mdi-circle-small</v-icon>
+        <v-icon color="sageGreen">mdi-circle-medium</v-icon>
+        <v-icon color="verylightSage">mdi-circle-medium</v-icon>
+        <v-icon color="verylightSage">mdi-circle-medium</v-icon>
         <v-icon color="sageGreen" class="hover" @click="$router.push('/shape')"
           >mdi-arrow-right-circle</v-icon
         >
@@ -96,10 +96,6 @@ export default {
 </script>
 
 <style scoped>
-.hover {
-  cursor: pointer;
-}
-
 #red {
   background-color: #f2362a;
 }

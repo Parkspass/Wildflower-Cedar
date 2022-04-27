@@ -4,42 +4,30 @@
       <v-col cols="12" class="mb-4">
         <v-icon float-right>$close</v-icon>
         <h1>Shape</h1>
-        <p class="subtitle">
-          Pick which shape best matches your flower! You can always change your
-          answer later.
-        </p>
-        <v-col v-for="color in colors" :key="color">
-          <div>
-            <v-btn
-              fab
-              color="color.value"
-              @click="selected_color = color.value"
-              >{{ color.name }}</v-btn
-            >
-            <p>{{ color.name }}</p>
+        <p class="subtitle">Pick which shape best matches your flower!</p>
+        <p class="subtitle">You can always change your answer later.</p>
+        <v-col v-for="petal in petals" :key="petal">
+          <div :style="inlineImage(petal.location)">
           </div>
+
+          <v-row>
+
+          </v-row>
         </v-col>
       </v-col>
-      <v-col class="mb-5" cols="12">
-        <v-btn class="primary-button" href="/color" color="sageGreen" rounded>
-          Step by Step Verification
-        </v-btn>
-      </v-col>
-      <v-col class="mb-5" cols="12">
-        <v-btn
-          light
-          color="lightSage white--text"
-          href="/search"
-          rounded
-          class="primary-button"
+      <v-col col="5">
+        <v-icon color="sageGreen" class="hover" @click="$router.push('/color')"
+          >mdi-arrow-left-circle</v-icon
         >
-          Search by Name
-        </v-btn>
+        <v-icon color="verylightSage">mdi-circle-medium</v-icon>
+        <v-icon color="sageGreen">mdi-circle-medium</v-icon>
+        <v-icon color="verylightSage">mdi-circle-medium</v-icon>
+        <v-icon color="sageGreen" class="hover" @click="$router.push('/leaves')"
+          >mdi-arrow-right-circle</v-icon
+        >
       </v-col>
       <v-col class="mb-5" cols="12">
-        <p class="link" color="sageGreen--text">
-          <u> Wildflower Festival - July 2022 </u>
-        </p>
+        <p class="navigation">{{ results }} results</p>
       </v-col>
     </v-row>
   </v-container>
@@ -50,30 +38,43 @@ export default {
   name: "Shape",
   data() {
     return {
-      selected_shape: null,
+      selected_shapes: [],
+      results: 18,
       petals: [
         {
           name: "3 or 4 Petals",
-          value: 0,
           description: "Flowers have 3 or 4 clearly defined petals",
+          location: "3-4-petals.svg",
         },
         {
           name: "5 Petals",
-          value: 1,
           description: "Flowers have exactly 5 clearly defined petals",
+          location: "5Petals.svg",
         },
         {
           name: "More Than 5",
-          value: 2,
           description: "e.g. Daisies, Asters and Dandelions",
+          location: "MoreThan5_icon.svg",
         },
         {
           name: "Other",
-          value: 3,
           description: "e.g. Bluebells, Lupine and other unique shapes",
+          location: "Other_icon.svg",
         },
       ],
     };
+  },
+  methods: {
+    inlineImage(src) {
+      let bgImage = require("@/assets/" + src);
+
+      return {
+        backgroundImage: `url("${bgImage}")`,
+      };
+    },
+    pushIntoSelectedShape(shape) {
+      this.selected_shapes.push(shape);
+    },
   },
 };
 </script>

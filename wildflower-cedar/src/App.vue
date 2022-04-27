@@ -83,4 +83,8 @@ h3 {
   line-height: 20px;
   color: #000000;
 }
+
+.hover {
+  cursor: pointer;
+}
 </style>

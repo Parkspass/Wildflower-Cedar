@@ -11,17 +11,17 @@ const routes = [
     component: Home,
   },
   {
-    path: "/", // just for developing rn. Change back to /color
+    path: "/color",
     name: "color",
     component: Color,
   },
   {
-    path: "/search",
+    path: "/search", // just for developing rn. Change back to /search
     name: "search",
     component: Search,
   },
   {
-    path: "/shape",
+    path: "/", // just for developing rn. Change back to /shape
     name: "shape",
     component: Shape,
   },
