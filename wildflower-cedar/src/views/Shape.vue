@@ -9,11 +9,18 @@
         <p class="subtitle">Pick which shape best matches your flower!</p>
         <p class="subtitle">You can always change your answer later.</p>
         <v-col cols="12">
-          <v-row no-gutters class="text-center" justify="center" align="center">
+          <v-row
+            no-gutters
+            class="text-center"
+            justify="center"
+            align="center"
+            v-for="petal in petals"
+            :key="petal"
+          >
             <v-col
-              :style="inlineImage(petals[1].location)"
+              :style="inlineImage(petal.location)"
               class="full-picture hover"
-              cols="5"
+              cols="2"
             >
             </v-col>
             <v-col cols="7">
@@ -24,28 +31,13 @@
                 align="center"
               >
                 <v-col cols="12">
-                  <p>{{ petals[1].name }}</p>
-                  <span>{{ petals[1].description }}</span>
+                  <h3>{{ petal.name }}</h3>
+                  <p class="subtitle">{{ petal.description }}</p>
                 </v-col>
               </v-row>
             </v-col>
           </v-row>
         </v-col>
-        <!-- <v-col
-          cols="12"
-          v-for="petal in petals"
-          :key="petal"
-          justify-center
-          align-center
-        >
-          <div
-            :style="inlineImage(petal.location)"
-            class="full-picture hover"
-            @click="selected_shape = petal.name"
-          ></div>
-          <p>{{ petal.name }}</p>
-          <span>{{ petal.description }}</span>
-        </v-col> -->
       </v-col>
       <v-col col="5">
         <v-icon color="sageGreen" class="hover" @click="$router.push('/color')"
