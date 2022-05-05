@@ -1,11 +1,36 @@
 <template>
   <v-container>
     <v-row no-gutters class="text-center">
-      <v-col cols="12" class="mb-4">
+      <v-col offset="10" cols="2" justify="right">
         <v-icon float-right>$close</v-icon>
+      </v-col>
+      <v-col cols="12" class="mb-4">
         <h1>Shape</h1>
         <p class="subtitle">Pick which shape best matches your flower!</p>
         <p class="subtitle">You can always change your answer later.</p>
+        <v-col cols="12">
+          <v-row no-gutters class="text-center" justify="center" align="center">
+            <v-col
+              :style="inlineImage(petals[1].location)"
+              class="full-picture hover"
+              cols="5"
+            >
+            </v-col>
+            <v-col cols="7">
+              <v-row
+                no-gutters
+                class="text-center"
+                justify="center"
+                align="center"
+              >
+                <v-col cols="12">
+                  <p>{{ petals[1].name }}</p>
+                  <span>{{ petals[1].description }}</span>
+                </v-col>
+              </v-row>
+            </v-col>
+          </v-row>
+        </v-col>
         <!-- <v-col
           cols="12"
           v-for="petal in petals"
@@ -84,6 +109,10 @@ export default {
 </script>
 
 <style scoped>
+* {
+  border: 1px solid red;
+}
+
 .full-picture {
   min-height: 100px;
 }
