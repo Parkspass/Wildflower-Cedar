@@ -18,7 +18,7 @@ h1 {
   font-weight: 400;
   font-size: 48px;
   line-height: 59px;
-  color: #000000;
+  color: #3b4549;
 }
 
 h2 {
@@ -35,7 +35,7 @@ h3 {
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
-  color: #000000;
+  color: #3b4549;
 }
 
 .link {
@@ -54,7 +54,7 @@ h3 {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: #000000;
+  color: #3b4549;
 }
 
 .primary-button {
@@ -72,7 +72,7 @@ h3 {
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
-  color: #000000;
+  color: #3b4549;
 }
 
 .search {
@@ -81,7 +81,7 @@ h3 {
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
-  color: #000000;
+  color: #3b4549;
 }
 
 .hover {

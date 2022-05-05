@@ -1,13 +1,19 @@
 <template>
   <v-container>
-    <v-row no-gutters class="text-center">
+    <v-row no-gutters>
       <v-col offset="10" cols="2" justify="right">
         <v-icon float-right>$close</v-icon>
       </v-col>
-      <v-col cols="12" class="mb-4">
-        <h1>Shape</h1>
+      <v-col cols="12" class="text-center">
+        <h1 color="lavarockNavy--text">Shape</h1>
+      </v-col>
+      <v-col cols="12" class="text-center">
         <p class="subtitle">Pick which shape best matches your flower!</p>
+      </v-col>
+      <v-col cols="12" class="text-center">
         <p class="subtitle">You can always change your answer later.</p>
+      </v-col>
+      <v-col cols="12" class="mb-4">
         <v-col cols="12">
           <v-row
             no-gutters
@@ -27,8 +33,8 @@
               <v-row
                 no-gutters
                 class="text-center"
-                justify="center"
-                align="center"
+                justify="start"
+                align-content="start"
               >
                 <v-col cols="12">
                   <h3>{{ petal.name }}</h3>
@@ -39,7 +45,7 @@
           </v-row>
         </v-col>
       </v-col>
-      <v-col col="5">
+      <v-col col="5" class="text-center">
         <v-icon color="sageGreen" class="hover" @click="$router.push('/color')"
           >mdi-arrow-left-circle</v-icon
         >
@@ -50,7 +56,7 @@
           >mdi-arrow-right-circle</v-icon
         >
       </v-col>
-      <v-col class="mb-5" cols="12">
+      <v-col class="mb-5 text-center" cols="12">
         <p class="navigation">{{ results }} results</p>
       </v-col>
     </v-row>
@@ -101,9 +107,9 @@ export default {
 </script>
 
 <style scoped>
-* {
+/* * {
   border: 1px solid red;
-}
+} */
 
 .full-picture {
   min-height: 100px;
