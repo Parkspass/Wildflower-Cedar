@@ -96,16 +96,6 @@ export default {
 </script>
 
 <style scoped>
-#red {
-  background-color: #f2362a;
-}
-
-.btn {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-}
-
 .check {
   background-image: url("~@/assets/check.svg");
   position: inherit;

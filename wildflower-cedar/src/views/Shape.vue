@@ -6,14 +6,21 @@
         <h1>Shape</h1>
         <p class="subtitle">Pick which shape best matches your flower!</p>
         <p class="subtitle">You can always change your answer later.</p>
-        <v-col v-for="petal in petals" :key="petal">
-          <div :style="inlineImage(petal.location)">
-          </div>
-
-          <v-row>
-
-          </v-row>
-        </v-col>
+        <!-- <v-col
+          cols="12"
+          v-for="petal in petals"
+          :key="petal"
+          justify-center
+          align-center
+        >
+          <div
+            :style="inlineImage(petal.location)"
+            class="full-picture hover"
+            @click="selected_shape = petal.name"
+          ></div>
+          <p>{{ petal.name }}</p>
+          <span>{{ petal.description }}</span>
+        </v-col> -->
       </v-col>
       <v-col col="5">
         <v-icon color="sageGreen" class="hover" @click="$router.push('/color')"
@@ -38,7 +45,7 @@ export default {
   name: "Shape",
   data() {
     return {
-      selected_shapes: [],
+      selected_shape: null,
       results: 18,
       petals: [
         {
@@ -72,11 +79,12 @@ export default {
         backgroundImage: `url("${bgImage}")`,
       };
     },
-    pushIntoSelectedShape(shape) {
-      this.selected_shapes.push(shape);
-    },
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.full-picture {
+  min-height: 100px;
+}
+</style>
