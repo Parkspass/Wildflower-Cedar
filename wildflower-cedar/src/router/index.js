@@ -3,10 +3,11 @@ import Home from "../views/Home.vue";
 import Color from "../views/Color.vue";
 import Search from "../views/Search.vue";
 import Shape from "../views/Shape.vue";
+import Leaves from "../views/Leaves.vue";
 
 const routes = [
   {
-    path: "/home", // just for developing rn. Change back to /
+    path: "/", // just for developing rn. Change back to /
     name: "home",
     component: Home,
   },
@@ -21,9 +22,14 @@ const routes = [
     component: Search,
   },
   {
-    path: "/", // just for developing rn. Change back to /shape
+    path: "/shape", // just for developing rn. Change back to /shape
     name: "shape",
     component: Shape,
+  },
+  {
+    path: "/leaves", // just for developing rn. Change back to /shape
+    name: "leaves",
+    component: Leaves,
   },
   {
     path: "/about",
