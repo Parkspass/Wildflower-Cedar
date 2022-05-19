@@ -1,16 +1,15 @@
 <template>
   <v-app>
-    <router-view />
+    <v-main>
+      <v-container fluid>
+        <router-view> </router-view>
+      </v-container>
+    </v-main>
   </v-app>
 </template>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;600&family=Source+Sans+Pro:wght@400;600;700&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-}
 
 h1 {
   font-family: "Fraunces";

@@ -80,24 +80,19 @@ export default {
       results: 18,
       petals: [
         {
-          name: "3 or 4 Petals",
-          description: "Flowers have 3 or 4 clearly defined petals",
-          location: "3-4-petals.svg",
+          name: "Alternate",
+          description: "Attach to stem in an alternating pattern",
+          location: "alternate.svg",
         },
         {
-          name: "5 Petals",
-          description: "Flowers have exactly 5 clearly defined petals",
-          location: "5Petals.svg",
+          name: "Opposite",
+          description: "Attach to stem across from each other",
+          location: "opposite.svg",
         },
         {
-          name: "More Than 5",
-          description: "e.g. Daisies, Asters and Dandelions",
-          location: "MoreThan5_icon.svg",
-        },
-        {
-          name: "Other",
-          description: "e.g. Bluebells, Lupine and other unique shapes",
-          location: "Other_icon.svg",
+          name: "Basal",
+          description: "Attach primarily at base of plant",
+          location: "basal.svg",
         },
       ],
     };

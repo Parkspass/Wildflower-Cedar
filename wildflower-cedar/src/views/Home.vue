@@ -1,5 +1,5 @@
 <template>
-  <v-container class="home-image">
+  <v-container class="home-image mx-0">
     <v-row class="text-center">
       <v-col cols="12">
         <v-img
@@ -65,6 +65,7 @@ export default {
   background-size: cover;
   /* filter: blur(4px); */
   height: 100%;
+  width: 100%;
 }
 
 #link {

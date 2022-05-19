@@ -2,14 +2,14 @@
   <v-container>
     <v-row>
       <v-col cols="12"> </v-col>
-      <v-col class="mb-4">
-        <h2>SEARCH LINK</h2>
-        <h1>Wildflowers</h1>
+      <v-col cols="12">
+        <h1>Search</h1>
       </v-col>
-      <v-col class="mb-5" cols="12">
-        <v-btn class="primary-button" href="/color" color="sageGreen" rounded>
-          Step by Step Verification
-        </v-btn>
+      <v-col cols="12" class="text-center">
+        <p class="subtitle">Explore flowers by name.</p>
+      </v-col>
+      <v-col cols="12" class="text-center">
+        <p class="subtitle">Add some filters to narrow down the results!</p>
       </v-col>
       <v-col class="mb-5" cols="12">
         <v-btn

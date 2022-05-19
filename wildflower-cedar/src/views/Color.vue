@@ -1,7 +1,9 @@
 <template>
   <v-container>
-    <v-row no-gutters class="text-center" justify="center" align="center">
-      <v-icon @click="$router.push('/home')" float-right>$close</v-icon>
+    <v-row no-gutters class="text-center">
+      <v-col offset="10" cols="2">
+        <v-icon @click="$router.push('/home')" float-right>$close</v-icon>
+      </v-col>
       <v-col cols="12" class="mb-4">
         <h1>Color</h1>
         <p class="subtitle">Pick which color(s) best matches your flower!</p>
@@ -44,8 +46,11 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
   name: "Color",
+  computed: mapGetters(["allResults"]),
   data() {
     return {
       selected_colors: [],
