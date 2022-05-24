@@ -130,9 +130,11 @@
               dense
               flat
             ></v-toolbar>
-            <!-- <v-list-item-title id="sideDrawerTitle" class="title ml-4">Menu</v-list-item-title> -->
+            <v-list-item-title id="sideDrawerTitle" class="title ml-4"
+              >Menu</v-list-item-title
+            >
             <div id="sideDrawerTitle" class="ml-4">Menu</div>
-            <!-- <v-divider></v-divider> -->
+            <v-divider></v-divider>
             <div
               class="ml-4 mt-9 mb-3 sideDrawer--Titles"
               @click="sideDrawerPageChange('home')"
@@ -288,7 +290,19 @@
                   />
                   Search Wildflowers</v-btn
                 >
-                <!-- <v-btn class="button d-block mt-4" tile color="#3B4549" @click="sideDrawerPageChange('searchTrees');" dark><img class="landing--buttons_image mr-2" src="icons/treeLight.svg" alt="flower"> Search Trees</v-btn> -->
+                <v-btn
+                  class="button d-block mt-4"
+                  tile
+                  color="#3B4549"
+                  @click="sideDrawerPageChange('searchTrees');"
+                  dark
+                  ><img
+                    class="landing--buttons_image mr-2"
+                    src="icons/treeLight.svg"
+                    alt="flower"
+                  />
+                  Search Trees</v-btn
+                >
                 <v-btn
                   class="button d-block mt-4"
                   tile
