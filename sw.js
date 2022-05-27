@@ -24,7 +24,7 @@ self.addEventListener('install', evt => {
     );
 });
 
-// Acivate event
+// Activate event
 self.addEventListener('activate', evt => {
     // This function will delete all the older caches so the app stays up to date
     evt.waitUntil(

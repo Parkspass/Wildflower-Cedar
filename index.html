@@ -1,142 +1,362 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-		<meta content="utf-8" http-equiv="encoding">
-		<title>Wildflowers</title>
-		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-		<link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
-		<link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="vuetify.min.css">
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="manifest" href="manifest.json">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <title>Wildflowers</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="vuetify.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
 
-		<!-- PWA STUFF -->
-		<meta name="theme-color" content="#829891"/>
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-title" content="Cedar Breaks Wildflowers">
-		<meta name="apple-mobile-web-app-status-bar" content="black-translucent">
-		<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-		<link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/icon_828x1792.png"/>
-		<link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/icon_1242x2688.png"/>
-		<link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/icon_1125x2436.png"/>
-		<link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/icons/icon_1242x2208.png"/>
-		<link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/icon_750x1334.png"/>
-		<link rel="apple-touch-startup-image" media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/icon_2048x2732.png"/>
-		<link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/icon_1668x2224.png"/>
-		<link rel="apple-touch-startup-image" media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/icon_640x1136.png"/>
-		<link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/icon_1668x2388.png"/>
-		<link rel="apple-touch-startup-image" media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/icons/icon_1536x2048.png"/>
+    <!-- PWA STUFF -->
+    <meta name="theme-color" content="#829891" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-title"
+      content="Cedar Breaks Wildflowers"
+    />
+    <meta name="apple-mobile-web-app-status-bar" content="black-translucent" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-startup-image"
+      media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+      href="/icons/icon_828x1792.png"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+      href="/icons/icon_1242x2688.png"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+      href="/icons/icon_1125x2436.png"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+      href="/icons/icon_1242x2208.png"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+      href="/icons/icon_750x1334.png"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+      href="/icons/icon_2048x2732.png"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+      href="/icons/icon_1668x2224.png"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+      href="/icons/icon_640x1136.png"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+      href="/icons/icon_1668x2388.png"
+    />
+    <link
+      rel="apple-touch-startup-image"
+      media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+      href="/icons/icon_1536x2048.png"
+    />
 
-		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-  	<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-		<script type="module" src="./glossary.json">
-			import glos from './glossary.json'
-			export default {
-				
-			}
-		</script>
-	</head>
-	
-    <body>
-        <div id="app">
-			<v-app>
-				<v-main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script type="module" src="./glossary.json">
+      import glos from './glossary.json'
+      export default {
 
-					<!-- MAIN NAVIGATION FOR EVERY PAGE -->
-					<!-- MADE GLOBAL SO EVERY PAGE HAS IT AND NO REPETITIVE CODE -->
-					<v-bottom-navigation fixed background-color="#3B4549" color="#fff" style="justify-content: space-between">
-						<v-btn value="sideDrawer" @click="drawer = !drawer">
-							<img :src="hambugerMenuIcon" alt="hamburgerMenu">
-						</v-btn>
-						<v-btn value="searchWildflowers" @click="setAppBarIcon('research');">
-							<img :src="wildflowerIcon" alt="flower">
-						</v-btn>
-						<v-btn value="searchTrees" @click="setAppBarIcon('searchTrees');">
-							<img :src="treesIcon" alt="tree">
-						</v-btn>
-					</v-bottom-navigation>
+      }
+    </script>
+  </head>
 
-					<!-- Start side drawer -->
-					<v-navigation-drawer class="fill-height" v-model="drawer" app>
-						<v-toolbar color="#fff" height="24" class="mb-4" dense flat></v-toolbar>
-						<!-- <v-list-item-title id="sideDrawerTitle" class="title ml-4">Menu</v-list-item-title> -->
-						<div id="sideDrawerTitle" class="ml-4">Menu</div>
-						<!-- <v-divider></v-divider> -->
-						<div class="ml-4 mt-9 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('home')">Home <img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""> </div><v-divider></v-divider>
-						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('research')">Wildflowers<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
-						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('searchTrees')">Trees<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
-						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('Instructions')">Instructions<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
-						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('Glossary')">Glossary<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
-						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('Resources')">Additional Resources<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
-						<div class="ml-4 mt-3 mb-3 sideDrawer--Titles" @click="sideDrawerPageChange('Info')">General Information<img class="sideDrawer--arrows" src="icons/right_arrow.svg" alt=""></div><v-divider></v-divider>
-						<p class="ml-4 mt-5 sortBy">Sort by:</p>
-						<div class="sideDrawer--sortBy ml-2">
-							<span class="sortBy_tabs" @click="commonSelected" :class="{sortBy_focus: common_selected}">Common Name</span><span class="sortBy_tabs" @click="latinSelected" :class="{sortBy_focus: latin_selected}">Latin Name</span>
-						</div>
-					</v-navigation-drawer>
-					<!-- End side drawer -->
-					<!-- END MAIN NAVIGATION FOR EVERY PAGE -->
+  <body>
+    <div id="app">
+      <v-app>
+        <v-main>
+          <!-- MAIN NAVIGATION FOR EVERY PAGE -->
+          <!-- MADE GLOBAL SO EVERY PAGE HAS IT AND NO REPETITIVE CODE -->
+          <v-bottom-navigation
+            fixed
+            background-color="#3B4549"
+            color="#fff"
+            style="justify-content: space-between"
+          >
+            <v-btn value="Home" @click="page = 'home'">
+              <span>Home</span>
+              <v-icon>mdi-home</v-icon>
+            </v-btn>
+            <v-btn value="Collection" @click="page ='collection'">
+              <span>Collection</span>
+              <v-icon>mdi-bookmark-box-multiple-outline</v-icon>
+            </v-btn>
+            <v-btn value="Identify" @click="page ='color'">
+              <img src="" alt="Identify Icon" />
+              <span>Identify</span>
+            </v-btn>
+            <v-btn value="Search" @click="page ='search'">
+              <span>Search</span>
+              <v-icon>mdi-text-search-variant</v-icon>
+            </v-btn>
+            <v-btn value="Help" @click="page ='help'">
+              <span>Help</span>
+              <v-icon>mdi-help-circle-outline</v-icon>
+            </v-btn>
+            <v-btn value="sideDrawer" @click="drawer = !drawer">
+              <img :src="hambugerMenuIcon" alt="hamburgerMenu" />
+            </v-btn>
+            <v-btn
+              value="searchWildflowers"
+              @click="setAppBarIcon('research');"
+            >
+              <img :src="wildflowerIcon" alt="flower" />
+            </v-btn>
+          </v-bottom-navigation>
 
-					<!-- Pages -->
-					<div v-if="page == 'loading' " >
-						<img src="landing_flower.png" class="loading--flower" alt="flower">
-						<p class="loading--title">Cedar Breaks</p>
-						<p class="loading--title"> National Monument</p>
-						<p class="loading--sub-title">Wildflowers</p>
-						<div class="loading--nps_div">
-							<img class="loading--NPS_logo" src="nps_logo.svg" alt="npsLogo">
-							<p class="loading--NPS_logo ml-2">NATIONAL PARK SERVICE</p>
-						</div>
-					</div>
+          <!-- Start side drawer -->
+          <v-navigation-drawer class="fill-height" v-model="drawer" app>
+            <v-toolbar
+              color="#fff"
+              height="24"
+              class="mb-4"
+              dense
+              flat
+            ></v-toolbar>
+            <v-list-item-title id="sideDrawerTitle" class="title ml-4"
+              >Menu</v-list-item-title
+            >
+            <div id="sideDrawerTitle" class="ml-4">Menu</div>
+            <v-divider></v-divider>
+            <div
+              class="ml-4 mt-9 mb-3 sideDrawer--Titles"
+              @click="sideDrawerPageChange('home')"
+              style="cursor: pointer"
+            >
+              Home
+              <img
+                class="sideDrawer--arrows"
+                src="icons/right_arrow.svg"
+                alt=""
+              />
+            </div>
+            <v-divider></v-divider>
+            <div
+              class="ml-4 mt-3 mb-3 sideDrawer--Titles"
+              @click="sideDrawerPageChange('research')"
+              style="cursor: pointer"
+            >
+              Wildflowers<img
+                class="sideDrawer--arrows"
+                src="icons/right_arrow.svg"
+                alt=""
+              />
+            </div>
+            <v-divider></v-divider>
+            <div
+              class="ml-4 mt-3 mb-3 sideDrawer--Titles"
+              @click="sideDrawerPageChange('Instructions')"
+              style="cursor: pointer"
+            >
+              Instructions<img
+                class="sideDrawer--arrows"
+                src="icons/right_arrow.svg"
+                alt=""
+              />
+            </div>
+            <v-divider></v-divider>
+            <div
+              class="ml-4 mt-3 mb-3 sideDrawer--Titles"
+              @click="sideDrawerPageChange('Glossary')"
+              style="cursor: pointer"
+            >
+              Glossary<img
+                class="sideDrawer--arrows"
+                src="icons/right_arrow.svg"
+                alt=""
+              />
+            </div>
+            <v-divider></v-divider>
+            <div
+              class="ml-4 mt-3 mb-3 sideDrawer--Titles"
+              @click="sideDrawerPageChange('Resources')"
+              style="cursor: pointer"
+            >
+              Additional Resources<img
+                class="sideDrawer--arrows"
+                src="icons/right_arrow.svg"
+                alt=""
+              />
+            </div>
+            <v-divider></v-divider>
+            <div
+              class="ml-4 mt-3 mb-3 sideDrawer--Titles"
+              @click="sideDrawerPageChange('Info')"
+              style="cursor: pointer"
+            >
+              General Information<img
+                class="sideDrawer--arrows"
+                src="icons/right_arrow.svg"
+                alt=""
+              />
+            </div>
+            <v-divider></v-divider>
+            <p class="ml-4 mt-5 sortBy">Sort by:</p>
+            <div class="sideDrawer--sortBy ml-2">
+              <span
+                class="sortBy_tabs"
+                @click="commonSelected"
+                :class="{sortBy_focus: common_selected}"
+                >Common Name</span
+              ><span
+                class="sortBy_tabs"
+                @click="latinSelected"
+                :class="{sortBy_focus: latin_selected}"
+                >Latin Name</span
+              >
+            </div>
+          </v-navigation-drawer>
+          <!-- End side drawer -->
+          <!-- END MAIN NAVIGATION FOR EVERY PAGE -->
 
-				
-					<!-- home research, searchTrees, Instructions, Glossary, Resources, Info -->
-					<div v-if="page == 'home' ">
-						<div id="homeHero">
-							<div class="landing--nps_div">
-								<img class="landing--NPS_logo" src="nps_logo.svg" alt="npsLogo">
-								<p class="landing--NPS_logo ml-2">NATIONAL PARK SERVICE</p>
-							</div>
-							<div class="landing--title_div">
-								<p class="landing--title">Cedar Breaks</p>
-								<p class="landing--title"> National Monument</p>
-								<img src="landing_flower.png" class="loading--flower mt-5" alt="flower">
-								<p class="landing--sub-title mt-2">Wildflowers</p>
-							</div>
-							
-							<div>
-								<v-btn class="button d-block mt-9" tile color="#3B4549" @click="sideDrawerPageChange('research');" dark><img class="landing--buttons_image mr-2" src="icons/appbar_flower.svg" alt="flower"> Search Wildflowers</v-btn>
-								<v-btn class="button d-block mt-4" tile color="#3B4549" @click="sideDrawerPageChange('searchTrees');" dark><img class="landing--buttons_image mr-2" src="icons/treeLight.svg" alt="flower"> Search Trees</v-btn>
-								<v-btn class="button d-block mt-4" tile color="#3B4549" @click="sideDrawerPageChange('Instructions');" dark><img class="landing--buttons_image mr-2" src="icons/question_mark.svg" alt="flower"> Instructions</v-btn>
-							</div>
-						</div>
-					</div>
+          <!-- Pages -->
+          <div v-if="page == 'loading' ">
+            <img
+              src="landing_flower.png"
+              class="loading--flower"
+              alt="flower"
+            />
+            <p class="loading--title">Cedar Breaks</p>
+            <p class="loading--title">National Monument</p>
+            <p class="loading--sub-title">Wildflowers</p>
+            <div class="loading--nps_div">
+              <img class="loading--NPS_logo" src="nps_logo.svg" alt="npsLogo" />
+              <p class="loading--NPS_logo ml-2">NATIONAL PARK SERVICE</p>
+            </div>
+          </div>
 
-					<!-- research, searchTrees, Instructions, Glossary, Resources, Info -->
-					
-					<div v-if="page == 'research' ">
-						<div> <!-- App bar for research page -->
-							<v-app-bar dense>
-								<v-toolbar-title class="researchHeader" v-on:click="page='home'; resetAppBarTabs(); "><img class="backButton" src="icons/backArrow.svg"><span>Search Wildflowers</span></v-toolbar-title>
-								<v-spacer></v-spacer>
-							</v-app-bar>
-						</div>
-						<div id="selectionWrapper">
-							<span class="sortBy_tabs" @click="abcSelected" :class="{sortBy_focus: abc_selected}">Search Alphabetically</span><span class="sortBy_tabs" @click="classSelected" :class="{sortBy_focus: class_selected}">Search Classifications</span>
-						</div>
-						<div v-if="abc_selected" class="mt-5">
-							<div class="searchBox mb-3">
-								<img class="ml-2 d-inline" src="icons/magnifying.svg" alt="">
-								<input type="text" class="d-inline" name="search" id="searchBox" color="#3B4549" placeholder="Search">
-							</div>
-							<div class="aBar"><p class="pl-4">A</p></div>
+          <!-- home research, Instructions, Glossary, Resources, Info -->
+          <div v-if="page == 'home' ">
+            <div id="homeHero">
+              <div class="landing--nps_div">
+                <img
+                  class="landing--NPS_logo"
+                  src="nps_logo.svg"
+                  alt="npsLogo"
+                />
+                <p class="landing--NPS_logo ml-2">NATIONAL PARK SERVICE</p>
+              </div>
+              <div class="landing--title_div">
+                <p class="landing--title">Cedar Breaks</p>
+                <p class="landing--title">National Monument</p>
+                <img
+                  src="landing_flower.png"
+                  class="loading--flower mt-5"
+                  alt="flower"
+                />
+                <p class="landing--sub-title mt-2">Wildflowers</p>
+              </div>
 
-							<!-- ALL FLOWER IMAGES/SELECTION -->
-							<!-- <div class="picWrapper">
+              <div>
+                <v-btn
+                  class="button d-block mt-9"
+                  tile
+                  color="#3B4549"
+                  @click="sideDrawerPageChange('research');"
+                  dark
+                  ><img
+                    class="landing--buttons_image mr-2"
+                    src="icons/appbar_flower.svg"
+                    alt="flower"
+                  />
+                  Search Wildflowers</v-btn
+                >
+                <v-btn
+                  class="button d-block mt-4"
+                  tile
+                  color="#3B4549"
+                  @click="sideDrawerPageChange('Instructions');"
+                  dark
+                  ><img
+                    class="landing--buttons_image mr-2"
+                    src="icons/question_mark.svg"
+                    alt="flower"
+                  />
+                  Instructions</v-btn
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- research, Instructions, Glossary, Resources, Info -->
+
+          <div v-if="page == 'research' ">
+            <div>
+              <!-- App bar for research page -->
+              <v-app-bar dense>
+                <v-toolbar-title
+                  class="researchHeader"
+                  v-on:click="page='home'; resetAppBarTabs(); "
+                  ><img class="backButton" src="icons/backArrow.svg" /><span
+                    >Search Wildflowers</span
+                  ></v-toolbar-title
+                >
+                <v-spacer></v-spacer>
+              </v-app-bar>
+            </div>
+            <div id="selectionWrapper">
+              <span
+                class="sortBy_tabs"
+                @click="abcSelected"
+                :class="{sortBy_focus: abc_selected}"
+                >Search Alphabetically</span
+              ><span
+                class="sortBy_tabs"
+                @click="classSelected"
+                :class="{sortBy_focus: class_selected}"
+                >Search Classifications</span
+              >
+            </div>
+            <div v-if="abc_selected" class="mt-5">
+              <div class="searchBox mb-3">
+                <img class="ml-2 d-inline" src="icons/magnifying.svg" alt="" />
+                <input
+                  type="text"
+                  class="d-inline"
+                  name="search"
+                  id="searchBox"
+                  color="#3B4549"
+                  placeholder="Search"
+                />
+              </div>
+              <div class="aBar"><p class="pl-4">A</p></div>
+
+              <!-- ALL FLOWER IMAGES/SELECTION -->
+              <!-- <div class="picWrapper">
 								<div class="containerPics">
 									<img src="flowers/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
 									<div class="text-block" v-if="common_selected">Alfalfa</div><div class="text-block latin" v-if="latin_selected">Medicago sativa</div>
@@ -334,244 +554,403 @@
 									<div class="text-block" v-if="common_selected">Yellow Evening Primrose</div><div class="text-block latin" v-if="latin_selected">Oenothera flava</div>
 								</div>
 							</div>-->
+            </div>
 
-						</div>
+            <div v-if="class_selected">
+              <div class="contentWrapper">
+                <h2>Shape</h2>
+                <div class="gridContainer">
+                  <img
+                    class="optionImg"
+                    src="icons/simple.svg"
+                    @click="simpleSelected"
+                    :class="{selected_focus: simple_selected}"
+                  />
+                  <img
+                    class="optionImg"
+                    src="icons/daisy.svg"
+                    @click="daisySelected"
+                    :class="{selected_focus: daisy_selected}"
+                  />
+                  <img
+                    class="optionImg"
+                    src="icons/irregular.svg"
+                    @click="irregularSelected"
+                    :class="{selected_focus: irregular_selected}"
+                  />
+                </div>
+                <h2>Leaf Arrangement</h2>
+                <div class="gridContainer">
+                  <img
+                    class="optionImg"
+                    src="icons/basal.svg"
+                    @click="basalSelected"
+                    :class="{selected_focus: basal_selected}"
+                  />
+                  <img
+                    class="optionImg"
+                    src="icons/opposite.svg"
+                    @click="oppositeSelected"
+                    :class="{selected_focus: opposite_selected}"
+                  />
+                  <img
+                    class="optionImg"
+                    src="icons/whorled.svg"
+                    @click="whorledSelected"
+                    :class="{selected_focus: whorled_selected}"
+                  />
+                  <img
+                    class="optionImg"
+                    src="icons/alternate.svg"
+                    @click="alternateSelected"
+                    :class="{selected_focus: alternate_selected}"
+                  />
+                </div>
+                <h2>Color</h2>
+                <div class="gridContainer2">
+                  <img
+                    class="optionImg"
+                    src="icons/blue.svg"
+                    @click="blueSelected"
+                    :class="{selected_focus: blue_selected}"
+                  />
+                  <img
+                    class="optionImg"
+                    src="icons/orange.svg"
+                    @click="orangeSelected"
+                    :class="{selected_focus: orange_selected}"
+                  />
+                  <img
+                    class="optionImg"
+                    src="icons/pink.svg"
+                    @click="pinkSelected"
+                    :class="{selected_focus: pink_selected}"
+                  />
+                  <img
+                    class="optionImg"
+                    src="icons/yellow.svg"
+                    @click="yellowSelected"
+                    :class="{selected_focus: yellow_selected}"
+                  />
+                  <img
+                    class="optionImg"
+                    src="icons/red.svg"
+                    @click="redSelected"
+                    :class="{selected_focus: red_selected}"
+                  />
+                  <img
+                    class="optionImg"
+                    src="icons/purple.svg"
+                    @click="purpleSelected"
+                    :class="{selected_focus: purple_selected}"
+                  />
+                  <img
+                    class="optionImg"
+                    src="icons/white.svg"
+                    @click="whiteSelected"
+                    :class="{selected_focus: white_selected}"
+                  />
+                  <img
+                    class="optionImg"
+                    src="icons/all.svg"
+                    @click="allSelected"
+                    :class="{selected_focus: all_selected}"
+                  />
+                </div>
+                <div id="petalWrap" @click="page = 'petals'">
+                  <span id="numPetals">Number of Petals</span>
+                  <span id="num">{{petalNumber}}</span>
+                </div>
+                <div id="reset" @click="reset();">Reset Filters</div>
+              </div>
+            </div>
+          </div>
 
-						<div v-if="class_selected">
-							<div class="contentWrapper">
-								<h2>Shape</h2>
-								<div class="gridContainer">
-									<img class="optionImg" src="icons/simple.svg" @click="simpleSelected" :class="{selected_focus: simple_selected}">
-									<img class="optionImg" src="icons/daisy.svg" @click="daisySelected" :class="{selected_focus: daisy_selected}">
-									<img class="optionImg" src="icons/irregular.svg" @click="irregularSelected" :class="{selected_focus: irregular_selected}">
-								</div>
-								<h2>Leaf Arrangement</h2>
-								<div class="gridContainer">
-									<img class="optionImg" src="icons/basal.svg" @click="basalSelected" :class="{selected_focus: basal_selected}">
-									<img class="optionImg" src="icons/opposite.svg" @click="oppositeSelected" :class="{selected_focus: opposite_selected}">
-									<img class="optionImg" src="icons/whorled.svg" @click="whorledSelected" :class="{selected_focus: whorled_selected}">
-									<img class="optionImg" src="icons/alternate.svg" @click="alternateSelected" :class="{selected_focus: alternate_selected}">
-								</div>
-								<h2>Color</h2>
-								<div class="gridContainer2">
-									<img class="optionImg" src="icons/blue.svg" @click="blueSelected" :class="{selected_focus: blue_selected}">
-									<img class="optionImg" src="icons/orange.svg" @click="orangeSelected" :class="{selected_focus: orange_selected}">
-									<img class="optionImg" src="icons/pink.svg" @click="pinkSelected" :class="{selected_focus: pink_selected}">
-									<img class="optionImg" src="icons/yellow.svg" @click="yellowSelected" :class="{selected_focus: yellow_selected}">
-									<img class="optionImg" src="icons/red.svg" @click="redSelected" :class="{selected_focus: red_selected}">
-									<img class="optionImg" src="icons/purple.svg" @click="purpleSelected" :class="{selected_focus: purple_selected}">
-									<img class="optionImg" src="icons/white.svg" @click="whiteSelected" :class="{selected_focus: white_selected}">
-									<img class="optionImg" src="icons/all.svg" @click="allSelected" :class="{selected_focus: all_selected}">
-								</div>
-								<div id="petalWrap" @click="page = 'petals'">
-									<span id="numPetals">Number of Petals</span>
-									<span id="num">{{petalNumber}}</span>
-								</div>
-								<div id="reset" @click="reset();">Reset Filters</div>
-							</div>
-						</div>
-					</div>
+          <div v-if="page == 'petals'">
+            <div>
+              <!-- App bar for petals page -->
+              <v-app-bar dense>
+                <v-toolbar-title id="petalHeader"
+                  ><img
+                    class="xButton"
+                    src="icons/x.svg"
+                    @click="page = 'research'"
+                  /><span>Number of Petals</span></v-toolbar-title
+                >
+                <v-spacer></v-spacer>
+              </v-app-bar>
+            </div>
+            <ul id="listWrapper">
+              <li
+                id="listItem"
+                v-for="petalNum in numPetals"
+                style="list-style-type: none"
+                @click="petalNumber = petalNum; page = 'research'"
+              >
+                {{petalNum}}
+              </li>
+            </ul>
+            <div id="cancelButton" @click="page = 'research'">Cancel</div>
+          </div>
 
-					<div v-if="page == 'petals'">
-						<div> <!-- App bar for petals page -->
-							<v-app-bar dense>
-								<v-toolbar-title id="petalHeader"><img class="xButton" src="icons/x.svg" @click="page = 'research'"><span>Number of Petals</span></v-toolbar-title>
-								<v-spacer></v-spacer>
-							</v-app-bar>
-						</div>
-						<ul id="listWrapper">
-							<li id="listItem" v-for="petalNum in numPetals" style="list-style-type:none" @click="petalNumber = petalNum; page = 'research'">{{petalNum}}</li>
-						</ul>
-						<div id="cancelButton" @click="page = 'research'">Cancel</div>
-					</div>
+          <div v-if="page == 'flowerdetailPage' ">
+            <v-app-bar dense>
+              <v-toolbar-title
+                class="researchHeader"
+                v-on:click="page='research'; resetAppBarTabs(); "
+                ><img class="backButton" src="icons/backArrow.svg" /><span
+                  >{{selectedFlower}}</span
+                ></v-toolbar-title
+              >
+              <v-spacer></v-spacer>
+            </v-app-bar>
+            <div id="slideshowContainer">
+              <div class="slidesContainer fade">
+                <img class="flowerDetailImage" :src="selectedFlowerImage" />
+              </div>
+              <div class="slidesContainer fade">
+                <img class="flowerDetailImage" :src="selectedFlowerImage2" />
+              </div>
+              <div class="slidesContainer fade">
+                <img class="flowerDetailImage" :src="selectedFlowerImage3" />
+              </div>
+              <div class="dots">
+                <span class="dot" @click="currentSlide(1)"></span>
+                <span class="dot" @click="currentSlide(2)"></span>
+                <span class="dot" @click="currentSlide(3)"></span>
+              </div>
+            </div>
+            <p class="details"><b>Common Name:</b> {{selectedFlowerCommon}}</p>
+            <p class="details"><b>Latin Name:</b> {{selectedFlowerLatin}}</p>
+            <p class="details"><b>Family Name:</b> {{selectedFlowerFamily}}</p>
+            <p class="details">
+              <b>Number of Petals:</b> {{selectedFlowerPetals}}
+            </p>
+            <p class="details"><b>Size:</b> {{selectedFlowerSize}}</p>
+            <p class="details">
+              <b>Leaf Arrangement:</b> {{selectedFlowerLeaves}}
+            </p>
+            <p class="details">
+              <b>Blooming Months:</b> {{selectedFlowerBloomingMonths}}
+            </p>
+            <br />
+            <p class="details">
+              <b>Physical Description:</b> {{selectedFlowerDescription}}
+            </p>
+            <br />
+            <p class="details"><b>General Info:</b> {{selectedFlowerInfo}}</p>
+            <br /><br /><br />
+          </div>
 
-					<div v-if="page == 'flowerdetailPage' ">
-						<v-app-bar dense>
-							<v-toolbar-title class="researchHeader" v-on:click="page='research'; resetAppBarTabs(); "><img class="backButton" src="icons/backArrow.svg"><span>{{selectedFlower}}</span></v-toolbar-title>
-							<v-spacer></v-spacer>
-						</v-app-bar>
-						<div id="slideshowContainer">
-							<div class="slidesContainer fade">
-								<img class="flowerDetailImage" :src="selectedFlowerImage">
-							</div>
-							<div class="slidesContainer fade">
-								<img class="flowerDetailImage" :src="selectedFlowerImage2">
-							</div>
-							<div class="slidesContainer fade">
-								<img class="flowerDetailImage" :src="selectedFlowerImage3">
-							</div>
-							<div class="dots">
-								<span class="dot" @click="currentSlide(1)"></span>
-								<span class="dot" @click="currentSlide(2)"></span>
-								<span class="dot" @click="currentSlide(3)"></span>
-							</div>
-						</div>
-						<p class="details"><b>Common Name:</b> {{selectedFlowerCommon}}</p>
-						<p class="details"><b>Latin Name:</b> {{selectedFlowerLatin}}</p>
-						<p class="details"><b>Family Name:</b> {{selectedFlowerFamily}}</p>
-						<p class="details"><b>Number of Petals:</b> {{selectedFlowerPetals}}</p>
-						<p class="details"><b>Size:</b> {{selectedFlowerSize}}</p>
-						<p class="details"><b>Leaf Arrangement:</b> {{selectedFlowerLeaves}}</p>
-						<p class="details"><b>Blooming Months:</b> {{selectedFlowerBloomingMonths}}</p><br>
-						<p class="details"><b>Physical Description:</b> {{selectedFlowerDescription}}</p><br>
-						<p class="details"><b>General Info:</b> {{selectedFlowerInfo}}</p><br><br><br>
-					</div>
+          <div v-if="page == 'Instructions' ">
+            <v-app-bar dense>
+              <v-toolbar-title
+                class="researchHeader"
+                v-on:click="page='home'; resetAppBarTabs(); "
+                ><img class="backButton" src="icons/backArrow.svg" /><span
+                  >Instructions</span
+                ></v-toolbar-title
+              >
+              <v-spacer></v-spacer> </v-app-bar
+            ><br />
+            <p class="instruction--text">
+              After locating a plant specimen you would like to use the app to
+              identify, go to the respective tab (wildflower or tree) at the
+              bottom of the screen. Go to the “Search Classifications
+            </p>
+            <p class="instruction--headers">For Wildflowers</p>
+            <p class="instruction--text">
+              Select the trait that most represents the plant that you are
+              looking at. If you leave a section blank, that section will not be
+              used when filtering the search results. For example, if you would
+              like to see only the yellow wildflowers, select the ‘yellow’ tab
+              and leave all other sections blank.
+            </p>
+            <p class="instruction--sub-headers">Wildflower Example</p>
+            <img
+              src="icons/wildflowerExample.png"
+              alt="WF_Example"
+              class="InstructionExample"
+            />
 
-					<div v-if="page == 'searchTrees' ">
-						<div> <!-- App bar for research page -->
-							<v-app-bar dense>
-								<v-toolbar-title class="researchHeader" v-on:click="page='home'; resetAppBarTabs(); "><img class="backButton" src="icons/backArrow.svg"><span>Search Trees</span></v-toolbar-title>
-								<v-spacer></v-spacer>
-							</v-app-bar>
-						</div>
-						<div id="selectionWrapper">
-							<span class="sortBy_tabs" @click="abcSelected" :class="{sortBy_focus: abc_selected}">Search Alphabetically</span><span class="sortBy_tabs" @click="classSelected" :class="{sortBy_focus: class_selected}">Search Classifications</span>
-						</div>
-						<div v-if="abc_selected" class="mt-5">
-							<div class="searchBox mb-3">
-								<img class="ml-2 d-inline" src="icons/magnifying.svg" alt="">
-								<input type="text" class="d-inline" name="search" id="searchBox" color="#3B4549" placeholder="Search">
-							</div>
-							<div class="aBar"><p class="pl-4">A</p></div>
-							<div class="picWrapper">
-								<div class="container">
-									<img src="flowers/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
-									<div class="text-block" v-if="common_selected">Alfalfa</div><div class="text-block latin" v-if="latin_selected">Alfalfa</div>
-								</div>
-								<div class="container">
-									<img src="flowers/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
-									<div class="text-block" v-if="common_selected">Alfalfa</div><div class="text-block latin" v-if="latin_selected">Alfalfa</div>
-								</div>
-								<div class="container">
-									<img src="flowers/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
-									<div class="text-block" v-if="common_selected">Alfalfa</div><div class="text-block latin" v-if="latin_selected">Alfalfa</div>
-								</div>
-								<div class="container">
-									<img src="flowers/alfalfa.png" @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();" class="pic" alt="alfalfaTest">
-									<div class="text-block" v-if="common_selected">Alfalfa</div><div class="text-block latin" v-if="latin_selected">Alfalfa</div>
-								</div>
-							</div>
-						</div>
+            <div class="space"></div>
+            <!-- must add empty space or it get cut off by app bar. -->
+          </div>
 
-						<div v-if="class_selected">
-							<div class="contentWrapper">
-								<h2>Leaves or Needles</h2>
-								<div class="gridContainer">
-									<img class="optionImg" src="icons/leaves.svg" @click="leavesSelected" :class="{selected_focus: leaves_selected}">
-									<img class="optionImg" src="icons/needles.svg" @click="needlesSelected" :class="{selected_focus: needles_selected}">
-								</div>
-								<h2>Leaf Shape</h2>
-								<div class="gridContainer">
-									<img class="optionImg" src="icons/palmate.svg" @click="palmateSelected" :class="{selected_focus: palmate_selected}">
-									<img class="optionImg" src="icons/compound.svg" @click="compoundSelected" :class="{selected_focus: compound_selected}">
-									<img class="optionImg" src="icons/oval.svg" @click="ovalSelected" :class="{selected_focus: oval_selected}">
-									<img class="optionImg" src="icons/other.svg" @click="otherSelected" :class="{selected_focus: other_selected}">
-								</div>
-								<h2>Color</h2>
-								<div class="gridContainer">
-									<img class="optionImg" src="icons/one.svg" @click="oneSelected" :class="{selected_focus: one_selected}">
-									<img class="optionImg" src="icons/two.svg" @click="twoSelected" :class="{selected_focus: two_selected}">
-									<img class="optionImg" src="icons/three.svg" @click="threeSelected" :class="{selected_focus: three_selected}">
-									<img class="optionImg" src="icons/four+.svg" @click="fourSelected" :class="{selected_focus: four_selected}">
-								</div>
-								<div id="reset" @click="reset();">Reset Filters</div>
-							</div>
-						</div>
-					</div>
+          <div v-if="page == 'Glossary' ">
+            <v-app-bar dense color="#829891" class="mb-9">
+              <v-toolbar-title v-on:click="page='home'" color="#C47D3D"
+                ><img class="ml-4 mr-4" src="icons/backArrow.svg" /><span
+                  class="tanColor"
+                  >Glossary
+                </span></v-toolbar-title
+              >
+            </v-app-bar>
+            <div class="searchBox mt-n3">
+              <img class="ml-2 d-inline" src="icons/magnifying.svg" alt="" />
+              <input
+                type="text"
+                class="d-inline"
+                name="search"
+                id="searchBox"
+                color="#3B4549"
+                placeholder="Search"
+                v-model="glossarySearch"
+              />
+            </div>
+            <div class="mt-6 ml-5" v-for="item in filteredGlossary">
+              <p class="glossaryName">{{item.name | to-uppercase}}</p>
+              <p class="glossaryDesc">{{item.description}}</p>
+            </div>
+            <div class="space"></div>
+          </div>
 
-					<div v-if="page == 'Instructions' ">
-						<v-app-bar dense>
-							<v-toolbar-title class="researchHeader" v-on:click="page='home'; resetAppBarTabs(); "><img class="backButton" src="icons/backArrow.svg"><span>Instructions</span></v-toolbar-title>
-							<v-spacer></v-spacer>
-						</v-app-bar><br>
-						<p class="instruction--text">After locating a plant specimen you would like to use the app to identify, go to the respective tab (wildflower or tree) at the bottom of the screen. Go to the “Search Classifications</p>
-						<p class="instruction--headers">For Wildflowers</p>
-						<p class="instruction--text">Select the trait that most represents the plant that you are looking at. If you leave a section blank, that section will not be used when filtering the search results. For example, if you would like to see only the yellow wildflowers, select the ‘yellow’ tab and leave all other sections blank.</p>
-						<p class="instruction--sub-headers">Wildflower Example</p>
-						<img src="icons/wildflowerExample.png" alt="WF_Example" class="InstructionExample">
+          <div v-if="page == 'Resources' ">
+            <v-app-bar dense color="#829891" class="mb-9">
+              <v-toolbar-title v-on:click="page='home'" color="#C47D3D"
+                ><img class="ml-4 mr-4" src="icons/backArrow.svg" /><span
+                  class="tanColor"
+                  >Additional Resources</span
+                ></v-toolbar-title
+              >
+            </v-app-bar>
+            <div class="ml-4 mr-3">
+              <div class="image">
+                <img
+                  class="resourceImage"
+                  src="icons/flowerApp.png"
+                  alt="appIcon"
+                />
+              </div>
+              <div class="text">
+                <p class="factsPage--header d-inline">
+                  Cedar Breaks National Monument-Flowers App
+                </p>
+                <p class="factsPage--info">
+                  Find more details on the large variety of wildflowers.
+                </p>
+              </div>
+            </div>
+            <div class="ml-4 mr-3 mt-7">
+              <div class="image">
+                <img
+                  class="resourceImage"
+                  src="icons/instagram.svg"
+                  alt="appIcon"
+                />
+              </div>
+              <div class="text">
+                <p class="factsPage--header d-inline">
+                  Cedar Breaks National Monument Instagram
+                </p>
+                <p class="factsPage--info">
+                  Explore photos found in Cedar Breaks via Instagram.
+                </p>
+              </div>
+            </div>
+          </div>
 
-						<p class="instruction--headers">For Trees</p>
-						<p class="instruction--text">Select the trait that most represents the tree that you are looking at. If you leave a section blank, that section will not be used when filtering the search results. For example, if you would like to see only the trees with needles, select the ‘needles’ tab and leave all other sections blank.</p>
-						<p class="instruction--sub-headers">Tree Example</p>
-						<img src="icons/TreeExample.png" alt="T_Example" class="InstructionExample">
-						<div class="space"></div> <!-- must add empty space or it get cut off by app bar. -->
+          <div v-if="page == 'Facts_questions'">
+            <v-app-bar dense color="#829891" class="mb-9">
+              <v-toolbar-title v-on:click="page='home'" color="#C47D3D"
+                ><img class="ml-4 mr-4" src="icons/backArrow.svg" /><span
+                  class="tanColor"
+                  >Facts and Questions</span
+                ></v-toolbar-title
+              >
+            </v-app-bar>
+            <div class="ml-2 mt-6 mr-2">
+              <p class="factsPage--header">
+                Do I need to make a selection for all criteria when searching?
+              </p>
+              <p class="factsPage--info">
+                No. Just a single criteria may be used, though selecting more
+                will narrow down your search faster.
+              </p>
+              <p class="factsPage--header">
+                What if the features vary from plant to plant?
+              </p>
+              <p class="factsPage--info">
+                Use the most commonly occurring feature in a population. For
+                example, if some flowers are red, but more are orange, use
+                “orange” as the search option.
+              </p>
+              <p class="factsPage--header">
+                What if the features vary on a plant?
+              </p>
+              <p class="factsPage--info">
+                Use the most commonly occuring feature. For example, if most
+                leaves are alternate, but a few are opposite, use “alternate” as
+                the search option.
+              </p>
+              <p class="factsPage--header">
+                What if there is more than one color on the flowers?
+              </p>
+              <p class="factsPage--info">
+                Select the color that occupies the most area.
+              </p>
+              <p class="factsPage--header">
+                How many plants Are in This App? How many are in Cedar Breaks
+                National Monument?
+              </p>
+              <p class="factsPage--info">
+                In this first version of the app there are 44 wildflowers and...
+              </p>
+              <p class="factsPage--header">
+                How were the plants chosen for this app?
+              </p>
+              <p class="factsPage--info">
+                The likelihood of visitors encountering the species and the
+                potential interest in that species were taken into account.
+              </p>
+              <p class="factsPage--header">
+                Will this app work in areas outside of Cedar Breaks?
+              </p>
+              <p class="factsPage--info">
+                Yes, but with limitations, as the focus of the app is Cedar
+                Breaks. The distribution of many of the plants found in Cedar
+                Breaks extend throughout southern Utah and beyond. However, some
+                of the plants common at higher or lower elevations in the
+                surrounding areas may not be found at Zion and therefore are not
+                included in this app.
+              </p>
+            </div>
+            <div class="space"></div>
+          </div>
 
-					</div>
-
-					<div v-if="page == 'Glossary' ">
-						<v-app-bar dense  color="#829891" class="mb-9">
-							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">Glossary </span></v-toolbar-title>
-						</v-app-bar>
-						<div class="searchBox mt-n3">
-							<img class="ml-2 d-inline" src="icons/magnifying.svg" alt="">
-							<input type="text" class="d-inline" name="search" id="searchBox" color="#3B4549" placeholder="Search" v-model="glossarySearch">
-						</div>
-						<div class="mt-6 ml-5"  v-for="item in filteredGlossary">
-							<p class="glossaryName">{{item.name | to-uppercase}}</p>
-							<p class="glossaryDesc">{{item.description}}</p>
-						</div>
-						<div class="space"></div>
-					</div>
-
-					<div v-if="page == 'Resources' ">
-						<v-app-bar dense  color="#829891" class="mb-9">
-							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">Additional Resources</span></v-toolbar-title>
-						</v-app-bar>
-						<div class="ml-4 mr-3">
-							<div class="image">
-								<img class="resourceImage" src="icons/flowerApp.png" alt="appIcon">
-							</div>
-							<div class="text">
-								<p class="factsPage--header d-inline">Cedar Breaks National Monument-Flowers App</p>
-								<p class="factsPage--info">Find more details on the large variety of wildflowers.</p>
-							</div>
-						</div>
-						<div class="ml-4 mr-3 mt-7">
-							<div class="image">
-								<img class="resourceImage" src="icons/instagram.svg" alt="appIcon">
-							</div>
-							<div class="text">
-								<p class="factsPage--header d-inline">Cedar Breaks National Monument Instagram</p>
-								<p class="factsPage--info">Explore photos found in Cedar Breaks via Instagram.</p>
-							</div>
-						</div>
-					</div>
-
-					<div v-if="page == 'Facts_questions'">
-						<v-app-bar dense  color="#829891" class="mb-9">
-							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">Facts and Questions</span></v-toolbar-title>
-						</v-app-bar>
-						<div class="ml-2 mt-6 mr-2">
-							<p class="factsPage--header">Do I need to make a selection for all criteria when searching?</p>
-							<p class="factsPage--info">No. Just a single criteria may be used, though selecting more will narrow down your search faster.</p>
-							<p class="factsPage--header">What if the features vary from plant to plant?</p>
-							<p class="factsPage--info">Use the most commonly occurring feature in a population. For example, if some flowers are red, but more are orange, use “orange” as the search option.</p>
-							<p class="factsPage--header">What if the features vary on a plant?</p>
-							<p class="factsPage--info">Use the most commonly occuring feature. For example, if most leaves are alternate, but a few are opposite, use “alternate” as the search option.</p>
-							<p class="factsPage--header">What if there is more than one color on the flowers?</p>
-							<p class="factsPage--info">Select the color that occupies the most area.</p>
-							<p class="factsPage--header">How many plants Are in This App? How many are in Cedar Breaks National Monument?</p>
-							<p class="factsPage--info">In this first version of the app there are 44 wildflowers and...</p>
-							<p class="factsPage--header">How were the plants chosen for this app?</p>
-							<p class="factsPage--info">The likelihood of visitors encountering the species and the potential interest in that species were taken into account.</p>
-							<p class="factsPage--header">Will this app work in areas outside of Cedar Breaks?</p>
-							<p class="factsPage--info">Yes, but with limitations, as the focus of the app is Cedar Breaks. The distribution of many of the plants found in Cedar Breaks extend throughout southern Utah and beyond. However, some of the plants common at higher or lower elevations in the surrounding areas may not be found at Zion and therefore are not included in this app.</p>
-						</div>
-						<div class="space"></div>
-					</div>
-
-					<div v-if="page == 'Info' ">
-						<v-app-bar dense  color="#829891" class="mb-9">
-							<v-toolbar-title v-on:click="page='home'" color="#C47D3D"><img class="ml-4 mr-4" src="icons/backArrow.svg"><span class="tanColor">General Information</span></v-toolbar-title>
-						</v-app-bar>
-						<p class="instruction--text">Every summer Cedar Breaks exhibits a spectacular display of wildflowers. Early bloomers such as cushion phlox, kittentails, and aspen bluebells emerge in late June. The wildflower variety and display then peaks in mid-July as countless other wildflowers bloom: scarlet paintbrushes, Colorado columbines, little sunflowers, elkweeds, and many more fill the forests and meadows with color. Later in the summer carpets of yellow showy goldeneye and purple Oregon fleabane pop-up for a final show of color, ushering in Autumn and the changing of the leaves.
-						<br><br>Not all plant species found in the park could be included in this app. Plant species were chosen for this app based on the likelihood of visitors encountering the species, the potential interest in that species, and the ease of field identification. Although many of the tree species found in the park aren’t truly “flowering” plants, they are included in a separate tree section of the app due to visitor interest in them.</p><br><br>
-					</div>
-
-				</v-main>
-			</v-app>
-		</div>
-		<script src="app.js"></script>
-		<noscript>Please install Javascript</noscript>
-    </body>
+          <div v-if="page == 'Info' ">
+            <v-app-bar dense color="#829891" class="mb-9">
+              <v-toolbar-title v-on:click="page='home'" color="#C47D3D"
+                ><img class="ml-4 mr-4" src="icons/backArrow.svg" /><span
+                  class="tanColor"
+                  >General Information</span
+                ></v-toolbar-title
+              >
+            </v-app-bar>
+            <p class="instruction--text">
+              Every summer Cedar Breaks exhibits a spectacular display of
+              wildflowers. Early bloomers such as cushion phlox, kittentails,
+              and aspen bluebells emerge in late June. The wildflower variety
+              and display then peaks in mid-July as countless other wildflowers
+              bloom: scarlet paintbrushes, Colorado columbines, little
+              sunflowers, elkweeds, and many more fill the forests and meadows
+              with color. Later in the summer carpets of yellow showy goldeneye
+              and purple Oregon fleabane pop-up for a final show of color,
+              ushering in Autumn and the changing of the leaves. <br /><br />Not
+              all plant species found in the park could be included in this app.
+              Plant species were chosen for this app based on the likelihood of
+              visitors encountering the species, the potential interest in that
+              species, and the ease of field identification. Although many of
+              the tree species found in the park aren't truly “flowering”
+              plants, they are included in a separate tree section of the app
+              due to visitor interest in them.
+            </p>
+            <br /><br />
+          </div>
+        </v-main>
+      </v-app>
+    </div>
+    <script src="app.js"></script>
+    <noscript>Please install Javascript</noscript>
+  </body>
 </html>
