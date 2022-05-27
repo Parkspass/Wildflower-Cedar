@@ -107,6 +107,26 @@
             color="#fff"
             style="justify-content: space-between"
           >
+            <v-btn value="Home" @click="page = 'home'">
+              <span>Home</span>
+              <v-icon>mdi-home</v-icon>
+            </v-btn>
+            <v-btn value="Collection" @click="page ='collection'">
+              <span>Collection</span>
+              <v-icon>mdi-bookmark-box-multiple-outline</v-icon>
+            </v-btn>
+            <v-btn value="Identify" @click="page ='color'">
+              <img src="" alt="Identify Icon" />
+              <span>Identify</span>
+            </v-btn>
+            <v-btn value="Search" @click="page ='search'">
+              <span>Search</span>
+              <v-icon>mdi-text-search-variant</v-icon>
+            </v-btn>
+            <v-btn value="Help" @click="page ='help'">
+              <span>Help</span>
+              <v-icon>mdi-help-circle-outline</v-icon>
+            </v-btn>
             <v-btn value="sideDrawer" @click="drawer = !drawer">
               <img :src="hambugerMenuIcon" alt="hamburgerMenu" />
             </v-btn>
@@ -115,9 +135,6 @@
               @click="setAppBarIcon('research');"
             >
               <img :src="wildflowerIcon" alt="flower" />
-            </v-btn>
-            <v-btn value="searchTrees" @click="setAppBarIcon('searchTrees');">
-              <img :src="treesIcon" alt="tree" />
             </v-btn>
           </v-bottom-navigation>
 
@@ -154,18 +171,6 @@
               style="cursor: pointer"
             >
               Wildflowers<img
-                class="sideDrawer--arrows"
-                src="icons/right_arrow.svg"
-                alt=""
-              />
-            </div>
-            <v-divider></v-divider>
-            <div
-              class="ml-4 mt-3 mb-3 sideDrawer--Titles"
-              @click="sideDrawerPageChange('searchTrees')"
-              style="cursor: pointer"
-            >
-              Trees<img
                 class="sideDrawer--arrows"
                 src="icons/right_arrow.svg"
                 alt=""
@@ -254,7 +259,7 @@
             </div>
           </div>
 
-          <!-- home research, searchTrees, Instructions, Glossary, Resources, Info -->
+          <!-- home research, Instructions, Glossary, Resources, Info -->
           <div v-if="page == 'home' ">
             <div id="homeHero">
               <div class="landing--nps_div">
@@ -294,19 +299,6 @@
                   class="button d-block mt-4"
                   tile
                   color="#3B4549"
-                  @click="sideDrawerPageChange('searchTrees');"
-                  dark
-                  ><img
-                    class="landing--buttons_image mr-2"
-                    src="icons/treeLight.svg"
-                    alt="flower"
-                  />
-                  Search Trees</v-btn
-                >
-                <v-btn
-                  class="button d-block mt-4"
-                  tile
-                  color="#3B4549"
                   @click="sideDrawerPageChange('Instructions');"
                   dark
                   ><img
@@ -320,7 +312,7 @@
             </div>
           </div>
 
-          <!-- research, searchTrees, Instructions, Glossary, Resources, Info -->
+          <!-- research, Instructions, Glossary, Resources, Info -->
 
           <div v-if="page == 'research' ">
             <div>
@@ -750,174 +742,6 @@
             <br /><br /><br />
           </div>
 
-          <div v-if="page == 'searchTrees' ">
-            <div>
-              <!-- App bar for research page -->
-              <v-app-bar dense>
-                <v-toolbar-title
-                  class="researchHeader"
-                  v-on:click="page='home'; resetAppBarTabs(); "
-                  ><img class="backButton" src="icons/backArrow.svg" /><span
-                    >Search Trees</span
-                  ></v-toolbar-title
-                >
-                <v-spacer></v-spacer>
-              </v-app-bar>
-            </div>
-            <div id="selectionWrapper">
-              <span
-                class="sortBy_tabs"
-                @click="abcSelected"
-                :class="{sortBy_focus: abc_selected}"
-                >Search Alphabetically</span
-              ><span
-                class="sortBy_tabs"
-                @click="classSelected"
-                :class="{sortBy_focus: class_selected}"
-                >Search Classifications</span
-              >
-            </div>
-            <div v-if="abc_selected" class="mt-5">
-              <div class="searchBox mb-3">
-                <img class="ml-2 d-inline" src="icons/magnifying.svg" alt="" />
-                <input
-                  type="text"
-                  class="d-inline"
-                  name="search"
-                  id="searchBox"
-                  color="#3B4549"
-                  placeholder="Search"
-                />
-              </div>
-              <div class="aBar"><p class="pl-4">A</p></div>
-              <div class="picWrapper">
-                <div class="container">
-                  <img
-                    src="flowers/alfalfa.png"
-                    @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();"
-                    class="pic"
-                    alt="alfalfaTest"
-                  />
-                  <div class="text-block" v-if="common_selected">Alfalfa</div>
-                  <div class="text-block latin" v-if="latin_selected">
-                    Alfalfa
-                  </div>
-                </div>
-                <div class="container">
-                  <img
-                    src="flowers/alfalfa.png"
-                    @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();"
-                    class="pic"
-                    alt="alfalfaTest"
-                  />
-                  <div class="text-block" v-if="common_selected">Alfalfa</div>
-                  <div class="text-block latin" v-if="latin_selected">
-                    Alfalfa
-                  </div>
-                </div>
-                <div class="container">
-                  <img
-                    src="flowers/alfalfa.png"
-                    @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();"
-                    class="pic"
-                    alt="alfalfaTest"
-                  />
-                  <div class="text-block" v-if="common_selected">Alfalfa</div>
-                  <div class="text-block latin" v-if="latin_selected">
-                    Alfalfa
-                  </div>
-                </div>
-                <div class="container">
-                  <img
-                    src="flowers/alfalfa.png"
-                    @click="flowerDetailPage('Alfalfa', 'alfalfa'); resetAppBarTabs();"
-                    class="pic"
-                    alt="alfalfaTest"
-                  />
-                  <div class="text-block" v-if="common_selected">Alfalfa</div>
-                  <div class="text-block latin" v-if="latin_selected">
-                    Alfalfa
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div v-if="class_selected">
-              <div class="contentWrapper">
-                <h2>Leaves or Needles</h2>
-                <div class="gridContainer">
-                  <img
-                    class="optionImg"
-                    src="icons/leaves.svg"
-                    @click="leavesSelected"
-                    :class="{selected_focus: leaves_selected}"
-                  />
-                  <img
-                    class="optionImg"
-                    src="icons/needles.svg"
-                    @click="needlesSelected"
-                    :class="{selected_focus: needles_selected}"
-                  />
-                </div>
-                <h2>Leaf Shape</h2>
-                <div class="gridContainer">
-                  <img
-                    class="optionImg"
-                    src="icons/palmate.svg"
-                    @click="palmateSelected"
-                    :class="{selected_focus: palmate_selected}"
-                  />
-                  <img
-                    class="optionImg"
-                    src="icons/compound.svg"
-                    @click="compoundSelected"
-                    :class="{selected_focus: compound_selected}"
-                  />
-                  <img
-                    class="optionImg"
-                    src="icons/oval.svg"
-                    @click="ovalSelected"
-                    :class="{selected_focus: oval_selected}"
-                  />
-                  <img
-                    class="optionImg"
-                    src="icons/other.svg"
-                    @click="otherSelected"
-                    :class="{selected_focus: other_selected}"
-                  />
-                </div>
-                <h2>Color</h2>
-                <div class="gridContainer">
-                  <img
-                    class="optionImg"
-                    src="icons/one.svg"
-                    @click="oneSelected"
-                    :class="{selected_focus: one_selected}"
-                  />
-                  <img
-                    class="optionImg"
-                    src="icons/two.svg"
-                    @click="twoSelected"
-                    :class="{selected_focus: two_selected}"
-                  />
-                  <img
-                    class="optionImg"
-                    src="icons/three.svg"
-                    @click="threeSelected"
-                    :class="{selected_focus: three_selected}"
-                  />
-                  <img
-                    class="optionImg"
-                    src="icons/four+.svg"
-                    @click="fourSelected"
-                    :class="{selected_focus: four_selected}"
-                  />
-                </div>
-                <div id="reset" @click="reset();">Reset Filters</div>
-              </div>
-            </div>
-          </div>
-
           <div v-if="page == 'Instructions' ">
             <v-app-bar dense>
               <v-toolbar-title
@@ -949,20 +773,6 @@
               class="InstructionExample"
             />
 
-            <p class="instruction--headers">For Trees</p>
-            <p class="instruction--text">
-              Select the trait that most represents the tree that you are
-              looking at. If you leave a section blank, that section will not be
-              used when filtering the search results. For example, if you would
-              like to see only the trees with needles, select the ‘needles’ tab
-              and leave all other sections blank.
-            </p>
-            <p class="instruction--sub-headers">Tree Example</p>
-            <img
-              src="icons/TreeExample.png"
-              alt="T_Example"
-              class="InstructionExample"
-            />
             <div class="space"></div>
             <!-- must add empty space or it get cut off by app bar. -->
           </div>
